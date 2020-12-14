@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+}
+
+header {
+  position: sticky;
+}
+
+.main-header {
+  display: flex;
+  background: blue;
+}
+.main-header__logo {
+  flex: 1;
+}
+.main-header__links {
+  display: flex;
+}
+
+/*# sourceMappingURL=agile.css.map */
