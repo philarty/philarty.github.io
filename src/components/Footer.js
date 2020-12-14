@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <footer>
-        <p>bye</p>
+        <p>thanks for checking out my site! bye! </p>
     </footer>
   );
 }

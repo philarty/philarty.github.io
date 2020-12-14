@@ -10,10 +10,10 @@ header {
 
 .main-header {
   display: flex;
-  background: blue;
 }
 .main-header__logo {
   flex: 1;
+  color: #00a1c2;
 }
 .main-header__links {
   display: flex;

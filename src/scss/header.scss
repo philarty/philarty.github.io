@@ -1,9 +1,9 @@
 .main-header {
   display: flex;
-  background: blue;
 
   &__logo {
     flex: 1;
+    color: $primary-color;
   }
 
   &__links {
