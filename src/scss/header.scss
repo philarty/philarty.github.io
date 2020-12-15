@@ -1,13 +1,29 @@
 .main-header {
-  display: flex;
+  background-color: white;
+  position: sticky;
+  font-size: 28px;
+  box-shadow: 0 0 20px #0000001a;
+
+  &__wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5em 1em;
+    display: flex;
+    place-content: space-between;
+    align-items: baseline;
+  }
 
   &__logo {
-    flex: 1;
     color: $primary-color;
+    text-transform: uppercase;
+    font-size: 1.4em;
   }
 
   &__links {
     display: flex;
 
+    > a {
+      margin-left: 1em;
+    }
   }
 }

@@ -1,9 +1,18 @@
+@import url("https://use.typekit.net/eur0zzn.css");
+
+
 body {
     margin: 0;
     padding: 0;
     height: 300px;
+    font-family: futura-pt, sans-serif
 }
 
 header {
     position: sticky;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
 }
