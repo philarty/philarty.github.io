@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 
 import "./css/agile.css";
 import Header from "./components/Header.js";
@@ -9,7 +9,7 @@ import About from "./components/About.js";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Header />
 
       <Route exact path="/" component={Content} />
