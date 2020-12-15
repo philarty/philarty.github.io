@@ -1,14 +1,17 @@
-export default function Header() {
+import React from "react";
+import { Link } from "react-router-dom";
+
+const  Header = () => {
   return (
     <header className="main-header">
       <nav className="main-header__logo">
-        <p>MY SITE</p>
+        <Link to="/">Philarty</Link>
       </nav>
       <nav className="main-header__links">
-        <p>to be link 1</p>
-        <p>to be link 2</p>
-        <p>to be link 3</p>
+        <Link to="/about">About</Link>
       </nav>
     </header>
   );
 }
+
+export default Header
