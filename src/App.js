@@ -2,10 +2,10 @@ import React from "react";
 import { HashRouter as Router, Route } from "react-router-dom";
 
 import "./css/agile.css";
-import Header from "./components/Header.js";
-import Content from "./components/Content.js";
-import Footer from "./components/Footer.js";
-import About from "./components/About.js";
+import Header from "./containers/Header.js";
+import Content from "./containers/Content.js";
+import Footer from "./containers/Footer.js";
+import About from "./containers/About.js";
 
 function App() {
   return (
