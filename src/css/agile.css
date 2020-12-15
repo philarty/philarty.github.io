@@ -4,6 +4,7 @@ body {
   padding: 0;
   height: 300px;
   font-family: futura-pt, sans-serif;
+  color: #101c2e;
 }
 
 header {
@@ -48,8 +49,6 @@ a {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   box-shadow: 0 0 20px #0000001a;
 }
@@ -57,6 +56,66 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1em;
+}
+
+.about-me {
+  padding: 3em;
+  min-height: 80vh;
+}
+
+.profile {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+}
+.profile img {
+  width: 100%;
+  max-width: 350px;
+  margin-right: 30px;
+  height: intrinsic;
+}
+.profile__info {
+  place-self: center;
+}
+.profile__info h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.profile__info__name {
+  color: #00a1c2;
+}
+.profile__info h2 {
+  justify-self: start;
+  font-size: 3em;
+  margin: 0;
+  line-height: 1.2;
+}
+.profile__info h2 a {
+  color: #101c2e;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+.profile__info h2 a:nth-child(1) {
+  text-decoration-color: red;
+}
+.profile__info h2 a:nth-child(1):hover {
+  color: red;
+}
+.profile__info h2 a:nth-child(2) {
+  text-decoration-color: green;
+}
+.profile__info h2 a:nth-child(2):hover {
+  color: green;
+}
+.profile__info h2 a:nth-child(3) {
+  text-decoration-color: blue;
+}
+.profile__info h2 a:nth-child(3):hover {
+  color: blue;
+}
+.profile__info p {
+  font-size: 1.5em;
+  max-width: 550px;
 }
 
 /*# sourceMappingURL=agile.css.map */

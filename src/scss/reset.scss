@@ -1,18 +1,18 @@
 @import url("https://use.typekit.net/eur0zzn.css");
 
-
 body {
-    margin: 0;
-    padding: 0;
-    height: 300px;
-    font-family: futura-pt, sans-serif
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  font-family: futura-pt, sans-serif;
+  color: $text-color;
 }
 
 header {
-    position: sticky;
+  position: sticky;
 }
 
 a {
-    color: $link-color;
-    text-decoration: none;
+  color: $link-color;
+  text-decoration: none;
 }
