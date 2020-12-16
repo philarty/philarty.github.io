@@ -66,6 +66,7 @@ a {
 .profile {
   max-width: 1040px;
   margin: 0 auto;
+  padding: 3em;
   display: flex;
 }
 .profile img {
