@@ -30,7 +30,7 @@ const ResumeSection = () => (
 );
 
 const About = () => (
-  <section className="about-me">
+  <section className="about">
     <ProfileSection />
     <ResumeSection />
   </section>

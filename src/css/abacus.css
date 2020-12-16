@@ -42,23 +42,7 @@ a {
   margin-left: 1em;
 }
 
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1em;
-}
-
-.footer {
-  width: 100%;
-  box-shadow: 0 0 20px #0000001a;
-}
-.footer__wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1em;
-}
-
-.about-me {
+.about {
   padding: 3em;
   min-height: 80vh;
 }
@@ -119,4 +103,24 @@ a {
   max-width: 550px;
 }
 
-/*# sourceMappingURL=agile.css.map */
+.footer {
+  width: 100%;
+  box-shadow: 0 0 20px #0000001a;
+}
+.footer__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.project-preview {
+  max-width: 1040px;
+  margin: 100px auto;
+}
+
+.project-index {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=abacus.css.map */

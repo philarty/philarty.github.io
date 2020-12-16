@@ -8,7 +8,7 @@ const PROJECTS = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
     imageSrc: "https://picsum.photos/500/300",
     tags: ["design"],
-    url: 'test1'
+    url: "test1",
   },
   {
     title: "Code Project",
@@ -16,7 +16,7 @@ const PROJECTS = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
     imageSrc: "https://picsum.photos/500/300",
     tags: ["code"],
-    url: 'test2'
+    url: "test2",
   },
   {
     title: "Make Project",
@@ -24,7 +24,7 @@ const PROJECTS = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
     imageSrc: "https://picsum.photos/500/300",
     tags: ["make"],
-    url: 'test3'
+    url: "test3",
   },
 ];
 
@@ -32,7 +32,6 @@ const ProjectPreview = (props) => {
   const { project } = props;
   return (
     <div className="project-preview">
-      <br/>
       <h3>{project.title}</h3>
       <img src={project.imageSrc} alt={project.title} />
       <p>{project.description}</p>
@@ -42,7 +41,6 @@ const ProjectPreview = (props) => {
           <span> {tag}</span>
         ))}
       </div>
-      <br/>
     </div>
   );
 };
