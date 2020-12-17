@@ -35,7 +35,9 @@ class Header extends React.Component {
               Philarty
             </Link>
             <nav className="main-header__links">
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
+                About
+              </Link>
               <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 Projects
               </Link>
