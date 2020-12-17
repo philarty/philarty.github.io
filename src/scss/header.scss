@@ -1,13 +1,21 @@
 .main-header {
   background-color: white;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   font-size: 28px;
-  box-shadow: 0 0 20px #0000001a;
+  padding: 0.5em 0;
+  // transition: all 0.25s ease-in-out;
+
+  &--scroll {
+    top: 0;
+    box-shadow: 0 0 20px #0000001a;
+    font-size: 20px;
+  }
 
   &__wrapper {
     max-width: 1200px;
     margin: auto;
-    padding: 0.5em 1em;
+    padding: 0 1em;
     display: flex;
     place-content: space-between;
     align-items: baseline;
@@ -26,4 +34,11 @@
       margin-left: 1em;
     }
   }
+}
+
+//this is a spacer so that on scroll up, page isnt affected by the changing size of header.
+
+.pseudo-header {
+  height: 78px;
+  display: block;
 }
