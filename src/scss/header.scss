@@ -44,7 +44,8 @@
   }
 }
 
-//this is a spacer so that on scroll up, page isnt affected by the changing size of header.
+// this is a spacer hidden behind header so that on scroll, 
+// so page content isnt affected by header shrinkage.
 
 .pseudo-header {
   height: 78px;
