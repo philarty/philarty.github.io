@@ -12,8 +12,14 @@ header {
 }
 
 a {
-  color: gray;
+  color: #808080;
   text-decoration: none;
+}
+a.active {
+  color: #00a1c2;
+}
+a:active, a:hover {
+  color: #101c2e;
 }
 
 .main-header {
@@ -22,11 +28,12 @@ a {
   width: 100%;
   font-size: 28px;
   padding: 0.5em 0;
+  transition: all 0.25s ease-in-out;
 }
 .main-header--scroll {
   top: 0;
   box-shadow: 0 0 20px #0000001a;
-  font-size: 20px;
+  font-size: 22px;
 }
 .main-header__wrapper {
   max-width: 1200px;
@@ -41,11 +48,17 @@ a {
   text-transform: uppercase;
   font-size: 1.4em;
 }
-.main-header__links {
+.main-header__logo:hover, .main-header__logo:active {
+  color: #00a1c2;
+}
+.main-header__nav {
   display: flex;
 }
-.main-header__links > a {
+.main-header__nav > a {
   margin-left: 1em;
+}
+.main-header__nav .active {
+  color: #00a1c2;
 }
 
 .pseudo-header {

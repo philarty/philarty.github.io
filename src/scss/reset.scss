@@ -15,4 +15,15 @@ header {
 a {
   color: $link-color;
   text-decoration: none;
+
+  &.active {
+    color: $primary-color
+  }
+
+  &:active,
+  &:hover {
+    color: $active-color;
+  }
+
+
 }

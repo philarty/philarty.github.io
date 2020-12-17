@@ -4,12 +4,12 @@
   width: 100%;
   font-size: 28px;
   padding: 0.5em 0;
-  // transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 
   &--scroll {
     top: 0;
     box-shadow: 0 0 20px #0000001a;
-    font-size: 20px;
+    font-size: 22px;
   }
 
   &__wrapper {
@@ -25,13 +25,21 @@
     color: $primary-color;
     text-transform: uppercase;
     font-size: 1.4em;
+    &:hover,
+    &:active {
+      color: $primary-color;
+    }
   }
 
-  &__links {
+  &__nav {
     display: flex;
 
     > a {
       margin-left: 1em;
+    }
+
+    .active {
+      color: $primary-color;
     }
   }
 }
