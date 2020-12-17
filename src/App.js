@@ -2,15 +2,15 @@ import React from "react";
 import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 import "./css/abacus.css";
-import Header from "./containers/Header.js";
-import Footer from "./containers/Footer.js";
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
 
 import FourOhFour from "./containers/FourOhFour.js";
 
 import About from "./containers/About.js";
 import ProjectIndex from "./containers/ProjectIndex.js";
 import Project from "./containers/Project.js";
-import ScrollToTop from "./Components/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {

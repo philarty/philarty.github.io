@@ -55,6 +55,7 @@ class HeaderInner extends React.Component {
             <nav className="main-header__nav">
               {NAV.map((link) => (
                 <Link
+                  key={link.text}
                   to={link.url}
                   className={currentPath === link.url ? "active" : ""}
                   onClick={() => window.scrollTo(0, 0)}
