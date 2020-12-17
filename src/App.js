@@ -27,7 +27,7 @@ function App() {
 
         <Route exact path="/about" component={About} />
 
-        <Route path="/project/:projectName" component={Project} />
+        {/* <Route path="/project/:projectName" component={Project} /> */}
 
 
 
