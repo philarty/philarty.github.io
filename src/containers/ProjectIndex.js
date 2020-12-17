@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const PROJECTS = [
   {
@@ -46,10 +46,10 @@ const ProjectPreview = (props) => {
 };
 
 function ProjectIndex(props) {
-  const { history } = props;
+  const location = useLocation();
 
   //get pathname
-  const pathname = history && history.location && history.location.pathname;
+  const pathname = location && location.pathname;
 
   //remove slash
   const selectedTag = pathname.replace(/^\/|/g, "");
@@ -61,7 +61,9 @@ function ProjectIndex(props) {
 
   return (
     <section className="project-index">
-      <h1>These are my {selectedTag} projects.</h1>
+      <h1>
+        These are my {selectedTag} projects.
+      </h1>
       {selectedProjects.map((project) => (
         <ProjectPreview project={project} />
       ))}
