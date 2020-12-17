@@ -38,7 +38,7 @@ const ProjectPreview = (props) => {
       <div>
         Project tags:
         {project.tags.map((tag) => (
-          <span> {tag}</span>
+          <span key={tag}> {tag}</span>
         ))}
       </div>
     </div>
@@ -61,11 +61,9 @@ function ProjectIndex(props) {
 
   return (
     <section className="project-index">
-      <h1>
-        These are my {selectedTag} projects.
-      </h1>
+      <h1>These are my {selectedTag} projects.</h1>
       {selectedProjects.map((project) => (
-        <ProjectPreview project={project} />
+        <ProjectPreview project={project} key={project.title} />
       ))}
     </section>
   );
