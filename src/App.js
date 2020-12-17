@@ -9,7 +9,7 @@ import FourOhFour from "./containers/FourOhFour.js";
 
 import About from "./containers/About.js";
 import ProjectIndex from "./containers/ProjectIndex.js";
-import Project from "./containers/Project.js";
+// import Project from "./containers/Project.js";
 import ScrollToTop from "./components/ScrollToTop";
 
 
