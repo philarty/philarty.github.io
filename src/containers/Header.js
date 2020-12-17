@@ -1,7 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-class Header extends React.Component {
+const NAV = [
+  {
+    text: "Projects",
+    url: "/",
+  },
+  {
+    text: "About",
+    url: "/about",
+  },
+  {
+    text: "Aiya",
+    url: "/404",
+  },
+];
+
+class HeaderInner extends React.Component {
   constructor(props) {
     super(props);
 
@@ -20,10 +36,12 @@ class Header extends React.Component {
 
   render() {
     const { scroll } = this.state;
+    const { location } = this.props;
+    const currentPath = location && location.pathname;
+
     return (
       <React.Fragment>
         <header
-          style={{ transition: scroll ? "all 0.25s ease-in-out" : "" }}
           className={"main-header" + (scroll ? " main-header--scroll" : "")}
         >
           <div className="main-header__wrapper">
@@ -34,13 +52,16 @@ class Header extends React.Component {
             >
               Philarty
             </Link>
-            <nav className="main-header__links">
-              <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
-                About
-              </Link>
-              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-                Projects
-              </Link>
+            <nav className="main-header__nav">
+              {NAV.map((link) => (
+                <Link
+                  to={link.url}
+                  className={currentPath === link.url ? "active" : ""}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  {link.text}
+                </Link>
+              ))}
             </nav>
           </div>
         </header>
@@ -49,6 +70,15 @@ class Header extends React.Component {
       </React.Fragment>
     );
   }
+}
+
+//wrapping HeaderInner to pass location,
+// since cannot use useLocation in class Component.
+
+function Header() {
+  const location = useLocation();
+
+  return <HeaderInner location={location} />;
 }
 
 export default Header;
