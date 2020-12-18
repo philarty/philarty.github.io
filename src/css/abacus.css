@@ -12,18 +12,6 @@
   --a__color: #00ff00;
 }
 
-.app {
-  --background-color: #ffffff;
-  --color: #000000;
-  --a__color: #ff0000;
-}
-
-.app.dark {
-  --background-color: #4b4444;
-  --color: #ffffff;
-  --a__color: #00ff00;
-}
-
 body {
   margin: 0;
   padding: 0;
