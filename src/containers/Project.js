@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 
-// useParams here basically pulling from url /portfolio#/projects/:projectName
+// useParams here to pull from url /portfolio#/projects/:projectName
 const Project = () => {
   let { projectName } = useParams();
 

@@ -29,6 +29,7 @@ a:active, a:hover {
   font-size: 28px;
   padding: 0.5em 0;
   transition: all 0.25s ease-in-out;
+  z-index: 300;
 }
 .main-header--scroll {
   top: 0;
@@ -137,14 +138,65 @@ a:active, a:hover {
   padding: 1em;
 }
 
-.project-preview {
+.project-index__title {
   max-width: 1200px;
-  margin: 100px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.project-index {
+.project-index__grid {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2em;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.project-preview {
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+}
+.project-preview__img {
+  grid-area: 1/1/2/2;
+  display: grid;
+}
+.project-preview img {
+  min-width: 100%;
+  place-self: center;
+  z-index: 1;
+}
+.project-preview:hover img {
+  opacity: 0.2;
+}
+.project-preview:hover .project-preview__text {
+  display: block;
+}
+.project-preview__text {
+  grid-area: 1/1/2/2;
+  place-self: center;
+  padding: 0 3em;
+  display: none;
+  z-index: 2;
+}
+.project-preview h3 {
+  font-size: 2em;
+  text-align: center;
+}
+.project-preview__tags {
+  display: flex;
+}
+.project-preview__tags a {
+  text-transform: uppercase;
+  margin-right: 0.5em;
+  background: #101c2e;
+  line-height: 1;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.7em;
+  color: white;
+  font-weight: 500;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=abacus.css.map */
