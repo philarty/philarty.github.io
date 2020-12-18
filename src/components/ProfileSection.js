@@ -11,8 +11,8 @@ const ProfileSection = () => (
         Hi. It's <span className="profile__name">Phil</span>!
       </h1>
       <h2>
-        I <Link to="/design">Design</Link>, <Link to="/code">Code</Link>, &{" "}
-        <Link to="/make">Make</Link> Stuff
+        I <Link to="/projects/design">Design</Link>, <Link to="/projects/code">Code</Link>, &{" "}
+        <Link to="/projects/make">Make</Link> Stuff
       </h2>
       <p>
         Here is a little paragraph about myself, I'm not 100% what to put in

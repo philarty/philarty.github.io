@@ -1,14 +1,19 @@
 .about {
-  padding: 3em;
+  padding: 0 3em;
   min-height: 80vh;
 }
 
 .profile {
-  max-width:1200px;
+  max-width:1040px;
   margin: 0 auto;
+
+
+  @media screen and (min-width: 600px) {
+  display: flex;
   padding: 3em;
 
-  display: flex;
+    
+  }
 
   img {
     width: 100%;

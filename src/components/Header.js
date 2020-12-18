@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 const NAV = [
   {
     text: "Projects",
-    url: "/",
+    url: "/projects",
   },
   {
     text: "About",
@@ -39,6 +39,7 @@ class HeaderInner extends React.Component {
     const { location } = this.props;
     const currentPath = location && location.pathname;
 
+    console.log(currentPath);
     return (
       <React.Fragment>
         <header
@@ -57,7 +58,7 @@ class HeaderInner extends React.Component {
                 <Link
                   key={link.text}
                   to={link.url}
-                  className={currentPath === link.url ? "active" : ""}
+                  className={currentPath.includes(link.url) ? "active" : ""}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   {link.text}

@@ -68,15 +68,19 @@ a:active, a:hover {
 }
 
 .about {
-  padding: 3em;
+  padding: 0 3em;
   min-height: 80vh;
 }
 
 .profile {
-  max-width: 1200px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 3em;
-  display: flex;
+}
+@media screen and (min-width: 600px) {
+  .profile {
+    display: flex;
+    padding: 3em;
+  }
 }
 .profile img {
   width: 100%;
@@ -146,7 +150,7 @@ a:active, a:hover {
 .project-index__grid {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2em;
+  padding: 0 2em;
   display: grid;
   grid-gap: 2em;
 }
