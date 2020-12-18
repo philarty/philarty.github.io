@@ -23,6 +23,8 @@
   display: grid;
   align-items: center;
   overflow: hidden;
+  border-radius: 4px;
+  transition: 0.25s ease-in-out;
 
   &__img {
     grid-area: 1/1/2/2;
@@ -37,7 +39,7 @@
 
   &:hover {
     img {
-      opacity: 0.2;
+      filter: grayscale(100%) brightness(20%);
     }
 
     .project-preview__text {
@@ -54,13 +56,9 @@
       display: none;
       grid-area: 1/1/2/2;
       padding: 0 3em;
+      color: $lightgray;
     }
   }
-
-  // h3,
-  // p {
-  //   margin: 0;
-  // }
 
   h3 {
     font-size: 2em;
@@ -77,15 +75,14 @@
     a {
       text-transform: uppercase;
       margin-right: 0.5em;
-      background: $text-color;
+      background: $lightgray;
       line-height: 1;
       padding: 3px 8px;
       border-radius: 3px;
       font-size: 0.7em;
 
-      color: white;
-      font-weight: 500;
-      opacity: 0.5;
+      color: $text-color;
+      font-weight: 700;
     }
   }
 }

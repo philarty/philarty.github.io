@@ -1,9 +1,10 @@
 @import url("https://use.typekit.net/eur0zzn.css");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0;
   padding: 0;
   height: 300px;
-  font-family: futura-pt, sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #101c2e;
 }
 
@@ -164,6 +165,8 @@ a:active, a:hover {
   display: grid;
   align-items: center;
   overflow: hidden;
+  border-radius: 4px;
+  transition: 0.25s ease-in-out;
 }
 .project-preview__img {
   grid-area: 1/1/2/2;
@@ -175,7 +178,7 @@ a:active, a:hover {
   z-index: 1;
 }
 .project-preview:hover img {
-  opacity: 0.2;
+  filter: grayscale(100%) brightness(20%);
 }
 .project-preview:hover .project-preview__text {
   display: block;
@@ -190,6 +193,7 @@ a:active, a:hover {
     display: none;
     grid-area: 1/1/2/2;
     padding: 0 3em;
+    color: #d3d3d3;
   }
 }
 .project-preview h3 {
@@ -207,14 +211,13 @@ a:active, a:hover {
 .project-preview__tags a {
   text-transform: uppercase;
   margin-right: 0.5em;
-  background: #101c2e;
+  background: #d3d3d3;
   line-height: 1;
   padding: 3px 8px;
   border-radius: 3px;
   font-size: 0.7em;
-  color: white;
-  font-weight: 500;
-  opacity: 0.5;
+  color: #101c2e;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=abacus.css.map */
