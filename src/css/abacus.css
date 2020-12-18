@@ -182,13 +182,14 @@ a:active, a:hover {
 }
 .project-preview__text {
   place-self: center;
-  padding: 0 3em;
   z-index: 2;
+  padding: 0 1em;
 }
 @media screen and (min-width: 600px) {
   .project-preview__text {
     display: none;
     grid-area: 1/1/2/2;
+    padding: 0 3em;
   }
 }
 .project-preview h3 {

@@ -39,7 +39,6 @@ class HeaderInner extends React.Component {
     const { location } = this.props;
     const currentPath = location && location.pathname;
 
-    console.log(currentPath);
     return (
       <React.Fragment>
         <header

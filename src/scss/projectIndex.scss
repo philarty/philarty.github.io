@@ -14,7 +14,6 @@
     grid-gap: 2em;
 
     @media screen and (min-width: 600px) {
-
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     }
   }
@@ -48,12 +47,13 @@
 
   &__text {
     place-self: center;
-    padding: 0 3em;
     z-index: 2;
+    padding: 0 1em;
 
     @media screen and (min-width: 600px) {
       display: none;
       grid-area: 1/1/2/2;
+      padding: 0 3em;
     }
   }
 
