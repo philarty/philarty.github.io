@@ -2,6 +2,27 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Phil's quick refresher
+
+These are the most used scripts!
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `sass --watch src/scss:src/css`
+
+In portfolio directory, automatically compile scss files to css
+read more [here](https://sass-lang.com/guide)
+
+### `npm run deploy`
+
+Deploy site to Github Pages
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -63,17 +84,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
-`npm run deploy`
-
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### compiling scss
-
-compile automatically compile scss files to css
-read more [here](https://sass-lang.com/guide)
-`sass --watch src/scss:src/css`
 
