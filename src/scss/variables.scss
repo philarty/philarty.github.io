@@ -1,5 +1,12 @@
+//scss variables
+$background-color--light: #ffffff;
+$color--light: #000000;
+$a__color--light: #ff0000;
 
-$randomheight: 500px;
+$background-color--dark: #4b4444;
+$color--dark: #ffffff;
+$a__color--dark: #00ff00;
+
 
 $primary-color: #00a1c2;
 $text-color: #101c2e;
@@ -10,3 +17,17 @@ $active-color: $text-color;
 
 
 
+//ccss custom vars
+.app {
+  --background-color: #{$background-color--light};
+  --color: #{$color--light};
+  --a__color: #{$a__color--light};
+}
+
+
+
+.app.dark {
+  --background-color: #{$background-color--dark};
+  --color: #{$color--dark};
+  --a__color: #{$a__color--dark};
+}

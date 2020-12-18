@@ -17,6 +17,9 @@ const NAV = [
   },
 ];
 
+//wrapping HeaderInner to pass location,
+// since cannot use useLocation in class Component.
+
 class HeaderInner extends React.Component {
   constructor(props) {
     super(props);
@@ -63,6 +66,7 @@ class HeaderInner extends React.Component {
                   {link.text}
                 </Link>
               ))}
+              <button onClick={() => this.props.onToggleTheme()}>Toggle</button>
             </nav>
           </div>
         </header>
@@ -76,10 +80,11 @@ class HeaderInner extends React.Component {
 //wrapping HeaderInner to pass location,
 // since cannot use useLocation in class Component.
 
-function Header() {
+function Header(props) {
   const location = useLocation();
+  const { ...rest } = props;
 
-  return <HeaderInner location={location} />;
+  return <HeaderInner location={location} {...rest} />;
 }
 
 export default Header;
