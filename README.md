@@ -63,8 +63,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
+`npm run deploy`
+
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### compiling scss
+
+compile automatically compile scss files to css
+read more [here](https://sass-lang.com/guide)
+`sass --watch src/scss:src/css`
+
