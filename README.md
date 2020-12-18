@@ -6,6 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 These are the most used scripts!
 
+### `npm run local-dev`
+
+*MY FIRST CUSTOM NPM SCRIPT!*
+Custom script used to run `npm start` and `sass --watch src/scss:src/css` concurrently.
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -16,7 +21,7 @@ You will also see any lint errors in the console.
 
 ### `sass --watch src/scss:src/css`
 
-In portfolio directory, automatically compile scss files to css
+Automatically compile scss files to css
 read more [here](https://sass-lang.com/guide)
 
 ### `npm run deploy`
