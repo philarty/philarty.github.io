@@ -13,8 +13,10 @@
     display: grid;
     grid-gap: 2em;
 
-    // media query
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    @media screen and (min-width: 600px) {
+
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
   }
 }
 
@@ -24,7 +26,7 @@
   overflow: hidden;
 
   &__img {
-    grid-area: 1 / 1/2/2;
+    grid-area: 1/1/2/2;
     display: grid;
   }
 
@@ -45,11 +47,14 @@
   }
 
   &__text {
-    grid-area: 1/1/2/2;
     place-self: center;
     padding: 0 3em;
-    display: none;
     z-index: 2;
+
+    @media screen and (min-width: 600px) {
+      display: none;
+      grid-area: 1/1/2/2;
+    }
   }
 
   // h3,
@@ -60,6 +65,10 @@
   h3 {
     font-size: 2em;
     text-align: center;
+
+    @media screen and (max-width: 599px) {
+      margin: 0.5em;
+    }
   }
 
   &__tags {

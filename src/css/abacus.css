@@ -149,7 +149,11 @@ a:active, a:hover {
   padding: 2em;
   display: grid;
   grid-gap: 2em;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+@media screen and (min-width: 600px) {
+  .project-index__grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
 }
 
 .project-preview {
@@ -173,15 +177,24 @@ a:active, a:hover {
   display: block;
 }
 .project-preview__text {
-  grid-area: 1/1/2/2;
   place-self: center;
   padding: 0 3em;
-  display: none;
   z-index: 2;
+}
+@media screen and (min-width: 600px) {
+  .project-preview__text {
+    display: none;
+    grid-area: 1/1/2/2;
+  }
 }
 .project-preview h3 {
   font-size: 2em;
   text-align: center;
+}
+@media screen and (max-width: 599px) {
+  .project-preview h3 {
+    margin: 0.5em;
+  }
 }
 .project-preview__tags {
   display: flex;
