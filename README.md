@@ -11,6 +11,10 @@ These are the most used scripts!
 *MY FIRST CUSTOM NPM SCRIPT!*
 Custom script used to run `npm start` and `sass --watch src/scss:src/css` concurrently.
 
+### `npm run deploy`
+
+Deploy site to Github Pages
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -23,10 +27,6 @@ You will also see any lint errors in the console.
 
 Automatically compile scss files to css
 read more [here](https://sass-lang.com/guide)
-
-### `npm run deploy`
-
-Deploy site to Github Pages
 
 ## Available Scripts
 
