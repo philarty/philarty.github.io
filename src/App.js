@@ -1,10 +1,5 @@
-import React from "react";
-import {
-  HashRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+import React, { useState } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import "./css/abacus.css";
 import Header from "./components/Header.js";
@@ -18,11 +13,13 @@ import ProjectIndex from "./containers/ProjectIndex.js";
 // import Project from "./containers/Project.js";
 import ScrollToTop from "./components/ScrollToTop";
 
-function App() {
+const App = () => {
+  const [isDarkTheme, toggleDarkTheme] = useState(false);
+
   return (
-    <Router basename="/">
+    <div className={"app" + (isDarkTheme ? " dark" : " light")}>
       <ScrollToTop />
-      <Header />
+      <Header onToggleTheme={() => toggleDarkTheme(!isDarkTheme)} />
       <Switch>
         <Route exact path="/">
           <section className="about">
@@ -45,8 +42,8 @@ function App() {
         <Redirect to="/404" />
       </Switch>
       <Footer />
-    </Router>
+    </div>
   );
-}
+};
 
 export default App;
