@@ -1,13 +1,3 @@
-//scss variables
-$background-color--light: #ffffff;
-$color--light: #000000;
-$a__color--light: #ff0000;
-
-$background-color--dark: #4b4444;
-$color--dark: #ffffff;
-$a__color--dark: #00ff00;
-
-
 $primary-color: #00a1c2;
 $text-color: #101c2e;
 
@@ -15,19 +5,36 @@ $lightgray: #d3d3d3;
 $link-color: #808080;
 $active-color: $text-color;
 
+//scss variables
+$a__color: #808080;
 
+$light--background-color: #ffffff;
+$light--color: #000000;
+$light--a__color: darken($a__color, 20%);
+$light--a__color--active: darken($a__color, 50%);
+$light--box-shadow__color: #0000001a;
+
+$dark--background-color: #171717;
+$dark--color: #e3e3e3;
+$dark--a__color: lighten($a__color, 20%);
+$dark--a__color--active: lighten($a__color, 50%);
+$dark--box-shadow__color: #000000b0;
 
 //ccss custom vars
 .app {
-  --background-color: #{$background-color--light};
-  --color: #{$color--light};
-  --a__color: #{$a__color--light};
+  --primary-color: #{$primary-color};
+  --background-color: #{$light--background-color};
+  --color: #{$light--color};
+  --a__color: #{$light--a__color};
+  --a__color--active: #{$light--a__color--active};
+  --box-shadow__color: #{$light--box-shadow__color};
 }
 
-
-
 .app.dark {
-  --background-color: #{$background-color--dark};
-  --color: #{$color--dark};
-  --a__color: #{$a__color--dark};
+  --primary-color: #{$primary-color};
+  --background-color: #{$dark--background-color};
+  --color: #{$dark--color};
+  --a__color: #{$dark--a__color};
+  --a__color--active: #{$dark--a__color--active};
+  --box-shadow__color: #{$dark--box-shadow__color};
 }

@@ -23,11 +23,11 @@ a {
   text-decoration: none;
 
   &.active {
-    color: $primary-color; 
+    color: var(--primary-color); 
   }
 
   &:active,
   &:hover {
-    color: $active-color;
+    color: var(--a__color--active);
   }
 }

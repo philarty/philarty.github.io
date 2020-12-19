@@ -42,7 +42,7 @@
       line-height: 1.2;
 
       a {
-        color: $text-color;
+        color: var(--color);
         text-decoration: underline;
         text-decoration-thickness: 4px;
 

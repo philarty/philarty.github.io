@@ -1,15 +1,21 @@
 @import url("https://use.typekit.net/eur0zzn.css");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .app {
+  --primary-color: #00a1c2;
   --background-color: #ffffff;
   --color: #000000;
-  --a__color: #ff0000;
+  --a__color: #4d4d4d;
+  --a__color--active: #010101;
+  --box-shadow__color: #0000001a;
 }
 
 .app.dark {
-  --background-color: #4b4444;
-  --color: #ffffff;
-  --a__color: #00ff00;
+  --primary-color: #00a1c2;
+  --background-color: #171717;
+  --color: #e3e3e3;
+  --a__color: #b3b3b3;
+  --a__color--active: white;
+  --box-shadow__color: #000000b0;
 }
 
 body {
@@ -33,10 +39,10 @@ a {
   text-decoration: none;
 }
 a.active {
-  color: #00a1c2;
+  color: var(--primary-color);
 }
 a:active, a:hover {
-  color: #101c2e;
+  color: var(--a__color--active);
 }
 
 .main-header {
@@ -50,7 +56,7 @@ a:active, a:hover {
 }
 .main-header--scroll {
   top: 0;
-  box-shadow: 0 0 20px #0000001a;
+  box-shadow: 0 0 20px var(--box-shadow__color);
   font-size: 22px;
 }
 .main-header__wrapper {
@@ -62,21 +68,25 @@ a:active, a:hover {
   align-items: baseline;
 }
 .main-header__logo {
-  color: #00a1c2;
+  color: var(--primary-color);
   text-transform: uppercase;
   font-size: 1.4em;
+  font-weight: 800;
 }
 .main-header__logo:hover, .main-header__logo:active {
-  color: #00a1c2;
+  color: var(--primary-color);
 }
 .main-header__nav {
   display: flex;
 }
-.main-header__nav > a {
+.main-header__nav > * {
   margin-left: 1em;
 }
-.main-header__nav .active {
-  color: #00a1c2;
+.main-header .switch {
+  place-self: center;
+}
+.main-header .switch input:checked + .slider {
+  background-color: var(--a__background-color);
 }
 
 .pseudo-header {
@@ -122,7 +132,7 @@ a:active, a:hover {
   line-height: 1.2;
 }
 .profile__info h2 a {
-  color: #101c2e;
+  color: var(--color);
   text-decoration: underline;
   text-decoration-thickness: 4px;
 }
@@ -151,7 +161,9 @@ a:active, a:hover {
 
 .footer {
   width: 100%;
-  box-shadow: 0 0 20px #0000001a;
+  box-shadow: 0 0 20px var(--box-shadow__color);
+  z-index: 300;
+  margin-top: 1em;
 }
 .footer__wrapper {
   max-width: 1200px;
@@ -234,6 +246,50 @@ a:active, a:hover {
   font-size: 0.7em;
   color: #101c2e;
   font-weight: 700;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  transition: 0.4s;
+  border-width: 1px;
+  border-color: var(--a__color);
+  border-style: solid;
+  border-radius: 9px;
+}
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 6px;
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--a__color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.switch input:checked + .slider {
+  background-color: var(--a__color--active);
+}
+.switch input:checked + .slider:before {
+  left: 18px;
 }
 
 /*# sourceMappingURL=abacus.css.map */
