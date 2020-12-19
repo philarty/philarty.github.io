@@ -47,21 +47,21 @@
         text-decoration-thickness: 4px;
 
         &:nth-child(1) {
-          text-decoration-color: red;
+          text-decoration-color: var(--red);
           &:hover {
-            color: red;
+            color: var(--red);
           }
         }
         &:nth-child(2) {
-          text-decoration-color: green;
+          text-decoration-color: var(--green);
           &:hover {
-            color: green;
+            color: var(--green);
           }
         }
         &:nth-child(3) {
-          text-decoration-color: blue;
+          text-decoration-color: var(--blue);
           &:hover {
-            color: blue;
+            color: var(--blue);
           }
         }
       }

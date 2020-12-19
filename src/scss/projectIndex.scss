@@ -39,7 +39,7 @@
 
   &:hover {
     img {
-      filter: grayscale(100%) brightness(20%);
+      filter: grayscale(100%) brightness(30%);
     }
 
     .project-preview__text {
@@ -71,6 +71,7 @@
 
   &__tags {
     display: flex;
+    flex-wrap: wrap;
 
     a {
       text-transform: uppercase;

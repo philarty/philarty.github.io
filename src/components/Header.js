@@ -75,7 +75,7 @@ class HeaderInner extends React.Component {
           </div>
         </header>
 
-        <div className="pseudo-header" />
+        <div className="header__pseudo" />
       </React.Fragment>
     );
   }

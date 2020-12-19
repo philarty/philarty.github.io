@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .app {
   --primary-color: #00a1c2;
+  --red: #f50000;
+  --green: #006c00;
+  --blue: #0000f5;
   --background-color: #ffffff;
   --color: #000000;
   --a__color: #4d4d4d;
@@ -11,6 +14,9 @@
 
 .app.dark {
   --primary-color: #00a1c2;
+  --red: #f7382b;
+  --green: #2daf21;
+  --blue: #2744ec;
   --background-color: #171717;
   --color: #e3e3e3;
   --a__color: #b3b3b3;
@@ -89,8 +95,8 @@ a:active, a:hover {
   background-color: var(--a__background-color);
 }
 
-.pseudo-header {
-  height: 78px;
+.header__pseudo {
+  height: 100px;
   display: block;
 }
 
@@ -137,22 +143,22 @@ a:active, a:hover {
   text-decoration-thickness: 4px;
 }
 .profile__info h2 a:nth-child(1) {
-  text-decoration-color: red;
+  text-decoration-color: var(--red);
 }
 .profile__info h2 a:nth-child(1):hover {
-  color: red;
+  color: var(--red);
 }
 .profile__info h2 a:nth-child(2) {
-  text-decoration-color: green;
+  text-decoration-color: var(--green);
 }
 .profile__info h2 a:nth-child(2):hover {
-  color: green;
+  color: var(--green);
 }
 .profile__info h2 a:nth-child(3) {
-  text-decoration-color: blue;
+  text-decoration-color: var(--blue);
 }
 .profile__info h2 a:nth-child(3):hover {
-  color: blue;
+  color: var(--blue);
 }
 .profile__info p {
   font-size: 1.5em;
@@ -163,7 +169,7 @@ a:active, a:hover {
   width: 100%;
   box-shadow: 0 0 20px var(--box-shadow__color);
   z-index: 300;
-  margin-top: 1em;
+  margin-top: 3em;
 }
 .footer__wrapper {
   max-width: 1200px;
@@ -206,7 +212,7 @@ a:active, a:hover {
   z-index: 1;
 }
 .project-preview:hover img {
-  filter: grayscale(100%) brightness(20%);
+  filter: grayscale(100%) brightness(30%);
 }
 .project-preview:hover .project-preview__text {
   display: block;
@@ -235,6 +241,7 @@ a:active, a:hover {
 }
 .project-preview__tags {
   display: flex;
+  flex-wrap: wrap;
 }
 .project-preview__tags a {
   text-transform: uppercase;
