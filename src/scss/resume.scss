@@ -1,9 +1,12 @@
 .resume {
-  max-width: 1040px;
+  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 250px 1fr 1fr;
-  grid-gap: 0 20px;
+
+  @media screen and (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr;
+    grid-gap: 0 20px;
+  }
 
   h3 {
     font-size: 2em;
@@ -14,8 +17,8 @@
   }
 
   h4 {
-      margin: 0;
-      margin-top: 0.5em;
+    margin: 0;
+    margin-top: 0.5em;
   }
 
   &__row {
@@ -40,10 +43,10 @@
   }
 
   &__list {
-      margin-right: 1em;
+    margin-right: 1em;
   }
 
   &__description {
-      margin: 0.25em 0;
+    margin: 0.25em 0;
   }
 }

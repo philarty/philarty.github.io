@@ -56,11 +56,11 @@ const RESUME = [
       {
         title: "Software",
         period: "Mac & PC",
-        desccription: ["ILL", "sketch", "HTML", "CSS"],
+        description: ["ILL", "sketch", "HTML", "CSS"],
       },
       {
         title: "Prototyp",
-        desccription: ["ILL", "sketch", "HTML", "CSS"],
+        description: ["ILL", "sketch", "HTML", "CSS"],
       },
     ],
   },
