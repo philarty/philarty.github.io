@@ -48,26 +48,6 @@ const RESUME = [
           "Lorem ipsads, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
         ],
       },
-      {
-        sub_header: "Chronasdoks",
-        title: "ID Fellow",
-        period: "2018-2019",
-        description: [
-          "Lorem dsasit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
-          "Lorem ipdsait amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
-          "Lorem ipsuasdt amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
-        ],
-      },
-      {
-        sub_header: "Chradsle Books",
-        title: "ID Fellow",
-        period: "2018-2019",
-        description: [
-          "Lorem ipsum dolor adsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
-          "Lorem ipds amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
-          "Lorem sait amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
-        ],
-      },
     ],
   },
   {
@@ -164,7 +144,7 @@ const SectionHeader = ({ children }) => <h3>{children}</h3>;
 const SubSection = ({ children, ...rest }) => <div {...rest}>{children}</div>;
 const SubHeader = ({ children }) => <h4>{children}</h4>;
 const Detail = ({ title, period }) => (
-  <div>
+  <div className="resume__row">
     <h5>{title}</h5>
     <p>{period}</p>
   </div>
@@ -174,9 +154,9 @@ const Content = ({ children }) => <div>{children}</div>;
 //set so that iff descript is a list of items, it can be styled accordingly.
 const Description = ({ children }) => {
   if (children.length < 20) {
-    return <span>{children}</span>;
+    return <span className="resume__list">{children}</span>;
   } else {
-    return <p>{children}</p>;
+    return <p className="resume__description">{children}</p>;
   }
 };
 
@@ -196,21 +176,59 @@ class Section extends React.Component {
 
 const ResumeSection = () => (
   <div className="resume">
-    {RESUME.map((section) => (
-      <Section key={section.header}>
-        <Section.Header children={section.header} />
-        {section.contents.map((content) => (
-          <Section.SubSection key={content.sub_header || content.title || content.description}>
-            <Section.SubHeader children={content.sub_header} />
-            <Section.Detail title={content.title} period={content.period} />
-            {content.description &&
-              content.description.map((description) => (
-                <Section.Description children={description} key={description}/>
-              ))}
-          </Section.SubSection>
-        ))}
-      </Section>
-    ))}
+    <div> </div>
+    <div>
+      {RESUME.slice(0, 3).map((section) => (
+        <Section key={section.header}>
+          <Section.Header children={section.header} />
+          {section.contents.map((content) => (
+            <Section.SubSection
+              key={content.sub_header || content.title || content.description}
+            >
+              <Section.SubHeader children={content.sub_header} />
+              {(content.title || content.period) && (
+                <Section.Detail title={content.title} period={content.period} />
+              )}
+              <Section.Content>
+                {content.description &&
+                  content.description.map((description) => (
+                    <Section.Description
+                      children={description}
+                      key={description}
+                    />
+                  ))}
+              </Section.Content>
+            </Section.SubSection>
+          ))}
+        </Section>
+      ))}
+    </div>
+    <div>
+      {RESUME.slice(3).map((section) => (
+        <Section key={section.header}>
+          <Section.Header children={section.header} />
+          {section.contents.map((content) => (
+            <Section.SubSection
+              key={content.sub_header || content.title || content.description}
+            >
+              <Section.SubHeader children={content.sub_header} />
+              {(content.title || content.period) && (
+                <Section.Detail title={content.title} period={content.period} />
+              )}
+              <Section.Content>
+                {content.description &&
+                  content.description.map((description) => (
+                    <Section.Description
+                      children={description}
+                      key={description}
+                    />
+                  ))}
+              </Section.Content>
+            </Section.SubSection>
+          ))}
+        </Section>
+      ))}
+    </div>
   </div>
 );
 

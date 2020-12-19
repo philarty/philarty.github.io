@@ -4,15 +4,13 @@
 }
 
 .profile {
-  max-width:1040px;
+  max-width: 1040px;
   margin: 0 auto;
 
-
   @media screen and (min-width: 600px) {
-  display: flex;
-  padding: 3em;
-
-    
+    display: flex;
+    padding: 3em;
+    place-items: center;
   }
 
   img {
@@ -24,8 +22,6 @@
   }
 
   &__info {
-    place-self: center;
-
     h1 {
       font-size: 3em;
       margin: 0;
