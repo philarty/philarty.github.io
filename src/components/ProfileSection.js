@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from './Button'
 
 import profileImage from "../images/about-me/HeadShot.jpg";
+import Icon from "./Icon";
 
 const ProfileSection = () => (
   <div className="profile">
@@ -14,7 +16,7 @@ const ProfileSection = () => (
     </h2>
     <p>
       Here is a little paragraph about myself, I'm not 100% what to put in here
-      yet, but if you are reading this, feel free to send me a message about why
+      yet, but if you are reading this, <Button btnStyle='link'>this is a test link Button</Button> feel free to send me a message about why
       you think im hirable. it would probably be around four to five lines, so
       which is the length of this little snippet. Thanks for your input!
     </p>

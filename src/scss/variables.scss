@@ -28,6 +28,10 @@ $light--a__color: darken($a__color, 20%);
 $light--a__color--active: darken($a__color, 80%);
 $light--box-shadow__color: #0000001a;
 
+$light--button__color: #353535;
+$light--button__background-color: lightGray;
+$light--button__border-color: gray;
+
 $dark--primary: #00a1c2;
 $dark--red: #f7382b;
 $dark--green: #2daf21;
@@ -39,17 +43,27 @@ $dark--a__color: lighten($a__color, 40%);
 $dark--a__color--active: lighten($a__color, 80%);
 $dark--box-shadow__color: #00000080;
 
+$dark--button__color: #353535;
+$dark--button__background-color: darkGray;
+$dark--button__border-color: gray;
+
 //ccss custom vars
 .app {
   --primary-color: #{$primary-color};
   --red: #{$light--red};
   --green: #{$light--green};
   --blue: #{$light--blue};
-  --background-color: #{$light--background-color};
+
   --color: #{$light--color};
+  --background-color: #{$light--background-color};
+  --box-shadow__color: #{$light--box-shadow__color};
+  
   --a__color: #{$light--a__color};
   --a__color--active: #{$light--a__color--active};
-  --box-shadow__color: #{$light--box-shadow__color};
+
+  --button__color: #{$light--button__color};
+  --button__background-color: #{$light--button__background-color};
+  --button__border-color: #{$light--button__border-color};
 }
 
 .app.dark {
@@ -57,9 +71,15 @@ $dark--box-shadow__color: #00000080;
   --red: #{$dark--red};
   --green: #{$dark--green};
   --blue: #{$dark--blue};
-  --background-color: #{$dark--background-color};
+
   --color: #{$dark--color};
+  --background-color: #{$dark--background-color};
+  --box-shadow__color: #{$dark--box-shadow__color};
+
   --a__color: #{$dark--a__color};
   --a__color--active: #{$dark--a__color--active};
-  --box-shadow__color: #{$dark--box-shadow__color};
+
+  --button__color: #{$dark--button__color};
+  --button__background-color: #{$dark--button__background-color};
+  --button__border-color: #{$dark--button__border-color};
 }
