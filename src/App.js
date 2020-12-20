@@ -13,22 +13,41 @@ import ProjectIndex from "./containers/ProjectIndex.js";
 // import Project from "./containers/Project.js";
 import ScrollToTop from "./components/ScrollToTop";
 
+import Button from "./components/Button";
+import Icon from "./components/Icon";
 
 const App = () => {
   //detects user OS color theme preference.
-  const preferDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const preferDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [isDarkTheme, toggleDarkTheme] = useState(preferDark);
 
   return (
     <div className={"app" + (isDarkTheme ? " dark" : " light")}>
       <ScrollToTop />
-      <Header onToggleTheme={() => toggleDarkTheme(!isDarkTheme)} isDarkTheme={isDarkTheme}/>
+      <Header
+        onToggleTheme={() => toggleDarkTheme(!isDarkTheme)}
+        isDarkTheme={isDarkTheme}
+      />
       <Switch>
         <Route exact path="/">
           <section className="about">
             <ProfileSection />
           </section>
           <ProjectIndex />
+          {/* <section className="about">
+            <div>
+              <Button btnStyle="outline">hello</Button>
+              <Button>hello</Button>
+              <Button icon>
+                <Icon icon="moon" />
+              </Button>
+              <Button btnStyle='link' icon>
+                <Icon icon="moon" />
+              </Button>
+            </div>
+          </section> */}
         </Route>
 
         <Route exact path="/projects" component={ProjectIndex} />
