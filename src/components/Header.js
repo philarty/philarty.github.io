@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import ToggleSwitch from './ToggleSwitch'
+import Icon from "./Icon";
+import Button from "./Button";
+import ToggleSwitch from "./ToggleSwitch";
 
 const NAV = [
   {
@@ -67,10 +69,13 @@ class HeaderInner extends React.Component {
                   {link.text}
                 </Link>
               ))}
-              <ToggleSwitch
-                isSelected={isDarkTheme}
-                onToggle={() => this.props.onToggleTheme()}
-              />
+              <Button
+                onClick={() => this.props.onToggleTheme()}
+                btnSize="icon"
+                btnStyle="outline"
+              >
+                <Icon icon={isDarkTheme ? "sun" : "moon"} />
+              </Button>
             </nav>
           </div>
         </header>
