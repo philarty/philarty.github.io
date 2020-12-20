@@ -9,7 +9,7 @@
 
   &--scroll {
     top: 0;
-    box-shadow: 0 0 20px #0000001a;
+    box-shadow: 0 0 20px var(--box-shadow__color);
     font-size: 22px;
   }
 
@@ -23,24 +23,32 @@
   }
 
   &__logo {
-    color: $primary-color;
+    color: var(--primary-color);
     text-transform: uppercase;
     font-size: 1.4em;
+    font-weight: 800;
+
     &:hover,
     &:active {
-      color: $primary-color;
+      color: var(--primary-color);
     }
   }
 
   &__nav {
     display: flex;
 
-    > a {
+    > * {
       margin-left: 1em;
     }
+  }
 
-    .active {
-      color: $primary-color;
+  //toggle-switch 
+
+  .switch {
+    place-self: center;
+
+    input:checked + .slider {
+      background-color: var(--a__background-color);
     }
   }
 }
@@ -48,7 +56,7 @@
 // this is a spacer hidden behind header so that on scroll, 
 // so page content isnt affected by header shrinkage.
 
-.pseudo-header {
-  height: 78px;
+.header__pseudo {
+  height: 100px;
   display: block;
 }

@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className={"app" + (isDarkTheme ? " dark" : " light")}>
       <ScrollToTop />
-      <Header onToggleTheme={() => toggleDarkTheme(!isDarkTheme)} />
+      <Header onToggleTheme={() => toggleDarkTheme(!isDarkTheme)} isDarkTheme={isDarkTheme}/>
       <Switch>
         <Route exact path="/">
           <section className="about">

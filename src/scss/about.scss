@@ -4,28 +4,26 @@
 }
 
 .profile {
-  max-width:1040px;
+  max-width: 1040px;
   margin: 0 auto;
-
+  display: grid;
 
   @media screen and (min-width: 600px) {
-  display: flex;
-  padding: 3em;
-
-    
+    display: flex;
+    padding: 3em;
+    place-items: center;
   }
 
   img {
     width: 100%;
     max-width: 350px;
     margin-right: 30px;
+    place-self: center;
     height: intrinsic;
     //intrinsic for safari
   }
 
   &__info {
-    place-self: center;
-
     h1 {
       font-size: 3em;
       margin: 0;
@@ -42,26 +40,26 @@
       line-height: 1.2;
 
       a {
-        color: $text-color;
+        color: var(--color);
         text-decoration: underline;
         text-decoration-thickness: 4px;
 
         &:nth-child(1) {
-          text-decoration-color: red;
+          text-decoration-color: var(--red);
           &:hover {
-            color: red;
+            color: var(--red);
           }
         }
         &:nth-child(2) {
-          text-decoration-color: green;
+          text-decoration-color: var(--green);
           &:hover {
-            color: green;
+            color: var(--green);
           }
         }
         &:nth-child(3) {
-          text-decoration-color: blue;
+          text-decoration-color: var(--blue);
           &:hover {
-            color: blue;
+            color: var(--blue);
           }
         }
       }
