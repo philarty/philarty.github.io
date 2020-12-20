@@ -13,8 +13,11 @@ import ProjectIndex from "./containers/ProjectIndex.js";
 // import Project from "./containers/Project.js";
 import ScrollToTop from "./components/ScrollToTop";
 
+
 const App = () => {
-  const [isDarkTheme, toggleDarkTheme] = useState(false);
+  //detects user OS color theme preference.
+  const preferDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [isDarkTheme, toggleDarkTheme] = useState(preferDark);
 
   return (
     <div className={"app" + (isDarkTheme ? " dark" : " light")}>
