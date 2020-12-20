@@ -6,11 +6,18 @@
   padding: 0.5em 0;
   transition: all 0.25s ease-in-out;
   z-index: 300;
+  touch-action:manipulation;
 
   &--scroll {
     top: 0;
     box-shadow: 0 0 20px var(--box-shadow__color);
     font-size: 22px;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      transition: all 0.25s ease-in-out;
+    }
   }
 
   &__wrapper {
@@ -36,6 +43,7 @@
 
   &__nav {
     display: flex;
+    align-items: center;
 
     > * {
       margin-left: 1em;
