@@ -1,8 +1,122 @@
+.icon {
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn,
+button {
+  display: inline-block;
+  border-radius: 5px;
+  font-family: inherit;
+  width: auto;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  line-height: 1;
+
+  touch-action: manipulation;
+  background-image: none;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+
+  padding: 5px 12px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: 0 3px 10px var(--box-shadow__color);
+  }
+}
+
+//style
+.btn--outline {
+  border-style: solid;
+  border-width: 1px;
+
+  background-color: transparent;
+
+  &.btn--primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  &.btn--default {
+    border-color: var(--a__color);
+    color: var(--a__color);
+
+    &:hover, &:focus, &:active {
+      border-color: var(--a__color--active);
+      color: var(--a__color--active);
+      box-shadow: none;
+    }
+  }
+}
+
+.btn--link {
+  border-color: transparent;
+  border-width: 0px;
+  background-color: transparent;
+
+  padding: 0;
+  line-height: inherit;
+  color: var(--primary-color);
+  font-size: inherit;
+
+  &:hover {
+    text-decoration: underline;
+    box-shadow: none;
+  }
+}
+
+// color
+
+// .btn--primary {
+//   color: var(--primary-color);
+//   border-color: var(--primary-color)
+// }
+
+// .btn--default {
+//   color: var(--button__color);
+//   background-color: var(--button__background-color);
+//   border-color: transparent;
+//   // border-color: var(--button__border-color)
+// }
+
+// sizing
+
+.btn--sm {
+  padding: 2px 5px;
+}
+
+.btn--icon {
+  padding: 3px;
+  line-height: 0;
+}
+
+// utility
+.btn--block {
+  width: 100%;
+}
+
+// toggl switch
 $toggle-size: 12px;
 $toggle-border-width: 1px;
 $toggle-margin: 2px;
-$toggle-background-height: $toggle-size + $toggle-border-width * 2 + $toggle-margin * 2;
-$toggle-background-width: ($toggle-size + $toggle-border-width + $toggle-margin * 2) * 2;
+$toggle-background-height: $toggle-size + $toggle-border-width * 2 +
+  $toggle-margin * 2;
+$toggle-background-width: (
+    $toggle-size + $toggle-border-width + $toggle-margin * 2
+  ) * 2;
 
 //The switch - the box around the slider
 .switch {
