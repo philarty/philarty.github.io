@@ -15,11 +15,11 @@ const Button = (props) => {
     <button
       className={
         "btn" +
-        (btnSize ? " btn--" + btnSize : "") +
-        (btnStyle ? " btn--" + btnStyle : "") +
-        (btnColor ? " btn--" + btnColor : " btn--default") +
-        (block ? " btn--block" : "") +
-        (icon ? " btn--icon" : "")
+        (btnSize ? " btn-" + btnSize : " btn-md") +
+        (icon ? " btn-icon" : "") +
+        (btnStyle ? " btn-" + btnStyle : " btn-solid") +
+        (btnColor ? "-" + btnColor : "-default") +
+        (block ? " btn-block" : "")
       }
       onClick={onClick}
       {...rest}

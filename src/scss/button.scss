@@ -18,7 +18,6 @@ button {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  font-size: 1.2rem;
   line-height: 1;
 
   touch-action: manipulation;
@@ -26,87 +25,124 @@ button {
 
   border-style: solid;
   border-width: 1px;
-  border-color: transparent;
-
-  padding: 5px 12px;
 
   &:active,
   &:focus,
   &:hover {
     outline: none;
-    box-shadow: 0 3px 10px var(--box-shadow__color);
   }
 }
 
-//style
-.btn--outline {
-  border-style: solid;
-  border-width: 1px;
+@mixin btn-solid($color) {
+  .btn-solid-#{$color} {
+    border-color: transparent;
 
-  background-color: transparent;
+    background-color: var(--button-color-#{$color});
+    color: white;
 
-  &.btn--primary {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-  }
-
-  &.btn--default {
-    border-color: var(--a__color);
-    color: var(--a__color);
-
-    &:hover, &:focus, &:active {
-      border-color: var(--a__color--active);
-      color: var(--a__color--active);
-      box-shadow: none;
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: var(--button-color-#{$color}--active);
     }
   }
 }
 
-.btn--link {
-  border-color: transparent;
-  border-width: 0px;
-  background-color: transparent;
+@mixin btn-outline($color) {
+  .btn-outline-#{$color} {
+    border-color: var(--button-color-#{$color});
+    color: var(--button-color-#{$color});
+    background-color: transparent;
 
-  padding: 0;
-  line-height: inherit;
-  color: var(--primary-color);
-  font-size: inherit;
-
-  &:hover {
-    text-decoration: underline;
-    box-shadow: none;
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: var(--button-color-#{$color}--active);
+      color: var(--button-color-#{$color}--active);
+    }
   }
 }
 
-// color
+@mixin btn-link($color) {
+  .btn-link-#{$color} {
+    padding: 0;
+    line-height: inherit;
+    font-size: inherit;
 
-// .btn--primary {
-//   color: var(--primary-color);
-//   border-color: var(--primary-color)
-// }
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--button-color-#{$color});
 
-// .btn--default {
-//   color: var(--button__color);
-//   background-color: var(--button__background-color);
-//   border-color: transparent;
-//   // border-color: var(--button__border-color)
-// }
-
-// sizing
-
-.btn--sm {
-  padding: 2px 5px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--button-color-#{$color}--active);
+      text-decoration: underline;
+    }
+  }
 }
 
-.btn--icon {
-  padding: 3px;
+//sizes
+.btn-sm {
+  padding: 2px 5px;
+  font-size: 1rem;
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.btn-md {
+  padding: 5px 12px;
+  font-size: 1.2rem;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.btn-lg {
+  padding: 8px 20px;
+  font-size: 1.5rem;
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.btn-icon {
   line-height: 0;
+
+  &.btn-sm {
+    padding: 2px;
+  }
+  &.btn-md {
+    padding: 5px;
+  }
+  &.btn-lg {
+    padding: 8px;
+  }
 }
 
 // utility
-.btn--block {
+.btn-block {
   width: 100%;
 }
+
+@include btn-solid(default);
+@include btn-solid(red);
+@include btn-solid(green);
+@include btn-solid(blue);
+@include btn-outline(default);
+@include btn-outline(red);
+@include btn-outline(green);
+@include btn-outline(blue);
+@include btn-link(default);
+@include btn-link(red);
+@include btn-link(green);
+@include btn-link(blue);
 
 // toggl switch
 $toggle-size: 12px;

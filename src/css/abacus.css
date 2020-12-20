@@ -10,9 +10,14 @@
   --box-shadow__color: #0000001a;
   --a__color: #4d4d4d;
   --a__color--active: black;
-  --button__color: #353535;
-  --button__background-color: lightGray;
-  --button__border-color: gray;
+  --button-color-default: #e6e6e6;
+  --button-color-default--active: white;
+  --button-color-red: #f7382b;
+  --button-color-red--active: #f7382b;
+  --button-color-green: #2daf21;
+  --button-color-green--active: #2daf21;
+  --button-color-blue: #2744ec;
+  --button-color-blue--active: #2744ec;
 }
 
 .app.dark {
@@ -25,9 +30,6 @@
   --box-shadow__color: #00000080;
   --a__color: #e6e6e6;
   --a__color--active: white;
-  --button__color: #353535;
-  --button__background-color: darkGray;
-  --button__border-color: gray;
 }
 
 body {
@@ -152,6 +154,255 @@ a:active, a:hover {
   color: var(--a__color--active);
 }
 
+.icon {
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn,
+button {
+  display: inline-block;
+  border-radius: 5px;
+  font-family: inherit;
+  width: auto;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1;
+  touch-action: manipulation;
+  background-image: none;
+  border-style: solid;
+  border-width: 1px;
+}
+.btn:active, .btn:focus, .btn:hover,
+button:active,
+button:focus,
+button:hover {
+  outline: none;
+}
+
+.btn-sm {
+  padding: 2px 5px;
+  font-size: 1rem;
+}
+.btn-sm .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-md {
+  padding: 5px 12px;
+  font-size: 1.2rem;
+}
+.btn-md .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-lg {
+  padding: 8px 20px;
+  font-size: 1.5rem;
+}
+.btn-lg .icon {
+  width: 28px;
+  height: 28px;
+}
+
+.btn-icon {
+  line-height: 0;
+}
+.btn-icon.btn-sm {
+  padding: 2px;
+}
+.btn-icon.btn-md {
+  padding: 5px;
+}
+.btn-icon.btn-lg {
+  padding: 8px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-solid-default {
+  border-color: transparent;
+  background-color: var(--button-color-default);
+  color: white;
+}
+.btn-solid-default:active, .btn-solid-default:focus, .btn-solid-default:hover {
+  background-color: var(--button-color-default--active);
+}
+
+.btn-solid-red {
+  border-color: transparent;
+  background-color: var(--button-color-red);
+  color: white;
+}
+.btn-solid-red:active, .btn-solid-red:focus, .btn-solid-red:hover {
+  background-color: var(--button-color-red--active);
+}
+
+.btn-solid-green {
+  border-color: transparent;
+  background-color: var(--button-color-green);
+  color: white;
+}
+.btn-solid-green:active, .btn-solid-green:focus, .btn-solid-green:hover {
+  background-color: var(--button-color-green--active);
+}
+
+.btn-solid-blue {
+  border-color: transparent;
+  background-color: var(--button-color-blue);
+  color: white;
+}
+.btn-solid-blue:active, .btn-solid-blue:focus, .btn-solid-blue:hover {
+  background-color: var(--button-color-blue--active);
+}
+
+.btn-outline-default {
+  border-color: var(--button-color-default);
+  color: var(--button-color-default);
+  background-color: transparent;
+}
+.btn-outline-default:hover, .btn-outline-default:focus, .btn-outline-default:active {
+  border-color: var(--button-color-default--active);
+  color: var(--button-color-default--active);
+}
+
+.btn-outline-red {
+  border-color: var(--button-color-red);
+  color: var(--button-color-red);
+  background-color: transparent;
+}
+.btn-outline-red:hover, .btn-outline-red:focus, .btn-outline-red:active {
+  border-color: var(--button-color-red--active);
+  color: var(--button-color-red--active);
+}
+
+.btn-outline-green {
+  border-color: var(--button-color-green);
+  color: var(--button-color-green);
+  background-color: transparent;
+}
+.btn-outline-green:hover, .btn-outline-green:focus, .btn-outline-green:active {
+  border-color: var(--button-color-green--active);
+  color: var(--button-color-green--active);
+}
+
+.btn-outline-blue {
+  border-color: var(--button-color-blue);
+  color: var(--button-color-blue);
+  background-color: transparent;
+}
+.btn-outline-blue:hover, .btn-outline-blue:focus, .btn-outline-blue:active {
+  border-color: var(--button-color-blue--active);
+  color: var(--button-color-blue--active);
+}
+
+.btn-link-default {
+  padding: 0;
+  line-height: inherit;
+  font-size: inherit;
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--button-color-default);
+}
+.btn-link-default:hover, .btn-link-default:focus, .btn-link-default:active {
+  color: var(--button-color-default--active);
+  text-decoration: underline;
+}
+
+.btn-link-red {
+  padding: 0;
+  line-height: inherit;
+  font-size: inherit;
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--button-color-red);
+}
+.btn-link-red:hover, .btn-link-red:focus, .btn-link-red:active {
+  color: var(--button-color-red--active);
+  text-decoration: underline;
+}
+
+.btn-link-green {
+  padding: 0;
+  line-height: inherit;
+  font-size: inherit;
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--button-color-green);
+}
+.btn-link-green:hover, .btn-link-green:focus, .btn-link-green:active {
+  color: var(--button-color-green--active);
+  text-decoration: underline;
+}
+
+.btn-link-blue {
+  padding: 0;
+  line-height: inherit;
+  font-size: inherit;
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--button-color-blue);
+}
+.btn-link-blue:hover, .btn-link-blue:focus, .btn-link-blue:active {
+  color: var(--button-color-blue--active);
+  text-decoration: underline;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  transition: 0.4s;
+  border-width: 1px;
+  border-color: var(--a__color);
+  border-style: solid;
+  border-radius: 9px;
+}
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 6px;
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--a__color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.switch input:checked + .slider {
+  background-color: var(--a__color--active);
+}
+.switch input:checked + .slider:before {
+  left: 18px;
+}
+
 .main-header {
   background-color: var(--background-color);
   position: fixed;
@@ -208,6 +459,18 @@ a:active, a:hover {
   display: block;
 }
 
+.footer {
+  width: 100%;
+  box-shadow: 0 0 20px var(--box-shadow__color);
+  z-index: 300;
+  margin-top: 3em;
+}
+.footer__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
 .about {
   padding: 0 3em;
   min-height: 80vh;
@@ -231,28 +494,34 @@ a:active, a:hover {
   width: 100%;
   place-self: center;
   height: intrinsic;
+  max-width: 250px;
 }
 @media (min-width: 768px) {
   .profile img {
     grid-row: 1/6;
+    max-width: 100%;
   }
 }
 .profile h1 {
   grid-row: 1/2;
   margin: 0;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .profile h1 {
     grid-row: 2/3;
+    text-align: left;
   }
 }
 .profile h2 {
   grid-row: 2/3;
   line-height: 1.2;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .profile h2 {
     grid-row: 3/4;
+    text-align: left;
   }
 }
 .profile h2 a {
@@ -281,19 +550,11 @@ a:active, a:hover {
 .profile p {
   grid-row: 4/5;
   font-size: 1.5em;
-  max-width: 550px;
 }
-
-.footer {
-  width: 100%;
-  box-shadow: 0 0 20px var(--box-shadow__color);
-  z-index: 300;
-  margin-top: 3em;
-}
-.footer__wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1em;
+@media (min-width: 768px) {
+  .profile p {
+    max-width: 550px;
+  }
 }
 
 .project-index__title {
@@ -374,133 +635,6 @@ a:active, a:hover {
   font-weight: 700;
 }
 
-.icon {
-  fill: currentColor;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-}
-
-.btn,
-button {
-  display: inline-block;
-  border-radius: 5px;
-  font-family: inherit;
-  width: auto;
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 1.2rem;
-  line-height: 1;
-  touch-action: manipulation;
-  background-image: none;
-  border-style: solid;
-  border-width: 1px;
-  border-color: transparent;
-  padding: 5px 12px;
-}
-.btn:active, .btn:focus, .btn:hover,
-button:active,
-button:focus,
-button:hover {
-  outline: none;
-  box-shadow: 0 3px 10px var(--box-shadow__color);
-}
-
-.btn--outline {
-  border-style: solid;
-  border-width: 1px;
-  background-color: transparent;
-}
-.btn--outline.btn--primary {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-}
-.btn--outline.btn--default {
-  border-color: var(--a__color);
-  color: var(--a__color);
-}
-.btn--outline.btn--default:hover, .btn--outline.btn--default:focus, .btn--outline.btn--default:active {
-  border-color: var(--a__color--active);
-  color: var(--a__color--active);
-  box-shadow: none;
-}
-
-.btn--link {
-  border-color: transparent;
-  border-width: 0px;
-  background-color: transparent;
-  padding: 0;
-  line-height: inherit;
-  color: var(--primary-color);
-  font-size: inherit;
-}
-.btn--link:hover {
-  text-decoration: underline;
-  box-shadow: none;
-}
-
-.btn--sm {
-  padding: 2px 5px;
-}
-
-.btn--icon {
-  padding: 3px;
-  line-height: 0;
-}
-
-.btn--block {
-  width: 100%;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 34px;
-  height: 18px;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.switch .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--background-color);
-  transition: 0.4s;
-  border-width: 1px;
-  border-color: var(--a__color);
-  border-style: solid;
-  border-radius: 9px;
-}
-.switch .slider:before {
-  position: absolute;
-  content: "";
-  border-radius: 6px;
-  height: 12px;
-  width: 12px;
-  left: 2px;
-  bottom: 2px;
-  background-color: var(--a__color);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-.switch input:checked + .slider {
-  background-color: var(--a__color--active);
-}
-.switch input:checked + .slider:before {
-  left: 18px;
-}
-
 .resume {
   max-width: 1200px;
   margin: 0 auto;
@@ -545,6 +679,11 @@ button:hover {
 }
 .resume__description {
   margin: 0.25em 0;
+}
+
+.four-oh-four {
+  max-width: 1040px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=abacus.css.map */

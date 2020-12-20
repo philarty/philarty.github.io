@@ -69,10 +69,12 @@ class HeaderInner extends React.Component {
                   {link.text}
                 </Link>
               ))}
-              <Button
+             <Button
                 onClick={() => this.props.onToggleTheme()}
-                btnSize="icon"
+                btnSize="sm"
                 btnStyle="outline"
+
+                icon
               >
                 <Icon icon={isDarkTheme ? "sun" : "moon"} />
               </Button>

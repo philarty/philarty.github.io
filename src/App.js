@@ -36,18 +36,6 @@ const App = () => {
             <ProfileSection />
           </section>
           <ProjectIndex />
-          {/* <section className="about">
-            <div>
-              <Button btnStyle="outline">hello</Button>
-              <Button>hello</Button>
-              <Button icon>
-                <Icon icon="moon" />
-              </Button>
-              <Button btnStyle='link' icon>
-                <Icon icon="moon" />
-              </Button>
-            </div>
-          </section> */}
         </Route>
 
         <Route exact path="/projects" component={ProjectIndex} />

@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const FourOhFour = () => {
   return (
-    <section className="404">
+    <section className="four-oh-four">
       <h1>AIYA</h1>
       <h3>Seems like you are lost.</h3>
-      <Link to="/">
-        <h3>Lets head home</h3>
+      <Link to="/" className='btn btn-lg btn-solid-red'>
+        Lets head home
       </Link>
     </section>
   );

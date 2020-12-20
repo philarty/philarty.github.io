@@ -13,7 +13,7 @@
     justify-content: left;
     grid-gap: 0 20px;
 
-    grid-template-columns: minmax(300px, 0.5fr) auto;;
+    grid-template-columns: minmax(300px, 0.5fr) auto;
     grid-template-rows: 1fr repeat(3, min-content) 1fr;
   }
 
@@ -23,24 +23,31 @@
     height: intrinsic;
     //intrinsic for safari
 
+    max-width: 250px;
+
     @include md {
       grid-row: 1/6;
+      max-width: 100%;
     }
   }
 
   h1 {
     grid-row: 1/2;
     margin: 0;
+    text-align: center;
     @include md {
       grid-row: 2/3;
+      text-align: left;
     }
   }
 
   h2 {
     grid-row: 2/3;
     line-height: 1.2;
+    text-align: center;
     @include md {
       grid-row: 3/4;
+      text-align: left;
     }
     a {
       color: var(--color);
@@ -67,10 +74,13 @@
       }
     }
   }
-  
+
   p {
     grid-row: 4/5;
     font-size: 1.5em;
-    max-width: 550px;
+
+    @include md {
+      max-width: 550px;
+    }
   }
 }
