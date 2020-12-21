@@ -13,14 +13,11 @@ import ProjectIndex from "./containers/ProjectIndex.js";
 // import Project from "./containers/Project.js";
 import ScrollToTop from "./components/ScrollToTop";
 
-import Button from "./components/Button";
-import Icon from "./components/Icon";
-
 const App = () => {
   //detects user OS color theme preference.
-  const preferDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const preferDark = false
+    // window.matchMedia &&
+    // window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [isDarkTheme, toggleDarkTheme] = useState(preferDark);
 
   return (
