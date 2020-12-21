@@ -9,6 +9,7 @@ const Button = (props) => {
     icon,
     children,
     onClick,
+    className,
     ...rest
   } = props;
   return (
@@ -19,7 +20,8 @@ const Button = (props) => {
         (icon ? " btn-icon" : "") +
         (btnStyle ? " btn-" + btnStyle : " btn-solid") +
         (btnColor ? "-" + btnColor : "-default") +
-        (block ? " btn-block" : "")
+        (block ? " btn-block" : "") +
+        (className ? " " + className : "")
       }
       onClick={onClick}
       {...rest}
