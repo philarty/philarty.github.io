@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Button from './Button'
 
 import profileImage from "../images/about-me/HeadShot.jpg";
-import Icon from "./Icon";
 
 const ProfileSection = () => (
   <div className="profile">
