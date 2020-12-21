@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Icon from "./Icon";
 import Button from "./Button";
-import ToggleSwitch from "./ToggleSwitch";
 
 const NAV = [
   {
@@ -29,6 +28,7 @@ class HeaderInner extends React.Component {
 
     this.state = {
       scroll: false,
+      showDropdownMenu: false,
     };
   }
 
@@ -40,17 +40,32 @@ class HeaderInner extends React.Component {
     this.setState({ scroll: window.scrollY > 0 });
   };
 
+  handleToggleDropdown = () => {
+    this.setState({ showDropdownMenu: !this.state.showDropdownMenu });
+  };
+
   render() {
-    const { scroll } = this.state;
+    const { scroll, showDropdownMenu } = this.state;
     const { location, isDarkTheme } = this.props;
     const currentPath = location && location.pathname;
 
     return (
       <React.Fragment>
         <header
-          className={"main-header" + (scroll ? " main-header--scroll" : "")}
+          className={
+            "main-header" +
+            (scroll || showDropdownMenu ? " main-header--scroll" : "")
+          }
         >
           <div className="main-header__wrapper">
+            <Button
+              onClick={this.handleToggleDropdown}
+              icon
+              btnStyle="link"
+              className="main-header__mobile-nav-button"
+            >
+              <Icon icon="sun" />
+            </Button>
             <Link
               className="main-header__logo"
               to="/"
@@ -58,7 +73,7 @@ class HeaderInner extends React.Component {
             >
               Philarty
             </Link>
-            <nav className="main-header__nav">
+            <nav className="main-header__nav--desktop">
               {NAV.map((link) => (
                 <Link
                   key={link.text}
@@ -69,17 +84,32 @@ class HeaderInner extends React.Component {
                   {link.text}
                 </Link>
               ))}
-             <Button
+              <Button
                 onClick={() => this.props.onToggleTheme()}
                 btnSize="sm"
                 btnStyle="outline"
-
                 icon
               >
                 <Icon icon={isDarkTheme ? "sun" : "moon"} />
               </Button>
             </nav>
           </div>
+
+          {/* dropdown Menu for mobile */}
+          {showDropdownMenu && (
+            <nav className="main-header__nav--mobile">
+              {NAV.map((link) => (
+                <Link
+                  key={link.text}
+                  to={link.url}
+                  className={currentPath.includes(link.url) ? "active" : ""}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  {link.text}
+                </Link>
+              ))}
+            </nav>
+          )}
         </header>
 
         <div className="header__pseudo" />
