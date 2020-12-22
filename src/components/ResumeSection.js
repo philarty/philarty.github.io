@@ -68,7 +68,7 @@ const RESUME = [
           "Sketch",
           "HTML",
           "CSS",
-          " Rhino",
+          "Rhino",
           "SolidWorks",
           "KeyShot",
           "Fusion360",
