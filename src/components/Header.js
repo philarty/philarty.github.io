@@ -28,12 +28,30 @@ class HeaderInner extends React.Component {
 
     this.state = {
       scroll: false,
-      showDropdownMenu: false,
+      expandedMenu: false,
     };
+
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("mousedown", this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("mousedown", this.handleClickOutside);
+  }
+
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+
+  handleClickOutside(event) {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      this.handleToggleDropdown();
+    }
   }
 
   handleScroll = () => {
@@ -41,11 +59,11 @@ class HeaderInner extends React.Component {
   };
 
   handleToggleDropdown = () => {
-    this.setState({ showDropdownMenu: !this.state.showDropdownMenu });
+    this.setState({ expandedMenu: !this.state.expandedMenu });
   };
 
   render() {
-    const { scroll, showDropdownMenu } = this.state;
+    const { scroll, expandedMenu } = this.state;
     const { location, isDarkTheme } = this.props;
     const currentPath = location && location.pathname;
 
@@ -54,7 +72,7 @@ class HeaderInner extends React.Component {
         <header
           className={
             "main-header" +
-            (scroll || showDropdownMenu ? " main-header--scroll" : "")
+            (scroll || expandedMenu ? " main-header--scroll" : "")
           }
         >
           <div className="main-header__wrapper">
@@ -62,9 +80,10 @@ class HeaderInner extends React.Component {
               onClick={this.handleToggleDropdown}
               icon
               btnStyle="link"
+              btnSize="sm"
               className="main-header__mobile-nav-button"
             >
-              <Icon icon="sun" />
+              <Icon icon="menu" />
             </Button>
             <Link
               className="main-header__logo"
@@ -85,10 +104,11 @@ class HeaderInner extends React.Component {
                 </Link>
               ))}
               <Button
-                onClick={() => this.props.onToggleTheme()}
-                btnSize="sm"
-                btnStyle="outline"
+                onClick={this.props.onToggleTheme}
+                btnSize="md"
+                btnStyle="link"
                 icon
+                ref={this.setWrapperRef}
               >
                 <Icon icon={isDarkTheme ? "sun" : "moon"} />
               </Button>
@@ -96,14 +116,17 @@ class HeaderInner extends React.Component {
           </div>
 
           {/* dropdown Menu for mobile */}
-          {showDropdownMenu && (
-            <nav className="main-header__nav--mobile">
+          {expandedMenu && (
+            <nav ref={this.setWrapperRef} className="main-header__nav--mobile">
               {NAV.map((link) => (
                 <Link
                   key={link.text}
                   to={link.url}
                   className={currentPath.includes(link.url) ? "active" : ""}
-                  onClick={() => window.scrollTo(0, 0)}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    this.handleToggleDropdown();
+                  }}
                 >
                   {link.text}
                 </Link>

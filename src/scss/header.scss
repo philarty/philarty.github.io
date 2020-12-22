@@ -2,31 +2,41 @@
   background-color: var(--background-color);
   position: fixed;
   width: 100%;
-  font-size: 28px;
-  padding: 0.5em 0;
+
   transition: all 0.25s ease-in-out;
   z-index: 300;
-  touch-action:manipulation;
+  touch-action: manipulation;
+  font-size: 22px;
+
+  transition: all 0.25s ease-in-out;
+
+  @include md {
+    font-size: 28px;
+  }
 
   &--scroll {
-    top: 0;
     box-shadow: 0 0 20px var(--box-shadow__color);
     font-size: 22px;
-
-    .icon {
-      width: 20px;
-      height: 20px;
-      transition: all 0.25s ease-in-out;
-    }
+    background-color:var(--header__background-color);
   }
 
   &__wrapper {
     max-width: 1200px;
     margin: auto;
-    padding: 0 1em;
+    padding: 0 0.5em;
     display: flex;
     place-content: space-between;
-    align-items: baseline;
+    align-items: center;
+
+    @include md {
+      margin: 0.5em auto;
+    }
+  }
+
+  &__mobile-nav-button {
+    @include md {
+      display: none;
+    }
   }
 
   &__logo {
@@ -41,16 +51,35 @@
     }
   }
 
-  &__nav {
+  &__nav--desktop {
     display: flex;
     align-items: center;
 
     > * {
       margin-left: 1em;
     }
+
+    a {
+      display: none;
+    }
+
+    @include md {
+      a {
+        display: inline-block;
+      }
+    }
   }
 
-  //toggle-switch 
+  &__nav--mobile {
+    display: grid;
+    padding: 0 0.5em 0.5em;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  //toggle-switch
 
   .switch {
     place-self: center;
@@ -61,7 +90,7 @@
   }
 }
 
-// this is a spacer hidden behind header so that on scroll, 
+// this is a spacer hidden behind header so that on scroll,
 // so page content isnt affected by header shrinkage.
 
 .header__pseudo {
