@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = (props) => {
+const Button = React.forwardRef((props, ref) => {
   const {
     btnSize,
     btnStyle,
@@ -14,6 +14,7 @@ const Button = (props) => {
   } = props;
   return (
     <button
+      ref={ref}
       className={
         "btn" +
         (btnSize ? " btn-" + btnSize : " btn-md") +
@@ -29,6 +30,6 @@ const Button = (props) => {
       {children}
     </button>
   );
-};
+});
 
 export default Button;
