@@ -1,10 +1,9 @@
 .about {
-  padding: 0 3em;
-  min-height: 80vh;
+  padding: 0 2em;
 }
 
 .profile {
-  max-width: 1040px;
+  max-width: 900px;
   margin: 0 auto;
   display: grid;
 
@@ -35,9 +34,13 @@
     grid-row: 1/2;
     margin: 0;
     text-align: center;
+
+    font-size: 1.728rem;
+
     @include md {
       grid-row: 2/3;
       text-align: left;
+      font-size: 2.488rem;
     }
   }
 
@@ -45,10 +48,14 @@
     grid-row: 2/3;
     line-height: 1.2;
     text-align: center;
+    font-size: 1.728rem;
+
     @include md {
       grid-row: 3/4;
       text-align: left;
+      font-size: 2.488rem;
     }
+
     a {
       color: var(--color);
       text-decoration: underline;
@@ -77,10 +84,13 @@
 
   p {
     grid-row: 4/5;
-    font-size: 1.5em;
+
+    font-size: 1rem;
 
     @include md {
+      margin: 0;
       max-width: 550px;
+      font-size: 1.44rem;
     }
   }
 }

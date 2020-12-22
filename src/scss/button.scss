@@ -41,7 +41,6 @@ button {
     color: white;
 
     &:active,
-    &:focus,
     &:hover {
       background-color: var(--button-color-#{$color}--active);
     }
@@ -55,7 +54,6 @@ button {
     background-color: transparent;
 
     &:hover,
-    &:focus,
     &:active {
       border-color: var(--button-color-#{$color}--active);
       color: var(--button-color-#{$color}--active);
@@ -65,16 +63,11 @@ button {
 
 @mixin btn-link($color) {
   .btn-link-#{$color} {
-    padding: 0;
-    line-height: inherit;
-    font-size: inherit;
-
     border-color: transparent;
     background-color: transparent;
     color: var(--button-color-#{$color});
 
     &:hover,
-    &:focus,
     &:active {
       color: var(--button-color-#{$color}--active);
       text-decoration: underline;

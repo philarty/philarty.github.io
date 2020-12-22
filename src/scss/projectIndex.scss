@@ -8,13 +8,13 @@
   &__grid {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2em;
 
     display: grid;
-    grid-gap: 2em;
+    grid-gap: 4em;
 
-    @media screen and (min-width: 600px) {
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    @include md {
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      grid-gap: 2em;
     }
   }
 }
@@ -38,21 +38,23 @@
   }
 
   &:hover {
-    img {
-      filter: grayscale(100%) brightness(30%);
-    }
+    @include md {
+      img {
+        filter: grayscale(100%) brightness(30%);
+      }
 
-    .project-preview__text {
-      display: block;
+      .project-preview__text {
+        display: block;
+      }
     }
   }
 
   &__text {
     place-self: center;
     z-index: 2;
-    padding: 0 1em;
+    padding: 0 2em;
 
-    @media screen and (min-width: 600px) {
+    @include md {
       display: none;
       grid-area: 1/1/2/2;
       padding: 0 3em;
@@ -61,12 +63,8 @@
   }
 
   h3 {
-    font-size: 2em;
     text-align: center;
-
-    @media screen and (max-width: 599px) {
-      margin: 0.5em;
-    }
+    margin: 0.5em;
   }
 
   &__tags {

@@ -30,10 +30,11 @@ $light--color: #191a1b;
 $light--a__color: darken($a__color, 20%);
 $light--a__color--active: darken($a__color, 80%);
 $light--box-shadow__color: #0000001a;
+$light--header__background-color: $light--background-color;
 
-//buttong
-$light--button-color-default: rgb(96, 96, 96);
-$light--button-color-default--active: rgb(103, 14, 14);
+//button
+$light--button-color-default: darken($a__color, 20%);
+$light--button-color-default--active: darken($a__color, 80%);
 $light--button-color-red: $light--red;
 $light--button-color-red--active: $light--red;
 $light--button-color-green: $light--green;
@@ -41,6 +42,8 @@ $light--button-color-green--active: $light--green;
 $light--button-color-blue: $light--blue;
 $light--button-color-blue--active: $light--blue;
 
+
+//colors for dark.
 $dark--primary: #00a1c2;
 $dark--red: #f7382b;
 $dark--green: #2daf21;
@@ -52,6 +55,7 @@ $dark--color: #e9e9e9;
 $dark--a__color: lighten($a__color, 40%);
 $dark--a__color--active: lighten($a__color, 80%);
 $dark--box-shadow__color: #00000080;
+$dark--header__background-color: lighten($dark--background-color, 20%);
 
 //button
 $dark--button-color-default: $dark--a__color;
@@ -73,18 +77,19 @@ $dark--button-color-blue--active: $dark--blue;
   --color: #{$light--color};
   --background-color: #{$light--background-color};
   --box-shadow__color: #{$light--box-shadow__color};
+  --header__background-color: #{$light--background-color};
 
   --a__color: #{$light--a__color};
   --a__color--active: #{$light--a__color--active};
 
-  --button-color-default: #{$dark--button-color-default};
-  --button-color-default--active: #{$dark--button-color-default--active};
-  --button-color-red: #{$dark--button-color-red};
-  --button-color-red--active: #{$dark--button-color-red--active};
-  --button-color-green: #{$dark--button-color-green};
-  --button-color-green--active: #{$dark--button-color-green--active};
-  --button-color-blue: #{$dark--button-color-blue};
-  --button-color-blue--active: #{$dark--button-color-blue--active};
+  --button-color-default: #{$light--button-color-default};
+  --button-color-default--active: #{$light--button-color-default--active};
+  --button-color-red: #{$light--button-color-red};
+  --button-color-red--active: #{$light--button-color-red--active};
+  --button-color-green: #{$light--button-color-green};
+  --button-color-green--active: #{$light--button-color-green--active};
+  --button-color-blue: #{$light--button-color-blue};
+  --button-color-blue--active: #{$light--button-color-blue--active};
 }
 
 .app.dark {
@@ -96,7 +101,17 @@ $dark--button-color-blue--active: $dark--blue;
   --color: #{$dark--color};
   --background-color: #{$dark--background-color};
   --box-shadow__color: #{$dark--box-shadow__color};
+  --header__background-color: #{$dark--background-color};
 
   --a__color: #{$dark--a__color};
   --a__color--active: #{$dark--a__color--active};
+
+  --button-color-default: #{$dark--button-color-default};
+  --button-color-default--active: #{$dark--button-color-default--active};
+  --button-color-red: #{$dark--button-color-red};
+  --button-color-red--active: #{$dark--button-color-red--active};
+  --button-color-green: #{$dark--button-color-green};
+  --button-color-green--active: #{$dark--button-color-green--active};
+  --button-color-blue: #{$dark--button-color-blue};
+  --button-color-blue--active: #{$dark--button-color-blue--active};
 }

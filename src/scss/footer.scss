@@ -3,6 +3,7 @@
   box-shadow: 0 0 20px var(--box-shadow__color);
   z-index: 300;
   margin-top: 3em;
+  background-color: var(--header__background-color);
 
   &__wrapper {
     max-width: 1200px;
