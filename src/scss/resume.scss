@@ -8,45 +8,75 @@
     grid-gap: 0 20px;
   }
 
+  &__section {
+    //Work Experience Section
+    margin-bottom: 2em;
+  }
+
   h3 {
-    font-size: 2em;
-    font-weight: 400;
-    font-family: serif;
+    // 'work Experience'
+    font-size: 2.2em;
+    font-weight: 500;
+
     margin: 0;
-    margin-top: 0.5em;
+    color: var(--primary-color);
+  }
+
+  &__item {
+    // chronicle Books Block
   }
 
   h4 {
+    // 'Chronicle Books'
     margin: 0;
     margin-top: 0.5em;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 
-  &__row {
+  &__detail {
+    // h5 - position +  p - Year
     display: flex;
+    align-content: center;
 
     h5,
     p {
       margin: 0;
-      line-height: 1.2;
-      font-size: 1em;
+      line-height: 1.6;
       font-weight: 400;
-    }
-
-    p {
-      font-style: italic;
+      font-size: 1rem;
     }
 
     p::before {
-      content: "-";
-      margin: 0 1em;
+      content: "–";
+      margin: 0 0.5em;
+      font-weight: 300;
+
+      // font-style: italic;
     }
   }
 
-  &__list {
-    margin-right: 1em;
-  }
+  &__content {
+    //description
+    span:not(:last-child)::after {
+      content: "";
+      background-color: gray;
+      height: 2px;
+      border-radius: 3px;
+      width: 2px;
+      display: inline-block;
+      margin-bottom: -0.25em;
 
-  &__description {
-    margin: 0.25em 0;
+      margin: 0 0.5em;
+      vertical-align: middle;
+    }
+
+    p {
+      margin: 0.5em 0;
+      line-height: 1.6;
+      &:last-child {
+        margin-bottom: 1.5em;
+      }
+    }
   }
 }
