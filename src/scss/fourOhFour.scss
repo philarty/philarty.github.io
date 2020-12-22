@@ -1,4 +1,24 @@
 .four-oh-four {
-    max-width: 1040px;
-    margin: auto;
+  max-width: 1040px;
+  margin: auto;
+
+  display: grid;
+
+  justify-content: center;
+
+  h1,
+  h3,
+  p,
+  div {
+    padding: 0 1em;
+    text-align: center;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    > * {
+      margin: 0 0.5em;
+    }
+  }
 }

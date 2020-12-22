@@ -726,6 +726,22 @@ button:hover {
 .four-oh-four {
   max-width: 1040px;
   margin: auto;
+  display: grid;
+  justify-content: center;
+}
+.four-oh-four h1,
+.four-oh-four h3,
+.four-oh-four p,
+.four-oh-four div {
+  padding: 0 1em;
+  text-align: center;
+}
+.four-oh-four div {
+  display: flex;
+  justify-content: center;
+}
+.four-oh-four div > * {
+  margin: 0 0.5em;
 }
 
 /*# sourceMappingURL=abacus.css.map */
