@@ -43,6 +43,7 @@ button {
     &:active,
     &:hover {
       background-color: var(--button-color-#{$color}--active);
+      color: white;
     }
   }
 }

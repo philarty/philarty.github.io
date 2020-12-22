@@ -247,6 +247,7 @@ button:hover {
 }
 .btn-solid-default:active, .btn-solid-default:hover {
   background-color: var(--button-color-default--active);
+  color: white;
 }
 
 .btn-solid-red {
@@ -256,6 +257,7 @@ button:hover {
 }
 .btn-solid-red:active, .btn-solid-red:hover {
   background-color: var(--button-color-red--active);
+  color: white;
 }
 
 .btn-solid-green {
@@ -265,6 +267,7 @@ button:hover {
 }
 .btn-solid-green:active, .btn-solid-green:hover {
   background-color: var(--button-color-green--active);
+  color: white;
 }
 
 .btn-solid-blue {
@@ -274,6 +277,7 @@ button:hover {
 }
 .btn-solid-blue:active, .btn-solid-blue:hover {
   background-color: var(--button-color-blue--active);
+  color: white;
 }
 
 .btn-outline-default {
@@ -464,7 +468,7 @@ button:hover {
 }
 .main-header__nav--mobile {
   display: grid;
-  padding: 0 0.5em 0.5em;
+  padding: 0 1em 0.5em;
 }
 @media (min-width: 768px) {
   .main-header__nav--mobile {

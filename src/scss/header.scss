@@ -72,7 +72,7 @@
 
   &__nav--mobile {
     display: grid;
-    padding: 0 0.5em 0.5em;
+    padding: 0 1em 0.5em;
 
     @include md {
       display: none;
