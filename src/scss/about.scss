@@ -59,24 +59,24 @@
     a {
       color: var(--color);
       text-decoration: underline;
-      text-decoration-thickness: 4px;
+      text-decoration-thickness: 3px;
 
       &:nth-child(1) {
-        text-decoration-color: var(--red);
+        text-decoration-color: var(--button-color-red);
         &:hover {
-          color: var(--red);
+          color: var(--button-color-red);
         }
       }
       &:nth-child(2) {
-        text-decoration-color: var(--green);
+        text-decoration-color: var(--button-color-green);
         &:hover {
-          color: var(--green);
+          color: var(--button-color-green);
         }
       }
       &:nth-child(3) {
-        text-decoration-color: var(--blue);
+        text-decoration-color: var(--button-color-blue);
         &:hover {
-          color: var(--blue);
+          color: var(--button-color-blue);
         }
       }
     }
