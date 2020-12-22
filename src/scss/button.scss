@@ -128,10 +128,12 @@ button {
 @include btn-solid(red);
 @include btn-solid(green);
 @include btn-solid(blue);
+
 @include btn-outline(default);
 @include btn-outline(red);
 @include btn-outline(green);
 @include btn-outline(blue);
+
 @include btn-link(default);
 @include btn-link(red);
 @include btn-link(green);
