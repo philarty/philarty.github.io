@@ -37,6 +37,20 @@ const Icon = (props) => {
         </svg>
       );
 
+    case "menu":
+      return (
+        <svg
+          className="icon icon--menu"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <g id="Symbol">
+            <path d="M18,8H6A1,1,0,0,1,6,6H18a1,1,0,0,1,0,2Z" />
+            <path d="M18,18H6a1,1,0,0,1,0-2H18a1,1,0,0,1,0,2Z" />
+            <path d="M18,13H6a1,1,0,0,1,0-2H18a1,1,0,0,1,0,2Z" />
+          </g>
+        </svg>
+      );
     default:
       return null;
   }
