@@ -10,7 +10,7 @@ import FourOhFour from "./containers/FourOhFour.js";
 
 import About from "./containers/About.js";
 import ProjectIndex from "./containers/ProjectIndex.js";
-// import Project from "./containers/Project.js";
+import Project from "./containers/Project.js";
 import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
@@ -42,7 +42,7 @@ const App = () => {
 
         <Route exact path="/about" component={About} />
 
-        {/* <Route path="/project/:projectName" component={Project} /> */}
+        <Route path="/project/:projectId" component={Project} />
 
         <Route exact path="/404" component={FourOhFour} />
 

@@ -1,19 +1,35 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
+import PROJECTS from "../projects/PROJECTS.js";
+import FourOhFour from "./FourOhFour.js";
 
-// useParams here to pull from url /portfolio#/projects/:projectName
+// useParams here to pull from url /portfolio#/projects/:projectId
+
+// project Object Shape // 2020 12 22
+// {
+//   title: "Make Project",
+//   description:
+//     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
+//   imageSrc: "https://picsum.photos/seed/3/500/300",
+//   tags: ["make"],
+//   id: "test3",
+// },
+
 const Project = () => {
-  let { projectName } = useParams();
+  let { projectId } = useParams();
 
-  if (projectName === "test1") {
+  const project = PROJECTS.find((p) => p.id === projectId);
+
+  if (project) {
     return (
-      <section className="project">
-        <div>{projectName}</div>
-        <div>This is a functional page for {projectName} </div>
+      <section className='project'>
+        <div>{project.title}</div>
+        <div>This is a functional page for {project.id} </div>
+        <img src={project.imageSrc} alt={project.title} />
       </section>
     );
-  }
+  } else return <FourOhFour />;
 };
 
 export default Project;

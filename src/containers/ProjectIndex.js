@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import ProjectPreview from "../components/ProjectPreview.js";
 
-import PROJECTS from '../components/PROJECTS.js'
+import PROJECTS from '../projects/PROJECTS.js'
 
 function ProjectIndex() {
   const location = useLocation();
