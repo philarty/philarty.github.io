@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/eur0zzn.css");
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .app {
   --primary-color: #00a1c2;
@@ -71,7 +71,6 @@ h4,
 h5,
 .h5 {
   margin: 3rem 0 1.38rem;
-  font-family: "Raleway", sans-serif;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -556,25 +555,25 @@ button:hover {
 .profile h2 a {
   color: var(--color);
   text-decoration: underline;
-  text-decoration-thickness: 4px;
+  text-decoration-thickness: 3px;
 }
 .profile h2 a:nth-child(1) {
-  text-decoration-color: var(--red);
+  text-decoration-color: var(--button-color-red);
 }
 .profile h2 a:nth-child(1):hover {
-  color: var(--red);
+  color: var(--button-color-red);
 }
 .profile h2 a:nth-child(2) {
-  text-decoration-color: var(--green);
+  text-decoration-color: var(--button-color-green);
 }
 .profile h2 a:nth-child(2):hover {
-  color: var(--green);
+  color: var(--button-color-green);
 }
 .profile h2 a:nth-child(3) {
-  text-decoration-color: var(--blue);
+  text-decoration-color: var(--button-color-blue);
 }
 .profile h2 a:nth-child(3):hover {
-  color: var(--blue);
+  color: var(--button-color-blue);
 }
 .profile p {
   grid-row: 4/5;
@@ -674,39 +673,54 @@ button:hover {
     grid-gap: 0 20px;
   }
 }
+.resume__section {
+  margin-bottom: 2em;
+}
 .resume h3 {
-  font-size: 2em;
-  font-weight: 400;
-  font-family: serif;
+  font-size: 2.2em;
+  font-weight: 500;
   margin: 0;
-  margin-top: 0.5em;
+  color: var(--primary-color);
 }
 .resume h4 {
   margin: 0;
   margin-top: 0.5em;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
-.resume__row {
+.resume__detail {
   display: flex;
+  align-content: center;
 }
-.resume__row h5,
-.resume__row p {
+.resume__detail h5,
+.resume__detail p {
   margin: 0;
-  line-height: 1.2;
-  font-size: 1em;
+  line-height: 1.6;
   font-weight: 400;
+  font-size: 1rem;
 }
-.resume__row p {
-  font-style: italic;
+.resume__detail p::before {
+  content: "–";
+  margin: 0 0.5em;
+  font-weight: 300;
 }
-.resume__row p::before {
-  content: "-";
-  margin: 0 1em;
+.resume__content span:not(:last-child)::after {
+  content: "";
+  background-color: gray;
+  height: 2px;
+  border-radius: 3px;
+  width: 2px;
+  display: inline-block;
+  margin-bottom: -0.25em;
+  margin: 0 0.5em;
+  vertical-align: middle;
 }
-.resume__list {
-  margin-right: 1em;
+.resume__content p {
+  margin: 0.5em 0;
+  line-height: 1.6;
 }
-.resume__description {
-  margin: 0.25em 0;
+.resume__content p:last-child {
+  margin-bottom: 1.5em;
 }
 
 .four-oh-four {
