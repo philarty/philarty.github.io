@@ -10,7 +10,7 @@
   --box-shadow__color: #0000001a;
   --header__background-color: #ffffff;
   --a__color: #4d4d4d;
-  --a__color--active: black;
+  --a__color--active: #00a1c2;
   --button-color-default: #4d4d4d;
   --button-color-default--active: black;
   --button-color-red: #d22700;
@@ -31,9 +31,9 @@
   --box-shadow__color: #00000080;
   --header__background-color: #191a1b;
   --a__color: #e6e6e6;
-  --a__color--active: white;
+  --a__color--active: #00a1c2;
   --button-color-default: #e6e6e6;
-  --button-color-default--active: white;
+  --button-color-default--active: #00a1c2;
   --button-color-red: #f7382b;
   --button-color-red--active: #f7382b;
   --button-color-green: #2daf21;

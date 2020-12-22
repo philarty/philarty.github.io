@@ -28,7 +28,7 @@ $light--blue: #0529b8;
 $light--background-color: #ffffff;
 $light--color: #191a1b;
 $light--a__color: darken($a__color, 20%);
-$light--a__color--active: darken($a__color, 80%);
+$light--a__color--active: $light--primary;
 $light--box-shadow__color: #0000001a;
 $light--header__background-color: $light--background-color;
 
@@ -53,7 +53,7 @@ $dark--blue: #2744ec;
 $dark--background-color: #191a1b;
 $dark--color: #e9e9e9;
 $dark--a__color: lighten($a__color, 40%);
-$dark--a__color--active: lighten($a__color, 80%);
+$dark--a__color--active: $dark--primary;
 $dark--box-shadow__color: #00000080;
 $dark--header__background-color: lighten($dark--background-color, 20%);
 
