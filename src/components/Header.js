@@ -50,7 +50,7 @@ class HeaderInner extends React.Component {
 
   handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      this.handleToggleDropdown();
+      this.setState({ expandedMenu: false });
     }
   }
 
@@ -70,6 +70,7 @@ class HeaderInner extends React.Component {
     return (
       <React.Fragment>
         <header
+          ref={this.setWrapperRef}
           className={
             "main-header" +
             (scroll || expandedMenu ? " main-header--scroll" : "")
@@ -80,7 +81,6 @@ class HeaderInner extends React.Component {
               onClick={this.handleToggleDropdown}
               icon
               btnStyle="link"
-              btnSize="sm"
               className="main-header__mobile-nav-button"
             >
               <Icon icon="menu" />
@@ -88,7 +88,10 @@ class HeaderInner extends React.Component {
             <Link
               className="main-header__logo"
               to="/"
-              onClick={() => window.scrollTo(0, 0)}
+              onClick={() => {
+                window.scrollTo(0, 0);
+                this.handleToggleDropdown();
+              }}
             >
               Philarty
             </Link>
@@ -105,10 +108,8 @@ class HeaderInner extends React.Component {
               ))}
               <Button
                 onClick={this.props.onToggleTheme}
-                btnSize="md"
                 btnStyle="link"
                 icon
-                ref={this.setWrapperRef}
               >
                 <Icon icon={isDarkTheme ? "sun" : "moon"} />
               </Button>
@@ -117,7 +118,7 @@ class HeaderInner extends React.Component {
 
           {/* dropdown Menu for mobile */}
           {expandedMenu && (
-            <nav ref={this.setWrapperRef} className="main-header__nav--mobile">
+            <nav className="main-header__nav--mobile">
               {NAV.map((link) => (
                 <Link
                   key={link.text}
