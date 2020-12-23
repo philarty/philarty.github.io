@@ -469,13 +469,13 @@ button:hover {
   display: flex;
   align-items: center;
 }
-.main-header__desktop-nav > * {
-  margin-left: 1em;
-}
 .main-header__desktop-nav a {
   display: none;
 }
 @media (min-width: 768px) {
+  .main-header__desktop-nav > * {
+    margin-left: 1em;
+  }
   .main-header__desktop-nav a {
     display: inline-block;
   }
