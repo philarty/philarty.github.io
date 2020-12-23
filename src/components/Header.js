@@ -58,10 +58,6 @@ class HeaderInner extends React.Component {
     this.setState({ scroll: window.scrollY > 0 });
   };
 
-  handleToggleDropdown = () => {
-    this.setState({ expandedMenu: !this.state.expandedMenu });
-  };
-
   render() {
     const { scroll, expandedMenu } = this.state;
     const { location, isDarkTheme } = this.props;
@@ -78,7 +74,7 @@ class HeaderInner extends React.Component {
         >
           <div className="main-header__wrapper">
             <Button
-              onClick={this.handleToggleDropdown}
+              onClick={() => this.setState({ expandedMenu: !expandedMenu })}
               icon
               btnStyle="link"
               className="main-header__mobile-nav-button"
@@ -90,7 +86,7 @@ class HeaderInner extends React.Component {
               to="/"
               onClick={() => {
                 window.scrollTo(0, 0);
-                this.handleToggleDropdown();
+                this.setState({ expandedMenu: false });
               }}
             >
               Philarty
@@ -125,8 +121,8 @@ class HeaderInner extends React.Component {
                 to={link.url}
                 className={currentPath.includes(link.url) ? "active" : ""}
                 onClick={() => {
+                  this.setState({ expandedMenu: false });
                   window.scrollTo(0, 0);
-                  this.handleToggleDropdown();
                 }}
               >
                 {link.text}
