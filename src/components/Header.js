@@ -38,10 +38,12 @@ class HeaderInner extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
     window.addEventListener("mousedown", this.handleClickOutside);
+    window.addEventListener("touchstart", this.handleClickOutside);
   }
 
   componentWillUnmount() {
     window.removeEventListener("mousedown", this.handleClickOutside);
+    window.removeEventListener("touchstart", this.handleClickOutside);
   }
 
   setWrapperRef(node) {
