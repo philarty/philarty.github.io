@@ -3,12 +3,10 @@
   position: fixed;
   width: 100%;
 
-  transition: all 0.25s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 300;
   touch-action: manipulation;
   font-size: 22px;
-
-  transition: all 0.25s ease-in-out;
 
   @include md {
     font-size: 28px;
@@ -51,7 +49,7 @@
     }
   }
 
-  &__nav--desktop {
+  &__desktop-nav {
     display: flex;
     align-items: center;
 
@@ -70,12 +68,28 @@
     }
   }
 
-  &__nav--mobile {
+  &__mobile-nav {
     display: grid;
-    padding: 0 1em 0.5em;
+    padding: 0 1em;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 0.5s ease-in-out;
+
+    &--show {
+      max-height: 1000px;
+    }
 
     @include md {
       display: none;
+    }
+
+    a:first-child{
+      margin-top: 0.5em;
+    }
+
+    a:last-child {
+      margin-bottom: 0.5em;
     }
   }
 

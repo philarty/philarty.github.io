@@ -35,7 +35,7 @@
     grid-column: 1/2;
     grid-row: 1/2;
     img {
-      min-width: 100%;
+      width: 100%;
       place-self: center;
       z-index: 1;
     }
@@ -82,10 +82,18 @@
     text-align: center;
     margin: 0.5em 0 0;
     grid-row: 2/3;
+
+    @include md {
+      color: white;
+    }
   }
 
   p {
     grid-row: 3/4;
+
+    @include md {
+      color: white;
+    }
   }
 
   &__tags {

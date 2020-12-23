@@ -410,11 +410,10 @@ button:hover {
   background-color: var(--background-color);
   position: fixed;
   width: 100%;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 300;
   touch-action: manipulation;
   font-size: 22px;
-  transition: all 0.25s ease-in-out;
 }
 @media (min-width: 768px) {
   .main-header {
@@ -453,29 +452,41 @@ button:hover {
 .main-header__logo:hover, .main-header__logo:active {
   color: var(--primary-color);
 }
-.main-header__nav--desktop {
+.main-header__desktop-nav {
   display: flex;
   align-items: center;
 }
-.main-header__nav--desktop > * {
+.main-header__desktop-nav > * {
   margin-left: 1em;
 }
-.main-header__nav--desktop a {
+.main-header__desktop-nav a {
   display: none;
 }
 @media (min-width: 768px) {
-  .main-header__nav--desktop a {
+  .main-header__desktop-nav a {
     display: inline-block;
   }
 }
-.main-header__nav--mobile {
+.main-header__mobile-nav {
   display: grid;
-  padding: 0 1em 0.5em;
+  padding: 0 1em;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.main-header__mobile-nav--show {
+  max-height: 1000px;
 }
 @media (min-width: 768px) {
-  .main-header__nav--mobile {
+  .main-header__mobile-nav {
     display: none;
   }
+}
+.main-header__mobile-nav a:first-child {
+  margin-top: 0.5em;
+}
+.main-header__mobile-nav a:last-child {
+  margin-bottom: 0.5em;
 }
 .main-header .switch {
   place-self: center;
@@ -629,7 +640,7 @@ button:hover {
   grid-row: 1/2;
 }
 .project-preview__img img {
-  min-width: 100%;
+  width: 100%;
   place-self: center;
   z-index: 1;
 }
@@ -671,8 +682,18 @@ button:hover {
   margin: 0.5em 0 0;
   grid-row: 2/3;
 }
+@media (min-width: 768px) {
+  .project-preview h3 {
+    color: white;
+  }
+}
 .project-preview p {
   grid-row: 3/4;
+}
+@media (min-width: 768px) {
+  .project-preview p {
+    color: white;
+  }
 }
 .project-preview__tags {
   display: flex;

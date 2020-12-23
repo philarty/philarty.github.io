@@ -95,7 +95,7 @@ class HeaderInner extends React.Component {
             >
               Philarty
             </Link>
-            <nav className="main-header__nav--desktop">
+            <nav className="main-header__desktop-nav">
               {NAV.map((link) => (
                 <Link
                   key={link.text}
@@ -106,34 +106,33 @@ class HeaderInner extends React.Component {
                   {link.text}
                 </Link>
               ))}
-              <Button
-                onClick={this.props.onToggleTheme}
-                btnStyle="link"
-                icon
-              >
+              <Button onClick={this.props.onToggleTheme} btnStyle="link" icon>
                 <Icon icon={isDarkTheme ? "sun" : "moon"} />
               </Button>
             </nav>
           </div>
 
           {/* dropdown Menu for mobile */}
-          {expandedMenu && (
-            <nav className="main-header__nav--mobile">
-              {NAV.map((link) => (
-                <Link
-                  key={link.text}
-                  to={link.url}
-                  className={currentPath.includes(link.url) ? "active" : ""}
-                  onClick={() => {
-                    window.scrollTo(0, 0);
-                    this.handleToggleDropdown();
-                  }}
-                >
-                  {link.text}
-                </Link>
-              ))}
-            </nav>
-          )}
+          <nav
+            className={
+              "main-header__mobile-nav " +
+              (expandedMenu ? " main-header__mobile-nav--show" : "")
+            }
+          >
+            {NAV.map((link) => (
+              <Link
+                key={link.text}
+                to={link.url}
+                className={currentPath.includes(link.url) ? "active" : ""}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  this.handleToggleDropdown();
+                }}
+              >
+                {link.text}
+              </Link>
+            ))}
+          </nav>
         </header>
 
         <div className="header__pseudo" />
