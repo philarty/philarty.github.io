@@ -33,8 +33,8 @@ $light--box-shadow__color: #0000001a;
 $light--header__background-color: $light--background-color;
 
 //button
-$light--button-color-default: darken($a__color, 20%);
-$light--button-color-default--active: darken($a__color, 80%);
+$light--button-color-default: $light--a__color;
+$light--button-color-default--active:  $light--a__color--active;
 $light--button-color-red: $light--red;
 $light--button-color-red--active: $light--red;
 $light--button-color-green: $light--green;
