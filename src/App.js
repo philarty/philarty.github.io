@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import "./css/abacus.css";
-import Header from "./temp/Header.js";
-import Footer from "./temp/Footer.js";
-import ProfileSection from "./temp/ProfileSection.js";
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import ProfileSection from "./components/ProfileSection.js";
 
 import FourOhFour from "./containers/FourOhFour.js";
 
 import About from "./containers/About.js";
 import ProjectIndex from "./containers/ProjectIndex.js";
 import Project from "./containers/Project.js";
-import ScrollToTop from "./temp/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   //detects user OS color theme preference.
