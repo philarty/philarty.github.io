@@ -617,6 +617,18 @@ button:hover {
   }
 }
 
+.project__header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.project__header-image {
+  max-width: 500px;
+}
+.project__body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .project-index__title {
   max-width: 1200px;
   margin-left: auto;

@@ -23,10 +23,12 @@ const Project = () => {
 
   if (project) {
     return (
-      <section className='project'>
-        <div>{project.title}</div>
-        <div>This is a functional page for {project.id} </div>
-        <img src={project.imageSrc} alt={project.title} />
+      <section className="project">
+        <div className="project__header">
+          <div>{project.title}</div>
+          <img className='project__header-image' src={project.imageSrc} alt={project.title} />
+        </div>
+        {project.content}
       </section>
     );
   } else return <FourOhFour />;
