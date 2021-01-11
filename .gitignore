@@ -23,5 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 .eslintcache
 *.css.map
+*.css.2.map
 *.css
 !abacus.css
