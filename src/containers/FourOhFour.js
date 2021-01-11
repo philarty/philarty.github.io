@@ -9,7 +9,7 @@ const FourOhFour = () => {
       <img src='https://source.unsplash.com/600x600?cute-animals' alt='Cute Animals' />
       <p>here are some cute animals for your troubles</p>
       <div>
-      <a href='http://philarty.github.io/portfolio#/404' className='btn btn-lg btn-solid-red' >
+      <a href='http://philarty.io/#/404' className='btn btn-lg btn-solid-red' >
         I want more cutness
       </a>
       <Link to="/" className='btn btn-lg btn-solid-green'>
