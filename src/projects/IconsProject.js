@@ -1,62 +1,60 @@
 import React from "react";
+import Icon from "../components/Icon";
 
-import sunnyIcon from "../images/icons.svg";
+import sunnyIcon from "../logo.svg";
 
-const PROJECTS = [
+const ICONSSETS = [
   {
     title: "Weather Icons",
     icons: [
       { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
+      { id: "Sunny Periods", src: sunnyIcon },
+      { id: "Sunny Intervals", src: sunnyIcon },
+      { id: "Sunny Periods with Showers", src: sunnyIcon },
+      { id: "Sunny Intervals with Showers", src: sunnyIcon },
+      { id: "Fog", src: sunnyIcon },
+      { id: "Cloudy", src: sunnyIcon },
+      { id: "Overcast", src: sunnyIcon },
+      { id: "Light Rain", src: sunnyIcon },
+      { id: "Heavy Rain", src: sunnyIcon },
+      { id: "Thunderstorms", src: sunnyIcon },
+      { id: "Windy", src: sunnyIcon },
+      { id: "Hot", src: sunnyIcon },
+      { id: "Warm", src: sunnyIcon },
+      { id: "Cool", src: sunnyIcon },
+      { id: "Cold", src: sunnyIcon },
     ],
   },
   {
     title: "Transit Icons",
     icons: [
       { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
+      { id: "Su2nny", src: sunnyIcon },
     ],
   },
   {
     title: "Location Icons",
     icons: [
       { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
+      { id: "Sun2ny", src: sunnyIcon },
     ],
   },
   {
     title: "App Icons",
     icons: [
       { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny", src: sunnyIcon },
+      { id: "S3nny", src: sunnyIcon },
     ],
   },
 ];
 
-const Icon = ({ id, iconSrc }) => {
-  <div>
-    <p>{id}</p>
-  </div>;
+const IconItem = ({ id, iconSrc }) => {
+  return (
+    <div>
+      <p>{id}</p>
+      <Icon src={iconSrc} />
+    </div>
+  );
 };
 
 const IconGrid = ({ title, icons }) => {
@@ -65,17 +63,16 @@ const IconGrid = ({ title, icons }) => {
       <h3>{title}</h3>
       <div>
         {icons.map((icon) => (
-          <Icon id={icon.id} iconSrc={icon.src} />
+          <IconItem key={icon.id} id={icon.id} iconSrc={icon.src} />
         ))}
       </div>
     </div>
   );
 };
 
-const SpooningSpoon = (
+const IconsProject = (
   <div className="project__body">
     <div>
-      <div>Icons</div>
       <div>
         <p>
           Icons are simple images used in context to communicate something. They
@@ -96,9 +93,9 @@ const SpooningSpoon = (
       </div>
     </div>
     {ICONSSETS.map((set) => (
-      <IconGrid title={set.title} icons={set.icons} />
+      <IconGrid key={set.title} title={set.title} icons={set.icons} />
     ))}
   </div>
 );
 
-export default SpooningSpoon;
+export default IconsProject;
