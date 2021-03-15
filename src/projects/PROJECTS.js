@@ -12,8 +12,8 @@ const PROJECTS = [
     content: SpooningSpoon,
   },
   {
-    title: "Code Project",
-    id: "test2",
+    title: "Iconography",
+    id: "iconography",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
     imageSrc: "https://picsum.photos/seed/2/500/300",
