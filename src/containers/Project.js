@@ -19,7 +19,7 @@ import FourOhFour from "./FourOhFour.js";
 const Project = () => {
   let { projectId } = useParams();
 
-  const project = PROJECTS.find((p) => p.id === projectId);
+  const project = PROJECTS && PROJECTS.find((p) => p.id === projectId);
 
   if (project) {
     return (
