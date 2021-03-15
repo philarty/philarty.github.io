@@ -1,28 +1,46 @@
 import React from "react";
 import Icon from "../components/Icon";
 
-import sunnyIcon from "../logo.svg";
+import sunnyIcon from "../images/icons/sunny.svg";
+import sunnyPeriodsIcon from "../images/icons/sunny-periods.svg";
+import sunnyIntervalIcon from "../images/icons/sunny-intervals.svg";
+import sunnyPeriodsWithShowersIcon from "../images/icons/sunny-periods-with-showers.svg";
+import sunnyIntervalsWithShowersIcon from "../images/icons/sunny-intervals-with-showers.svg";
+import fogIcon from "../images/icons/fog.svg";
+import cloudyIcon from "../images/icons/cloudy.svg";
+import overcastIcon from "../images/icons/overcast.svg";
+import lightRainIcon from "../images/icons/light-rain.svg";
+import heavyRainIcon from "../images/icons/heavy-rain.svg";
+import thunderstormIcon from "../images/icons/thunderstorm.svg";
+import windyIcon from "../images/icons/windy.svg";
+import hotIcon from "../images/icons/hot.svg";
+import warmIcon from "../images/icons/warm.svg";
+import coolIcon from "../images/icons/cool.svg";
+import coldIcon from "../images/icons/cold.svg";
 
 const ICONSSETS = [
   {
     title: "Weather Icons",
     icons: [
       { id: "Sunny", src: sunnyIcon },
-      { id: "Sunny Periods", src: sunnyIcon },
-      { id: "Sunny Intervals", src: sunnyIcon },
-      { id: "Sunny Periods with Showers", src: sunnyIcon },
-      { id: "Sunny Intervals with Showers", src: sunnyIcon },
-      { id: "Fog", src: sunnyIcon },
-      { id: "Cloudy", src: sunnyIcon },
-      { id: "Overcast", src: sunnyIcon },
-      { id: "Light Rain", src: sunnyIcon },
-      { id: "Heavy Rain", src: sunnyIcon },
-      { id: "Thunderstorms", src: sunnyIcon },
-      { id: "Windy", src: sunnyIcon },
-      { id: "Hot", src: sunnyIcon },
-      { id: "Warm", src: sunnyIcon },
-      { id: "Cool", src: sunnyIcon },
-      { id: "Cold", src: sunnyIcon },
+      { id: "Sunny Periods", src: sunnyPeriodsIcon },
+      { id: "Sunny Intervals", src: sunnyIntervalIcon },
+      { id: "Sunny Periods with Showers", src: sunnyPeriodsWithShowersIcon },
+      {
+        id: "Sunny Intervals with Showers",
+        src: sunnyIntervalsWithShowersIcon,
+      },
+      { id: "Fog", src: fogIcon },
+      { id: "Cloudy", src: cloudyIcon },
+      { id: "Overcast", src: overcastIcon },
+      { id: "Light Rain", src: lightRainIcon },
+      { id: "Heavy Rain", src: heavyRainIcon },
+      { id: "Thunderstorms", src: thunderstormIcon },
+      { id: "Windy", src: windyIcon },
+      { id: "Hot", src: hotIcon },
+      { id: "Warm", src: warmIcon },
+      { id: "Cool", src: coolIcon },
+      { id: "Cold", src: coldIcon },
     ],
   },
   {
@@ -50,16 +68,16 @@ const ICONSSETS = [
 
 const IconItem = ({ id, iconSrc }) => {
   return (
-    <div>
-      <p>{id}</p>
+    <div className="icon-item">
       <Icon src={iconSrc} />
+      <p>{id}</p>
     </div>
   );
 };
 
 const IconGrid = ({ title, icons }) => {
   return (
-    <div>
+    <div className="icon-grid">
       <h3>{title}</h3>
       <div>
         {icons.map((icon) => (
@@ -92,9 +110,11 @@ const IconsProject = (
         </p>
       </div>
     </div>
-    {ICONSSETS.map((set) => (
-      <IconGrid key={set.title} title={set.title} icons={set.icons} />
-    ))}
+    <div className="project__body">
+      {ICONSSETS.map((set) => (
+        <IconGrid key={set.title} title={set.title} icons={set.icons} />
+      ))}
+    </div>
   </div>
 );
 
