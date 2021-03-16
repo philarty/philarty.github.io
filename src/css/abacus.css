@@ -618,15 +618,53 @@ button:hover {
 }
 
 .project__header {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
+  display: flex;
 }
-.project__header-image {
-  max-width: 500px;
+.project__header--image {
+  width: 500px;
 }
 .project__body {
   max-width: 1200px;
   margin: 0 auto;
+}
+.project__section {
+  max-width: 800px;
+  margin: 0 auto 2em;
+}
+
+.icon-grid {
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 24px;
+  padding: 1em 2em;
+  border: 1px solid gray;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.icon-grid h3, .icon-grid p {
+  grid-column: 1/-1;
+  margin: 0;
+}
+.icon-grid__icon {
+  display: grid;
+  align-items: flex-start;
+  grid-template-rows: min-content;
+  justify-items: center;
+  text-align: center;
+}
+.icon-grid__icon .icon {
+  height: 32px;
+  width: 32px;
+}
+.icon-grid__icon p {
+  line-height: 1;
+  font-weight: 300;
+  font-size: 0.9em;
+  margin: 0.75em 0;
 }
 
 .project-index__title {
