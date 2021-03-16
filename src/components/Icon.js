@@ -1,5 +1,6 @@
 import React from "react";
-import { ReactSVG } from "react-svg";
+import SVG  from 'react-inlinesvg';
+
 
 const Icon = (props) => {
   const { icon, src, className } = props;
@@ -60,7 +61,7 @@ const Icon = (props) => {
 
   if (src) {
     return (
-      <ReactSVG
+      <SVG
         src={src}
         className={"icon" + (className ? " " + className : "")}
       />

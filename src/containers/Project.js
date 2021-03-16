@@ -8,12 +8,12 @@ import FourOhFour from "./FourOhFour.js";
 
 // project Object Shape // 2020 12 22
 // {
-//   title: "Make Project",
-//   description:
-//     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
-//   imageSrc: "https://picsum.photos/seed/3/500/300",
-//   tags: ["make"],
-//   id: "test3",
+//   title: "Spooning Spoon",
+//   id: "spooning-spoon",
+//   description: "Human Sized Spoon ",
+//   previewSrc: spooningSpoonCover,
+//   tags: ["design", "make"],
+//   content: SpooningSpoon,
 // },
 
 const Project = () => {
@@ -25,8 +25,17 @@ const Project = () => {
     return (
       <section className="project">
         <div className="project__header">
-          <div>{project.title}</div>
-          <img className='project__header-image' src={project.imageSrc} alt={project.title} />
+          {project.previewSrc && (
+            <img
+              className="project__header--image"
+              src={project.previewSrc}
+              alt={project.title}
+            />
+          )}
+          <div className="project__header--text">
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+          </div>
         </div>
         {project.content}
       </section>

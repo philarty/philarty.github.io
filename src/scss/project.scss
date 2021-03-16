@@ -1,17 +1,61 @@
 .project {
   &__header {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
+    display: flex;
+
   }
 
-  &__header-image {
-    max-width: 500px;
-
+  &__header--image {
+    width: 500px;
   }
 
   &__body {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
+  &__section {
+    max-width: 800px;
+    margin: 0 auto 2em;
+  }
+}
+
+.icon-grid {
+  max-width: 800px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 24px;
+  padding: 1em 2em;
+
+  h3, p {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+
+  border: 1px solid gray;
+  border-radius: 12px;
+  margin-bottom: 10px;
+
+  &__icon {
+    display: grid;
+    align-items: flex-start;
+    grid-template-rows: min-content;
+    justify-items: center;
+    text-align: center;
+
+    .icon {
+      height: 32px;
+      width: 32px;
+    }
+
+    p {
+      line-height: 1;
+      font-weight: 300;
+      font-size: 0.9em;
+      margin: 0.75em 0;
+    }
+  }
 }

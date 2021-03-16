@@ -7,7 +7,7 @@ const ProjectPreview = (props) => {
     <div className="project-preview">
       <Link to={"/project/" + project.id} className="project-preview__link" />
       <div className="project-preview__img">
-        <img src={project.imageSrc} alt={project.title} />
+        <img src={project.previewSrc} alt={project.title} />
       </div>
       <h3>{project.title}</h3>
       <p>{project.description}</p>
