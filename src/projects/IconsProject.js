@@ -41,7 +41,10 @@ const ICONSSETS = [
       { id: "Warm", src: warmIcon },
       { id: "Cool", src: coolIcon },
       { id: "Cold", src: coldIcon },
+      { id: "Humid", src: coldIcon },
+      { id: "Dry", src: coldIcon },
     ],
+    description: "This set of icons are designed for usage in the PRAISE HK app",
   },
   {
     title: "Transit Icons",
@@ -68,29 +71,29 @@ const ICONSSETS = [
 
 const IconItem = ({ id, iconSrc }) => {
   return (
-    <div className="icon-item">
+    <div className="icon-grid__icon">
       <Icon src={iconSrc} />
       <p>{id}</p>
     </div>
   );
 };
 
-const IconGrid = ({ title, icons }) => {
+const IconGrid = ({ title, icons, description }) => {
   return (
     <div className="icon-grid">
       <h3>{title}</h3>
-      <div>
-        {icons.map((icon) => (
-          <IconItem key={icon.id} id={icon.id} iconSrc={icon.src} />
-        ))}
-      </div>
+
+      {icons.map((icon) => (
+        <IconItem key={icon.id} id={icon.id} iconSrc={icon.src} />
+      ))}
+      {description && <p>{description}</p>}
     </div>
   );
 };
 
 const IconsProject = (
   <div className="project__body">
-    <div>
+    <div className="project__section">
       <div>
         <p>
           Icons are simple images used in context to communicate something. They
@@ -101,20 +104,20 @@ const IconsProject = (
         <p>
           This series of icons are designed to be used for mobile applications.
           Most of these icons draw inspiration from pre-existing ones, while a
-          few are new and unique to this application. The use of a 24 x 24 pixel
-          grid ensures the icon aligns with with display pixels on a mobile
-          device. Minimum stroke weight of 2px for both positive and negative
-          space to ensure legibility on a small screen. The consistent treatment
-          also unifies them into a single set, allowing them to look cohesive
-          existing in the same page.
+          few are new and unique to this application. Following Google's
+          Material Design Principle, the use of a 24 x 24 pixel grid ensures the
+          icon aligns with display pixels on a mobile device. Minimum stroke
+          weight of 2px for both positive and negative space to ensure
+          legibility on a small screen. The consistent treatment also unifies
+          them into a single set, allowing them to look cohesive existing in the
+          same page.
         </p>
       </div>
     </div>
-    <div className="project__body">
-      {ICONSSETS.map((set) => (
-        <IconGrid key={set.title} title={set.title} icons={set.icons} />
-      ))}
-    </div>
+    {ICONSSETS.map((set) => (
+      <IconGrid key={set.title} title={set.title} icons={set.icons} description={set.description
+      } />
+    ))}
   </div>
 );
 
