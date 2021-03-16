@@ -7,7 +7,7 @@ const PROJECTS = [
     title: "Spooning Spoon",
     id: "spooning-spoon",
     description: "Human Sized Spoon ",
-    imageSrc: spooningSpoonCover,
+    previewSrc: spooningSpoonCover,
     tags: ["design", "make"],
     content: SpooningSpoon,
   },
@@ -16,8 +16,8 @@ const PROJECTS = [
     id: "iconography",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
-    imageSrc: "https://picsum.photos/seed/2/500/300",
-    tags: ["code"],
+    previewSrc: "https://picsum.photos/seed/2/500/300",
+    tags: ["design"],
     content: IconsProject,
 
   },
@@ -26,7 +26,7 @@ const PROJECTS = [
     id: "test3",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
-    imageSrc: "https://picsum.photos/seed/3/500/300",
+    previewSrc: "https://picsum.photos/seed/3/500/300",
     tags: ["make"],
   },
   {
@@ -34,7 +34,7 @@ const PROJECTS = [
     id: "test4",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
-    imageSrc: "https://picsum.photos/seed/4/500/300",
+    previewSrc: "https://picsum.photos/seed/4/500/300",
     tags: ["design", "make"],
   },
   {
@@ -42,7 +42,7 @@ const PROJECTS = [
     id: "test5",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
-    imageSrc: "https://picsum.photos/seed/5/500/300",
+    previewSrc: "https://picsum.photos/seed/5/500/300",
     tags: ["code", "design"],
   },
   {
@@ -50,7 +50,7 @@ const PROJECTS = [
     id: "test6",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also ",
-    imageSrc: "https://picsum.photos/seed/6/500/300",
+    previewSrc: "https://picsum.photos/seed/6/500/300",
     tags: ["make", "code"],
   },
 ];
