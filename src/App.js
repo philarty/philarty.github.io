@@ -15,10 +15,10 @@ import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   //detects user OS color theme preference.
-  const preferDark = 
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [isDarkTheme, toggleDarkTheme] = useState(preferDark);
+  // const preferDark = 
+  //   window.matchMedia &&
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDarkTheme, toggleDarkTheme] = useState(false);
 
   return (
     <div className={"app" + (isDarkTheme ? " dark" : " light")}>
