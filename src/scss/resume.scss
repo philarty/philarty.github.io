@@ -35,10 +35,11 @@
   }
 
   &__detail {
-    // h5 - position +  p - Year
+    // h5 - position + p - Year
     display: flex;
     align-content: center;
 
+    
     h5,
     p {
       margin: 0;
@@ -48,11 +49,14 @@
     }
 
     p::before {
-      content: "–";
-      margin: 0 0.5em;
-      font-weight: 300;
 
-      // font-style: italic;
+      content: "";
+      margin: 0 0.25em;
+      background-color: gray;
+      height: 1px;
+      width: 10px;
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 

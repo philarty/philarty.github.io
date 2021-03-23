@@ -8,14 +8,14 @@ const RESUME = [
       {
         sub_header: "Rhode Island School of Design - RISD",
         title: "BFA Industrial Design",
-        period: "2014-2018",
+        period: "2014 - 2018",
         //   title: "Honor title Student",
         //  period: 3.9,
       },
       {
         sub_header: "Brown University",
         title: "Spanish Studies",
-        period: "2017-2018",
+        period: "2017 - 2018",
       },
       {
         sub_header: "Edinburgh College of Arts - ECA",
@@ -28,9 +28,20 @@ const RESUME = [
     header: "Work Experience",
     contents: [
       {
+        sub_header: "Moesif",
+        title: "UIUX Engineer",
+        period: "2019 - Present",
+        description: [
+          "Design wireframes and build react components for both front facing website, and internal web application",
+          "Revamp and maintain static blog/docs site by building a conhesive jekyll site.",
+          "Develop and grow a consistent design language used across the site and application as well as branding guidelines",
+          "Create inclusive marketing material used across various social media including Youtube, Facebook, Reddit, LinkedIn",
+        ],
+      },
+      {
         sub_header: "Chronicle Books",
         title: "Industrial Design Fellow",
-        period: "2018-2019",
+        period: "2018 - 2019",
         description: [
           "Worked across different publishing-groups and cross functional teams to develop novel products and packagings from conception to market. Considered point of purchase, perceived value, shipping and cost.",
           "Created low fidelity physical prototypes and visual renderings of new concepts. Taught other designers how to utilize 3D modeling and rendering softwares and programs to realize concepts.",
@@ -40,42 +51,51 @@ const RESUME = [
       {
         sub_header: "Praise HK",
         title: "UIUX Designer",
-        period: "2018-2019",
+        period: "2018",
         description: [
           "Commissioned by HKUST to develop a user centric smart city app to summarize complex street level pollution data and health risk information.",
           "Mobile app aims to empower people affected by COPD or asthma to reduce individual pollution exposure in their daily life and provide personalized analytics.",
           "Created user experience maps, wire-frames, user interface, and background illustrations.",
         ],
       },
-      {
-        sub_header: "PBteen",
-        title: "DecAcc Design Intern",
-        period: "Summer 2017",
-        description: [
-          "Expanded product line for college students and dorm rooms. Developed a variety of space-saving solutions to management team which were brought to market.",
-          "Assisted designers to iterate on product ideas and produce design specs to be sent to overseas vendors.",
-        ],
-      },
+      // {
+      //   sub_header: "PBteen",
+      //   title: "DecAcc Design Intern",
+      //   period: "Summer 2017",
+      //   description: [
+      //     "Expanded product line for college students and dorm rooms. Developed a variety of space-saving solutions to management team which were brought to market.",
+      //     "Assisted designers to iterate on product ideas and produce design specs to be sent to overseas vendors.",
+      //   ],
+      // },
     ],
   },
   {
     header: "Skills",
     contents: [
       {
+        sub_header: "Coding",
+        description: [
+          "HTML",
+          "SCSS",
+          "Javascript",
+          "React",
+          "Liquid",
+          "Jekyll"
+        ],
+      },
+      {
         sub_header: "Software - Mac & PC",
         description: [
           "Illustrator",
+          "InDesign",
+          "Photoshop",
           "Sketch",
-          "HTML",
-          "CSS",
           "Rhino",
           "SolidWorks",
           "KeyShot",
           "Fusion360",
           "Brazil",
           "Grasshopper",
-          "InDesign",
-          "Photoshop",
         ],
       },
       {
@@ -115,7 +135,7 @@ const RESUME = [
       },
       {
         sub_header: "First Responder Headlamp",
-        title: "Brown University and RI Hospita",
+        title: "Brown University and RI Hospital",
         period: "Fall 2017",
         description: [
           "Partnered with RI hospital EMT team and Brown University engineers to develop and design a headlamp to ease airway examination during emergency situations. Headlamp aligns light with vision to improve illumination of mouth and airway.",
@@ -187,7 +207,6 @@ const SubHeader = ({ children }) => <h4>{children}</h4>;
 const Detail = ({ title, period }) => (
   <div className="resume__detail">
     <h5>{title}</h5>
-    <span />
     {period && <p>{period}</p>}
   </div>
 );
@@ -223,7 +242,7 @@ const ResumeSection = () => (
     <div>
       <h2>Philip Lau</h2>
       <p>UIUX Engineer</p>
-      <Link to='/' >philarty.github.io/portfolio</Link>
+      <Link to='/' >philarty.io</Link>
     </div>
     <div>
       {RESUME.slice(0, 3).map((section) => (
