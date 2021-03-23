@@ -16,6 +16,13 @@ import FourOhFour from "./FourOhFour.js";
 //   content: SpooningSpoon,
 // },
 
+// const ProjectDescription = ({ title, text }) => (
+//   <div className="project__header--text">
+//     <p>{title}</p>
+//     <p>{text}</p>
+//   </div>
+// );
+
 const Project = () => {
   let { projectId } = useParams();
 
@@ -25,17 +32,14 @@ const Project = () => {
     return (
       <section className="project">
         <div className="project__header">
-          {project.previewSrc && (
-            <img
-              className="project__header--image"
-              src={project.previewSrc}
-              alt={project.title}
+          <h2>{project.title}</h2>
+          {/* {project.summary.map((sum) => (
+            <ProjectDescription
+              title={Object.keys(sum)[0]}
+              text={Object.values(sum)[0]}
             />
-          )}
-          <div className="project__header--text">
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-          </div>
+          ))} */}
+          {/* <p>{project.description}</p> */}
         </div>
         {project.content}
       </section>
