@@ -1,5 +1,6 @@
 import SpooningSpoon from "./SpooningSpoon";
 import Iconography from "./Iconography";
+import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/cover.jpg";
 
 const PROJECTS = [
@@ -7,8 +8,8 @@ const PROJECTS = [
     title: "Iconography",
     id: "iconography",
     description:
-      "Designing custom icon sets to be used in mobile applications",
-    previewSrc: "https://picsum.photos/seed/2/500/300",
+      "Custom icons sets used in a variety of settings and applications.",
+    previewSrc: IconographyCover,
     summary: [
       { 'tools': "Illustrator, Photoshop" },
       { 'skills': "Graphic Design" },
