@@ -139,7 +139,7 @@ const IconGrid = ({ title, icons, description }) => {
 };
 
 const Iconography = (
-  <div className="project__body project__body--icons">
+  <div className="project__body">
     <div className="project__section iconography-header">
       <SVG src={iconHeader} alt="icon" />
       <div className="text">
