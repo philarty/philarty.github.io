@@ -686,6 +686,7 @@ button:hover {
   display: grid;
   max-width: 1000px;
   background-color: whitesmoke;
+  padding: 0;
 }
 .praise-hk img {
   max-width: 100%;
