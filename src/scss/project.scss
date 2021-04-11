@@ -77,16 +77,19 @@
   }
 }
 
-.grid {
+.praise-hk {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
-  grid-gap: 1em;
+  max-width: 1000px;
+  background-color: hsl(0, 0%, 96%);
+  img {
+    max-width: 100%;
 
-  .col--5 {
-    grid-column: span 5;
-  }
-  .col--7 {
-    grid-column: span 7;
+    &:first-child {
+      border-radius: 3px 3px 0 0;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid black;
+    }
   }
 }

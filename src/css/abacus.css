@@ -682,17 +682,19 @@ button:hover {
   margin: 0.75em 0;
 }
 
-.grid {
+.praise-hk {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
-  grid-gap: 1em;
+  max-width: 1000px;
+  background-color: whitesmoke;
 }
-.grid .col--5 {
-  grid-column: span 5;
+.praise-hk img {
+  max-width: 100%;
 }
-.grid .col--7 {
-  grid-column: span 7;
+.praise-hk img:first-child {
+  border-radius: 3px 3px 0 0;
+}
+.praise-hk img:last-child {
+  border-bottom: 1px solid black;
 }
 
 .project-index__title {
