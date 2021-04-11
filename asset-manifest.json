@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.265aeac3.chunk.css",
-    "main.js": "/static/js/main.3c032bff.chunk.js",
-    "main.js.map": "/static/js/main.3c032bff.chunk.js.map",
+    "main.css": "/static/css/main.1febaad9.chunk.css",
+    "main.js": "/static/js/main.36ab7328.chunk.js",
+    "main.js.map": "/static/js/main.36ab7328.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.83a34aa8.js",
     "runtime-main.js.map": "/static/js/runtime-main.83a34aa8.js.map",
     "static/js/2.a4b68c39.chunk.js": "/static/js/2.a4b68c39.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.257e0429.chunk.js": "/static/js/3.257e0429.chunk.js",
     "static/js/3.257e0429.chunk.js.map": "/static/js/3.257e0429.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.265aeac3.chunk.css.map": "/static/css/main.265aeac3.chunk.css.map",
+    "static/css/main.1febaad9.chunk.css.map": "/static/css/main.1febaad9.chunk.css.map",
     "static/js/2.a4b68c39.chunk.js.LICENSE.txt": "/static/js/2.a4b68c39.chunk.js.LICENSE.txt",
     "static/media/HeadShot.c331daf2.jpg": "/static/media/HeadShot.c331daf2.jpg",
     "static/media/biking.5401759c.svg": "/static/media/biking.5401759c.svg",
@@ -37,7 +37,24 @@
     "static/media/nature.a2065053.svg": "/static/media/nature.a2065053.svg",
     "static/media/outdoor.a03746f8.svg": "/static/media/outdoor.a03746f8.svg",
     "static/media/overcast.8f66ca01.svg": "/static/media/overcast.8f66ca01.svg",
+    "static/media/paise-hk-1.bd347a4c.png": "/static/media/paise-hk-1.bd347a4c.png",
+    "static/media/paise-hk-10.60d74f7b.png": "/static/media/paise-hk-10.60d74f7b.png",
+    "static/media/paise-hk-11.113042ea.png": "/static/media/paise-hk-11.113042ea.png",
+    "static/media/paise-hk-12.8d29c43e.png": "/static/media/paise-hk-12.8d29c43e.png",
+    "static/media/paise-hk-13.c4ba20d2.png": "/static/media/paise-hk-13.c4ba20d2.png",
+    "static/media/paise-hk-14.9f3673fc.png": "/static/media/paise-hk-14.9f3673fc.png",
+    "static/media/paise-hk-15.9fb898ba.png": "/static/media/paise-hk-15.9fb898ba.png",
+    "static/media/paise-hk-16.a49eab06.png": "/static/media/paise-hk-16.a49eab06.png",
+    "static/media/paise-hk-2.587a0f7d.png": "/static/media/paise-hk-2.587a0f7d.png",
+    "static/media/paise-hk-3.3d327339.png": "/static/media/paise-hk-3.3d327339.png",
+    "static/media/paise-hk-4.bfd432df.png": "/static/media/paise-hk-4.bfd432df.png",
+    "static/media/paise-hk-5.ae363c9c.png": "/static/media/paise-hk-5.ae363c9c.png",
+    "static/media/paise-hk-6.95681183.png": "/static/media/paise-hk-6.95681183.png",
+    "static/media/paise-hk-7.dcc741d3.png": "/static/media/paise-hk-7.dcc741d3.png",
+    "static/media/paise-hk-8.2aef0f25.png": "/static/media/paise-hk-8.2aef0f25.png",
+    "static/media/paise-hk-9.6542687b.png": "/static/media/paise-hk-9.6542687b.png",
     "static/media/peak-tram.950fbccf.svg": "/static/media/peak-tram.950fbccf.svg",
+    "static/media/praise-hk-cover.1ae06c43.png": "/static/media/praise-hk-cover.1ae06c43.png",
     "static/media/school.7fcbcfc3.svg": "/static/media/school.7fcbcfc3.svg",
     "static/media/suburban.58c7858f.svg": "/static/media/suburban.58c7858f.svg",
     "static/media/sunny-intervals-with-showers.d14f39f1.svg": "/static/media/sunny-intervals-with-showers.d14f39f1.svg",
@@ -58,7 +75,7 @@
   "entrypoints": [
     "static/js/runtime-main.83a34aa8.js",
     "static/js/2.a4b68c39.chunk.js",
-    "static/css/main.265aeac3.chunk.css",
-    "static/js/main.3c032bff.chunk.js"
+    "static/css/main.1febaad9.chunk.css",
+    "static/js/main.36ab7328.chunk.js"
   ]
 }
