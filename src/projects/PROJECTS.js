@@ -1,7 +1,10 @@
 import SpooningSpoon from "./SpooningSpoon";
 import Iconography from "./Iconography";
+import PraiseHk from './PraiseHk'
+
 import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/cover.jpg";
+import praiseHkCover from "../images/praise-hk/praise-hk-cover.png";
 
 const PROJECTS = [
   {
@@ -19,6 +22,14 @@ const PROJECTS = [
     ],
     tags: ["design"],
     content: Iconography,
+  },
+  {
+    title: "Praise HK",
+    id: "praise-hk",
+    description: "Human Sized Spoon ",
+    previewSrc: praiseHkCover,
+    tags: ["design"],
+    content: PraiseHk,
   },
   {
     title: "Spooning Spoon",
