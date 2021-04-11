@@ -31,16 +31,16 @@ const Project = () => {
   if (project) {
     return (
       <section className="project">
-        <div className="project__header">
+        {/* <div className="project__header">
           <h2>{project.title}</h2>
-          {/* {project.summary.map((sum) => (
+          {project.summary.map((sum) => (
             <ProjectDescription
               title={Object.keys(sum)[0]}
               text={Object.values(sum)[0]}
             />
-          ))} */}
-          {/* <p>{project.description}</p> */}
-        </div>
+          ))}
+          <p>{project.description}</p>
+        </div> */}
         {project.content}
       </section>
     );

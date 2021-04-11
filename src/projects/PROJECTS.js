@@ -13,20 +13,13 @@ const PROJECTS = [
     description:
       "Custom icons sets used in a variety of settings and applications.",
     previewSrc: IconographyCover,
-    summary: [
-      { 'tools': "Illustrator, Photoshop" },
-      { 'skills': "Graphic Design" },
-      { 'time': "3 months" },
-      { 'role': "Graphic Design" },
-      { 'projects': 'ho'}
-    ],
     tags: ["design"],
     content: Iconography,
   },
   {
     title: "Praise HK",
     id: "praise-hk",
-    description: "Human Sized Spoon ",
+    description: "Develop a smart city mobile app empowering users to better manage and control their exposure to air pollutants.",
     previewSrc: praiseHkCover,
     tags: ["design"],
     content: PraiseHk,
