@@ -831,12 +831,49 @@ button:hover {
 .resume {
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px 40px;
 }
 @media screen and (min-width: 600px) {
   .resume {
-    display: grid;
-    grid-template-columns: 250px 1fr 1fr;
-    grid-gap: 0 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 900px) {
+  .resume {
+    grid-template-columns: 200px 1fr 1fr;
+  }
+}
+.resume__logo {
+  width: 50px;
+}
+@media screen and (min-width: 600px) {
+  .resume__logo {
+    grid-column: 1/2;
+  }
+}
+@media screen and (min-width: 900px) {
+  .resume__logo {
+    grid-column: 1/4;
+  }
+}
+.resume__profile h2 {
+  margin: 0;
+  font-size: 2.2em;
+}
+.resume__profile p {
+  font-weight: 500;
+  margin: 0;
+}
+@media screen and (min-width: 600px) {
+  .resume__profile {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 900px) {
+  .resume__profile {
+    grid-column: 1/2;
   }
 }
 .resume__section {
@@ -887,7 +924,7 @@ button:hover {
 }
 .resume__content p {
   margin: 0.5em 0;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 .resume__content p:last-child {
   margin-bottom: 1.5em;

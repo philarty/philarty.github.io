@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/logo.svg";
+import SVG from "react-inlinesvg";
 
 const RESUME = [
   {
@@ -80,7 +82,7 @@ const RESUME = [
           "Javascript",
           "React",
           "Liquid",
-          "Jekyll"
+          "Jekyll",
         ],
       },
       {
@@ -239,10 +241,13 @@ class Section extends React.Component {
 
 const ResumeSection = () => (
   <div className="resume">
-    <div>
+    <div className="resume__logo">
+      <SVG src={logo} />
+    </div>
+    <div className="resume__profile">
       <h2>Philip Lau</h2>
       <p>UIUX Engineer</p>
-      <Link to='/' >philarty.io</Link>
+      <Link to="/">philarty.io</Link>
     </div>
     <div>
       {RESUME.slice(0, 3).map((section) => (

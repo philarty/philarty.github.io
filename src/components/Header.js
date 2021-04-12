@@ -13,10 +13,10 @@ const NAV = [
     text: "About",
     url: "/about",
   },
-  {
-    text: "Aiya",
-    url: "/404",
-  },
+  // {
+  //   text: "Aiya",
+  //   url: "/404",
+  // },
 ];
 
 //wrapping HeaderInner to pass location,
