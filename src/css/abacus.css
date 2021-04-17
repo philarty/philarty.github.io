@@ -53,6 +53,7 @@ body {
 .app {
   color: var(--color);
   background-color: var(--background-color);
+  min-height: 100vh;
 }
 
 html {
@@ -415,9 +416,7 @@ button:hover {
   display: grid;
 }
 .lightbox__button {
-  border: none;
-  padding: 0;
-  margin: 0;
+  cursor: pointer;
 }
 .lightbox__button img {
   max-width: 100%;
@@ -736,6 +735,9 @@ button:hover {
   border-bottom: 1px solid black;
 }
 
+.project-index {
+  padding: 1em;
+}
 .project-index__title {
   max-width: 1200px;
   margin-left: auto;
