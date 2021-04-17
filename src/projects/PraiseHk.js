@@ -39,7 +39,7 @@ const PraiseHk = (
   <div className="project__body">
     <div className="project__section praise-hk">
       {STATICIMAGES.map((image) => (
-        <img src={image.src} alt={image.alt} />
+        <img src={image.src} alt={image.alt} key={image.alt}/>
       ))}
     </div>
   </div>
