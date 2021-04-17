@@ -41,16 +41,6 @@ const RESUME = [
         ],
       },
       {
-        sub_header: "Chronicle Books",
-        title: "Industrial Design Fellow",
-        period: "2018 - 2019",
-        description: [
-          "Worked across different publishing-groups and cross functional teams to develop novel products and packagings from conception to market. Considered point of purchase, perceived value, shipping and cost.",
-          "Created low fidelity physical prototypes and visual renderings of new concepts. Taught other designers how to utilize 3D modeling and rendering softwares and programs to realize concepts.",
-          "Managed international vendor relationships to ensure high production quality while maintaining margins.",
-        ],
-      },
-      {
         sub_header: "Praise HK",
         title: "UIUX Designer",
         period: "2018",
@@ -58,6 +48,16 @@ const RESUME = [
           "Commissioned by HKUST to develop a user centric smart city app to summarize complex street level pollution data and health risk information.",
           "Mobile app aims to empower people affected by COPD or asthma to reduce individual pollution exposure in their daily life and provide personalized analytics.",
           "Created user experience maps, wire-frames, user interface, and background illustrations.",
+        ],
+      },
+      {
+        sub_header: "Chronicle Books",
+        title: "Industrial Design Fellow",
+        period: "2018 - 2019",
+        description: [
+          "Worked across different publishing-groups and cross functional teams to develop novel products and packagings from conception to market. Considered point of purchase, perceived value, shipping and cost.",
+          "Created low fidelity physical prototypes and visual renderings of new concepts. Taught other designers how to utilize 3D modeling and rendering softwares and programs to realize concepts.",
+          "Managed international vendor relationships to ensure high production quality while maintaining margins.",
         ],
       },
       // {
