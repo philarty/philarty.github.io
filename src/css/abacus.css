@@ -405,6 +405,44 @@ button:hover {
   left: 18px;
 }
 
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  display: grid;
+}
+.lightbox__button {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.lightbox__button img {
+  max-width: 100%;
+}
+.lightbox > * {
+  grid-area: 1/1/2/2;
+}
+.lightbox__background {
+  background-color: #000000c4;
+}
+.lightbox__container {
+  place-self: center;
+  display: grid;
+}
+.lightbox__container > * {
+  grid-area: 1/1/2/2;
+}
+.lightbox__container .btn {
+  place-self: flex-start end;
+}
+.lightbox__container img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
 .main-header {
   background-color: var(--background-color);
   position: fixed;
