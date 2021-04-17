@@ -41,6 +41,7 @@ const Icon = (props) => {
         );
 
       case "menu":
+      default:
         return (
           <svg
             className="icon icon--menu"
@@ -54,8 +55,6 @@ const Icon = (props) => {
             </g>
           </svg>
         );
-      default:
-        return null;
     }
   }
 
