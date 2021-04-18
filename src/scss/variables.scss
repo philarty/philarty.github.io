@@ -1,6 +1,6 @@
 $primary-color: #00a1c2;
 $text-color: #101c2e;
-
+$muted-color: #808080;
 $lightgray: #d3d3d3;
 
 // Small tablets and large smartphones (landscape view)
@@ -17,12 +17,14 @@ $screen-xl-min: 1200px;
 
 //scss variables
 $a__color: #808080;
+$muted__color: #808080;
 
+//==============colors for light==============
 $light--primary: #00a1c2;
 $light--red: #f33207;
 $light--green: #009c00;
 $light--blue: #0033ff;
-
+$light--muted: lighten($muted__color, 20%);
 
 //base
 $light--background-color: #ffffff;
@@ -43,11 +45,12 @@ $light--button-color-blue: $light--blue;
 $light--button-color-blue--active: $light--blue;
 
 
-//colors for dark.
+//==============colors for dark==============
 $dark--primary: #00a1c2;
 $dark--red: #f7382b;
 $dark--green: #2daf21;
 $dark--blue: #2744ec;
+$dark--muted: darken($muted__color, 20%);
 
 //base
 $dark--background-color: #191a1b;
@@ -67,12 +70,13 @@ $dark--button-color-green--active: $dark--green;
 $dark--button-color-blue: $dark--blue;
 $dark--button-color-blue--active: $dark--blue;
 
-//ccss custom vars
+//==============css custom vars==============
 .app {
   --primary-color: #{$light--primary};
   --red: #{$light--red};
   --green: #{$light--green};
   --blue: #{$light--blue};
+  --muted: #{$light--muted};
 
   --color: #{$light--color};
   --background-color: #{$light--background-color};
@@ -97,6 +101,7 @@ $dark--button-color-blue--active: $dark--blue;
   --red: #{$dark--red};
   --green: #{$dark--green};
   --blue: #{$dark--blue};
+  --muted: #{$dark--muted};
 
   --color: #{$dark--color};
   --background-color: #{$dark--background-color};
