@@ -8,17 +8,20 @@ import spooningSpoonPhil from "../images/spooning-spoon/spooning-spoon-phil.jpg"
 
 const SpooningSpoon = (
   <div className="project__body">
-    <Lightbox>
-      <img src={spooningSpoonPoster} alt="" />
-    </Lightbox>
-    <Lightbox>
-      <img src={spooningSpoonDefinition} alt="" />
-    </Lightbox>{" "}
-    <div>
-      <h3>
-        Spoon <span>\spoon\</span>
-      </h3>
+    <div className="project__section spooning-spoon__poster">
+      <Lightbox>
+        <img src={spooningSpoonPoster} alt="" />
+      </Lightbox>
+    </div>
+    <div className="project__section spooning-spoon__definition">
+      <Lightbox>
+        <img src={spooningSpoonDefinition} alt="" />
+      </Lightbox>
       <ol>
+        <h3>
+          Spoon <span className="text-muted">/spo͞on/</span>
+        </h3>
+
         <h4>noun</h4>
         <li>
           An implement consisting of a small, shallow oval or round bowl on a
@@ -31,15 +34,21 @@ const SpooningSpoon = (
         </li>
       </ol>
     </div>
-    <Lightbox>
-      <img src={spooningSpoonProcess} alt="" />
-    </Lightbox>
-    <Lightbox>
-      <img src={spooningSpoonCover} alt="" />
-    </Lightbox>
-    <Lightbox>
-      <img src={spooningSpoonPhil} alt="" />
-    </Lightbox>
+    <div className="project__section">
+      <Lightbox>
+        <img src={spooningSpoonProcess} alt="" />
+      </Lightbox>
+    </div>
+    <div className="project__section">
+      <Lightbox>
+        <img src={spooningSpoonCover} alt="" />
+      </Lightbox>
+    </div>
+    <div className="project__section">
+      <Lightbox>
+        <img src={spooningSpoonPhil} alt="" />
+      </Lightbox>
+    </div>
   </div>
 );
 
