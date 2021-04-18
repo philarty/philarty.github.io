@@ -1,8 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import Button from "./Button";
-import Icon from "./Icon";
-
 function Lightbox(props) {
   const { children, className, ...rest } = props;
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
