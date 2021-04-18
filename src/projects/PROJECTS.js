@@ -3,7 +3,7 @@ import Iconography from "./Iconography";
 import PraiseHk from './PraiseHk'
 
 import IconographyCover from "../images/iconography/iconography-cover.svg";
-import spooningSpoonCover from "../images/spooning-spoon/cover.jpg";
+import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
 import praiseHkCover from "../images/praise-hk/praise-hk-cover.png";
 
 const PROJECTS = [
