@@ -1,6 +1,5 @@
 import React from "react";
-import SVG  from 'react-inlinesvg';
-
+import SVG from "react-inlinesvg";
 
 const Icon = (props) => {
   const { icon, src, className } = props;
@@ -39,7 +38,16 @@ const Icon = (props) => {
             </g>
           </svg>
         );
-
+      case "cross":
+        return (
+          <svg
+            className="icon icon--cross"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path d="M18.71,17.29a1,1,0,0,1,0,1.42,1,1,0,0,1-1.42,0L12,13.42,6.71,18.71a1,1,0,0,1-1.42,0,1,1,0,0,1,0-1.42L10.58,12,5.29,6.71A1,1,0,0,1,6.71,5.29L12,10.58l5.29-5.29a1,1,0,1,1,1.42,1.42L13.42,12Z" />
+          </svg>
+        );
       case "menu":
       default:
         return (
@@ -60,10 +68,7 @@ const Icon = (props) => {
 
   if (src) {
     return (
-      <SVG
-        src={src}
-        className={"icon" + (className ? " " + className : "")}
-      />
+      <SVG src={src} className={"icon" + (className ? " " + className : "")} />
     );
   }
 
