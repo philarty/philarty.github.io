@@ -30,17 +30,8 @@ function Lightbox(props) {
     return (
       <React.Fragment>
         <div className="lightbox">
-          <div className="lightbox__background" />
-
-          <div className="lightbox__container" ref={lightboxInner}>
+          <div className="lightbox__inner" ref={lightboxInner}>
             {children}
-            <Button
-              onClick={() => setLightBoxDisplay(false)}
-              btnStyle="link"
-              icon
-            >
-              <Icon icon="cross" />
-            </Button>
           </div>
         </div>
         <div

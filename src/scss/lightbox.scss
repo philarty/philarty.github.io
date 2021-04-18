@@ -14,27 +14,11 @@
   z-index: 10000;
 
   display: grid;
+  height:100%;
+  background-color:#000000c4;
 
-  > * {
-    grid-area: 1/1/2/2;
-  }
-
-  &__background {
-    background-color: #000000c4;
-  }
-
-  &__container {
+  &__inner {
     place-self: center;
-    display: grid;
-
-    > * {
-      grid-area: 1/1/2/2;
-    }
-
-    .btn {
-      place-self: flex-start end;
-    }
-
     img {
       max-width: 90vw;
       max-height: 90vh;
