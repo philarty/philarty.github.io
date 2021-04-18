@@ -4,7 +4,7 @@ import Button from "./Button";
 import Icon from "./Icon";
 
 function Lightbox(props) {
-  const { children } = props;
+  const { children, className, ...rest } = props;
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
 
   const lightboxInner = useRef();
@@ -54,8 +54,9 @@ function Lightbox(props) {
   } else {
     return (
       <div
-        className="lightbox__button"
+        className={"lightbox__button" + (className ? " " + className : "")}
         onClick={() => setLightBoxDisplay(true)}
+        {...rest}
       >
         {children}
       </div>
