@@ -11,6 +11,10 @@
 }
 
 .project {
+  img {
+    max-height: 100vh;
+  }
+
   &__body {
     max-width: 1200px;
     margin: 0 auto;
@@ -28,7 +32,7 @@
   grid-gap: 2em;
   place-items: center;
 
-  @media screen and (min-width: 600px) {
+  @include lg {
     grid-template-columns: 2fr 3fr;
   }
 
@@ -40,7 +44,7 @@
 
 .iconography-grid {
   max-width: 800px;
-  margin: 0 auto ;
+  margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -91,6 +95,24 @@
 
     &:last-child {
       border-bottom: 1px solid black;
+    }
+  }
+}
+
+.spooning-spoon {
+  &__poster {
+    display: flex;
+    place-content: center;
+  }
+
+  &__definition {
+    @include md {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    h4 {
+      margin: 1em 0 0 0;
     }
   }
 }
