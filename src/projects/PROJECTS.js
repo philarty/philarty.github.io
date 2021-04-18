@@ -1,6 +1,7 @@
 import SpooningSpoon from "./SpooningSpoon";
 import Iconography from "./Iconography";
 import PraiseHk from './PraiseHk'
+import DailyUI from './DailyUI'
 
 import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
@@ -24,6 +25,14 @@ const PROJECTS = [
     tags: ["design"],
     content: PraiseHk,
   },
+  // {
+  //   title: "Daily UI",
+  //   id: "daily-ui",
+  //   description: "Human Sized Spoon ",
+  //   previewSrc: spooningSpoonCover,
+  //   tags: ["design", "make"],
+  //   content: DailyUI,
+  // },
   {
     title: "Spooning Spoon",
     id: "spooning-spoon",
