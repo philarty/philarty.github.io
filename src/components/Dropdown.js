@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const Dropdown = React.forwardRef((props, ref) => {
-  const { options, value, onChange, className } = props;
+  const { options, value, placeholder, onChange, className } = props;
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownMenu = useRef();
 
@@ -28,7 +28,7 @@ const Dropdown = React.forwardRef((props, ref) => {
         onClick={() => setShowDropdown(true)}
         className="dropdown__input"
       >
-        {selectedOption.label}
+        {selectedOption ? selectedOption.label : <span className='dropdown__placeholder'>{placeholder || 'Select...'}</span>}
       </button>
       {showDropdown && (
         <ol ref={dropdownMenu} className="dropdown__menu">

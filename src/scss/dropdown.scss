@@ -5,6 +5,10 @@
     background-color: transparent;
   }
 
+  &__placeholder {
+    color: var(--muted)
+  }
+
   &__input {
     border: 1px solid var(--muted);
     min-width: 100px;
