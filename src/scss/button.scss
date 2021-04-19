@@ -34,7 +34,7 @@ button {
 
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: 50%;
   }
 }
 
@@ -166,7 +166,6 @@ $toggle-size: 10px;
 $toggle-margin: 2px;
 $toggle-background-height: $toggle-size + $toggle-margin * 2;
 $toggle-background-width: $toggle-size * 2 + $toggle-margin * 3;
-
 
 //The switch - the box around the slider
 .toggle-switch {
