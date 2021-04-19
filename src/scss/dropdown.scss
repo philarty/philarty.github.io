@@ -48,7 +48,7 @@
     padding-inline-start: 0;
 
     // styling
-    background-color: var(--muted);
+    background-color: var(--background-color);
     display: grid;
     position: absolute;
     min-width: 100px;
@@ -68,7 +68,7 @@
     line-height: 1.6;
 
     &:hover {
-      background-color: var(--background-color);
+      background-color: var(--muted);
     }
   }
 }
