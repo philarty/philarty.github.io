@@ -19,7 +19,14 @@
     justify-content: space-between;
     line-height: 1.6;
     color: var(--color);
+    font-size: $font-size-6--mobile;
 
+    @include md {
+      font-size: $font-size-6--desktop;
+    }
+    &:hover {
+      box-shadow: 0px 0px 1px 1px var(--box-shadow__color);
+    }
     &::after {
       display: block;
       content: "";
