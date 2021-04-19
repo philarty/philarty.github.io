@@ -187,9 +187,17 @@ a:active, a:hover {
 .dropdown__placeholder {
   color: var(--muted);
 }
+.dropdown--block {
+  width: 100%;
+}
+.dropdown--block .dropdown__input {
+  width: 100%;
+}
 .dropdown__input {
   background-color: transparent;
-  border: 1px solid var(--muted);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--button-color-default);
   min-width: 100px;
   text-align: left;
   min-height: 10px;
@@ -205,12 +213,6 @@ a:active, a:hover {
     font-size: 1rem;
   }
 }
-.dropdown__input:hover, .dropdown__input:active, .dropdown__input--active {
-  box-shadow: 0px 0px 1px 1px var(--box-shadow__color);
-}
-.dropdown__input:hover::after, .dropdown__input:active::after, .dropdown__input--active::after {
-  border-top-color: var(--color);
-}
 .dropdown__input::after {
   display: block;
   content: "";
@@ -219,6 +221,20 @@ a:active, a:hover {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid var(--muted);
+  margin-left: 3px;
+}
+.dropdown__input:disabled:hover, .dropdown__input:disabled:active {
+  background-color: transparent;
+  box-shadow: none;
+}
+.dropdown__input:disabled:hover::after, .dropdown__input:disabled:active::after {
+  border-top-color: var(--muted);
+}
+.dropdown__input:hover, .dropdown__input:active, .dropdown__input--active {
+  box-shadow: 0px 0px 1px 1px var(--box-shadow__color);
+}
+.dropdown__input:hover::after, .dropdown__input:active::after, .dropdown__input--active::after {
+  border-top-color: var(--button-color-default);
 }
 .dropdown__menu {
   list-style-type: decimal;
@@ -288,7 +304,7 @@ button:hover {
 .btn:disabled,
 button:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 50%;
 }
 
 .btn-sm {
@@ -893,16 +909,20 @@ button:disabled {
   border-radius: 3px;
 }
 .component-docs__header {
-  padding: 16px 24px;
+  padding: 8px 24px;
   margin: 0;
   background-color: var(--primary-color);
+  font-weight: 600;
+  color: white;
 }
 .component-docs__example {
   border-radius: 3px 3px 0 0;
   padding: 16px 24px;
+  display: flex;
+  align-items: center;
 }
 .component-docs__example--button {
-  min-height: 40px;
+  min-height: 50px;
 }
 .component-docs__code {
   padding: 16px 24px;

@@ -45,12 +45,12 @@ const ButtonSection = () => {
       : ""
   }
 > 
-  Stylize Me 
+  I'm A Button 
 </Button>`;
 
   return (
     <div className="project__section component-docs">
-      <h3 className="component-docs__header">Button</h3>
+      <h4 className="component-docs__header">Button</h4>
       <div className="component-docs__example component-docs__example--button">
         <Button
           btnStyle={btnStyle}
@@ -59,7 +59,7 @@ const ButtonSection = () => {
           block={block}
           disabled={disabled}
         >
-          Stylize Me
+          I'm A Button
         </Button>
       </div>
       <div className="component-docs__options">
@@ -83,9 +83,79 @@ const ButtonSection = () => {
   );
 };
 
+const DropdownSection = () => {
+  const [disabled, setDisabled] = useState(false);
+  const [block, setBlock] = useState(false);
+  const [value, setValue] = useState(null);
+
+  const code = `<Dropdown
+  placeholder='Select Surname'
+  value={surname}
+  onChange={() => setSurname()}
+  options=[
+    { value: "Green", label: "Green"},
+    { value: "Melendez", label: "Melendez"},
+    { value: "Middleton",label: "Middleton"},
+    { value: "Suarez",label: "Suarez"},
+    { value: "Chaney", label: "Chaney"},
+  ]${
+    block
+      ? `
+  block`
+      : ""
+  }${
+    disabled
+      ? `
+  disabled`
+      : ""
+  }
+/>`;
+
+  const SAMPLEDROPDOWNOPTIONS = [
+    { value: "Green", label: "Green" },
+    { value: "Melendez", label: "Melendez" },
+    { value: "Middleton", label: "Middleton" },
+    { value: "Suarez", label: "Suarez" },
+    { value: "Chaney", label: "Chaney" },
+  ];
+  return (
+    <div className="project__section component-docs">
+      <h4 className="component-docs__header">Dropdown</h4>
+      <div className="component-docs__example component-docs__example--button">
+        <Dropdown
+          options={SAMPLEDROPDOWNOPTIONS}
+          value={value}
+          onChange={setValue}
+          placeholder="Select Surname"
+          disabled={disabled}
+          block={block}
+        />
+      </div>
+      <div className="component-docs__options">
+        <Button btnStyle="outline" onClick={() => setValue(null)}>
+          Clear
+        </Button>
+        <ToggleSwitch isSelected={block} onToggle={() => setBlock(!block)}>
+          Block
+        </ToggleSwitch>
+        <ToggleSwitch
+          isSelected={disabled}
+          onToggle={() => setDisabled(!disabled)}
+        >
+          Disabled
+        </ToggleSwitch>
+      </div>
+      <div className="component-docs__code">
+        <code>{code}</code>
+      </div>
+    </div>
+  );
+};
+
 const Portfolio = (
   <div className="project__body portfolio">
     <ButtonSection />
+    <DropdownSection />
   </div>
 );
 

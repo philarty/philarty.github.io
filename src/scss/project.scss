@@ -128,17 +128,21 @@ $portfolio-padding: 16px 24px;
   border-radius: 3px;
 
   &__header {
-    padding: $portfolio-padding;
+    padding: 8px 24px;;
     margin: 0;
     background-color: var(--primary-color);
+    font-weight: 600;
+    color: white;
   }
 
   &__example{
     border-radius: 3px 3px 0 0;
     padding: $portfolio-padding;
+    display: flex;
+    align-items: center;
 
     &--button {
-      min-height: 40px;
+      min-height: 50px;
     }
   }
 
