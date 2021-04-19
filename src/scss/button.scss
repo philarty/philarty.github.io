@@ -31,6 +31,11 @@ button {
   &:hover {
     outline: none;
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
 
 @mixin btn-solid($color) {
@@ -79,7 +84,12 @@ button {
 //sizes
 .btn-sm {
   padding: 2px 5px;
-  font-size: 1rem;
+  font-size: $font-size-7--mobile;
+
+  @include md {
+    font-size: $font-size-7--desktop;
+  }
+
   .icon {
     width: 20px;
     height: 20px;
@@ -88,7 +98,11 @@ button {
 
 .btn-md {
   padding: 5px 12px;
-  font-size: 1.2rem;
+  font-size: $font-size-6--mobile;
+
+  @include md {
+    font-size: $font-size-6--desktop;
+  }
 
   .icon {
     width: 24px;
@@ -98,7 +112,11 @@ button {
 
 .btn-lg {
   padding: 8px 20px;
-  font-size: 1.5rem;
+  font-size: $font-size-5--mobile;
+
+  @include md {
+    font-size: $font-size-5--desktop;
+  }
 
   .icon {
     width: 28px;
