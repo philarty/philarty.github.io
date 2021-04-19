@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const Dropdown = React.forwardRef((props, ref) => {
-  const { options, value, placeholder, onChange, className } = props;
+  const { options, value, placeholder, onChange, disabled, className } = props;
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownMenu = useRef();
 
@@ -29,6 +29,7 @@ const Dropdown = React.forwardRef((props, ref) => {
         className={
           "dropdown__input" + (showDropdown ? " dropdown__input--active" : "")
         }
+        disabled={disabled}
       >
         {selectedOption ? (
           selectedOption.label
@@ -44,9 +45,7 @@ const Dropdown = React.forwardRef((props, ref) => {
             <button
               className={
                 "dropdown__item" +
-                (selectedOption.value === option.value
-                  ? " dropdown__item--active"
-                  : "")
+                (selectedOption === option ? " dropdown__item--active" : "")
               }
               onClick={() => {
                 onChange(option.value);

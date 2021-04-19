@@ -1,14 +1,16 @@
 .dropdown {
   position: relative;
 
-
   &__placeholder {
     color: var(--muted);
   }
 
   &__input {
     background-color: transparent;
-    border: 1px solid var(--muted);
+    border-width: 1px ;
+    border-style: solid;
+    border-color: var(--button-color-default);
+
     min-width: 100px;
     text-align: left;
     min-height: 10px;
@@ -22,15 +24,7 @@
     @include md {
       font-size: $font-size-6--desktop;
     }
-    &:hover,
-    &:active,
-    &--active {
-      box-shadow: 0px 0px 1px 1px var(--box-shadow__color);
 
-      &::after {
-        border-top-color: var(--color);
-      }
-    }
     &::after {
       display: block;
       content: "";
@@ -38,8 +32,31 @@
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-top: 5px solid var(--muted);
+      border-top: 5px solid var(--button-color-default);
+      margin-left: 3px;
     }
+
+    &:disabled:hover,
+    &:disabled:active {
+      background-color: transparent;
+      box-shadow: none;
+
+      &::after {
+        border-top-color: var(--button-color-default);
+      }
+    }
+
+    &:hover,
+    &:active,
+    &--active {
+      box-shadow: 0px 0px 1px 1px var(--box-shadow__color);
+
+      &::after {
+        border-top-color: var(--button-color-default);
+      }
+    }
+
+    
   }
 
   &__menu {
@@ -76,10 +93,10 @@
       background-color: var(--muted);
     }
 
-    &--active, &--active:hover {
+    &--active,
+    &--active:hover {
       background-color: var(--primary-color);
       color: white;
-
     }
   }
 }
