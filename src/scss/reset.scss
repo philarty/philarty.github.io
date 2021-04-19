@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 //base reset
 body {
@@ -13,11 +13,29 @@ body {
 .app {
   color: var(--color);
   background-color: var(--background-color);
-  min-height:100vh;
+  min-height: 100vh;
 }
 
+$font-size-base: 16px;
+
+$font-size-1--mobile: 2.488rem; //~49px
+$font-size-2--mobile: 2.074rem; //~39px
+$font-size-3--mobile: 1.728rem; //~31px
+$font-size-4--mobile: 1.44rem; //~25px
+$font-size-5--mobile: 1.2rem; //20px
+$font-size-6--mobile: 1rem; //16px
+$font-size-7--mobile: 0.833rem; //~12.8px
+
+$font-size-1--desktop: 3.052rem; //~49px
+$font-size-2--desktop: 2.441rem; //~39px
+$font-size-3--desktop: 1.953rem; //~31px
+$font-size-4--desktop: 1.563rem; //~25px
+$font-size-5--desktop: 1.25rem; //20px
+$font-size-6--desktop: 1rem; //16px
+$font-size-7--desktop: 0.8rem; //~12.8px
+
 html {
-  font-size: 16px;
+  font-size: $font-size-base;
 } /*16px*/
 
 h1,
@@ -43,74 +61,76 @@ p {
 h1,
 .h1 {
   margin-top: 0;
-  font-size: 2.488rem; //~49px
+  font-size:$font-size-1--mobile; //~49px
 }
 
 h2,
 .h2 {
-  font-size: 2.074rem; //~39px
+  font-size: $font-size-2--mobile; //~39px
 }
 
 h3,
 .h3 {
-  font-size: 1.728rem; //~31px
+  font-size: $font-size-3--mobile; //~31px
 }
 
 h4,
 .h4 {
-  font-size: 1.44rem; //~25px
+  font-size: $font-size-4--mobile; //~25px
 }
 
 h5,
 .h5 {
-  font-size: 1.2rem; //20px
+  font-size: $font-size-5--mobile; //20px
 }
 
 p,
 .p {
+  font-size: $font-size-6--mobile; //16px
   margin-bottom: 1rem; //16px
 }
 
 small,
 .text_small {
-  font-size: 0.833rem; //~12.8px
+  font-size: $font-size-7--mobile; //~12.8px
 }
 
 @include md {
   h1,
   .h1 {
     margin-top: 0;
-    font-size: 3.052rem; //~49px
+    font-size: $font-size-1--desktop; //~49px
   }
 
   h2,
   .h2 {
-    font-size: 2.441rem; //~39px
+    font-size: $font-size-2--desktop; //~39px
   }
 
   h3,
   .h3 {
-    font-size: 1.953rem; //~31px
+    font-size: $font-size-3--desktop; //~31px
   }
 
   h4,
   .h4 {
-    font-size: 1.563rem; //~25px
+    font-size: $font-size-4--desktop; //~25px
   }
 
   h5,
   .h5 {
-    font-size: 1.25rem; //20px
+    font-size: $font-size-5--desktop; //20px
   }
 
   p,
   .p {
+    margin-bottom: $font-size-6--desktop; //16px
     margin-bottom: 1rem; //16px
   }
 
   small,
   .text_small {
-    font-size: 0.8rem; //~12.8px
+    font-size: $font-size-7--desktop; //~12.8px
   }
 }
 
@@ -128,8 +148,7 @@ a {
   }
 }
 
-
 //utilities
 .text-muted {
-  color: var(--muted)
+  color: var(--muted);
 }
