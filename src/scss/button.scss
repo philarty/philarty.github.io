@@ -159,21 +159,17 @@ button {
 @include btn-link(blue);
 
 // toggl switch
-$toggle-size: 12px;
-$toggle-border-width: 1px;
+$toggle-size: 10px;
 $toggle-margin: 2px;
-$toggle-background-height: $toggle-size + $toggle-border-width * 2 +
-  $toggle-margin * 2;
-$toggle-background-width: (
-    $toggle-size + $toggle-border-width + $toggle-margin * 2
-  ) * 2;
+$toggle-background-height: $toggle-size + $toggle-margin * 2;
+$toggle-background-width: $toggle-size * 2 + $toggle-margin * 3;
+
 
 //The switch - the box around the slider
-.switch {
+.toggle-switch {
   position: relative;
-  display: inline-block;
-  width: $toggle-background-width;
-  height: $toggle-background-height;
+  display: flex;
+  align-items: center;
 
   input {
     opacity: 0;
@@ -182,20 +178,15 @@ $toggle-background-width: (
   }
 
   // The slider
-  .slider {
+  &__slider {
     //the border
-    position: absolute;
+    position: relative;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--background-color);
-    transition: 0.4s;
-    border-width: $toggle-border-width;
-    border-color: var(--a__color);
-    border-style: solid;
+    background-color: var(--muted);
+    transition: 0.3s;
     border-radius: $toggle-background-height / 2;
+    width: $toggle-background-width;
+    height: $toggle-background-height;
 
     //the circcle
     &:before {
@@ -206,17 +197,26 @@ $toggle-background-width: (
       width: $toggle-size;
       left: $toggle-margin;
       bottom: $toggle-margin;
-      background-color: var(--a__color);
+      background-color: var(--background-color);
       -webkit-transition: 0.4s;
       transition: 0.4s;
     }
   }
 
-  input:checked + .slider {
-    background-color: var(--a__color--active);
+  input:checked + .toggle-switch__slider {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  input:checked + .toggle-switch__slider:before {
+    left: $toggle-size + $toggle-margin * 2;
   }
 
-  input:checked + .slider:before {
-    left: $toggle-size + ($toggle-margin * 2) + $toggle-border-width * 2;
+  &__label {
+    margin-left: 4px;
+    line-height: 1.6;
+    font-size: $font-size-6--mobile;
+    @include md {
+      font-size: $font-size-6--desktop;
+    }
   }
 }
