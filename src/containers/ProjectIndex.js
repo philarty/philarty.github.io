@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import ProjectPreview from "../components/ProjectPreview.js";
 
-import PROJECTS from '../projects/PROJECTS.js'
+import PROJECTS from "../projects/PROJECTS.js";
 
 function ProjectIndex() {
   const location = useLocation();
@@ -18,6 +18,8 @@ function ProjectIndex() {
     ? PROJECTS.filter((p) => p.tags.includes(selectedTag))
     : PROJECTS;
 
+  const publicProjects = selectedProjects.filter((project) => !project.hidden);
+
   return (
     <section className="project-index">
       {selectedTag && (
@@ -26,7 +28,7 @@ function ProjectIndex() {
         </h1>
       )}
       <div className="project-index__grid">
-        {selectedProjects.map((project) => (
+        {publicProjects.map((project) => (
           <ProjectPreview project={project} key={project.title} />
         ))}
       </div>
