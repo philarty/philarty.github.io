@@ -113,3 +113,50 @@
     }
   }
 }
+
+$portfolio-padding: 16px 24px;
+.portfolio {
+  padding: 1em;
+  
+}
+
+.component-docs {
+  max-width: 600px;
+
+  border: 1px solid var(--primary-color);
+  padding: 0;
+  border-radius: 3px;
+
+  &__header {
+    padding: $portfolio-padding;
+    margin: 0;
+    background-color: var(--primary-color);
+  }
+
+  &__example{
+    border-radius: 3px 3px 0 0;
+    padding: $portfolio-padding;
+
+    &--button {
+      min-height: 40px;
+    }
+  }
+
+  &__code {
+    padding: $portfolio-padding;
+    white-space: pre-wrap;
+    border-top: 1px solid var(--primary-color);
+
+    line-height: 1.2;
+  }
+
+  &__options {
+    border-top: 1px solid var(--primary-color);
+    padding: $portfolio-padding;
+    display: flex;
+
+    > * {
+      margin-right: 10px;
+    }
+  }
+}
