@@ -36,42 +36,42 @@ $light--header__background-color: $light--background-color;
 
 //button
 $light--button-color-primary: $light--primary;
-$light--button-color-primary--active: darken($light--primary, 10%);
+$light--button-color-primary--hover: lighten($light--primary, 10%);
 $light--button-color-default: $light--a__color;
-$light--button-color-default--active: darken($light--a__color, 10%);
+$light--button-color-default--hover: lighten($light--a__color, 10%);
 $light--button-color-red: $light--red;
-$light--button-color-red--active: darken($light--red, 10%);
+$light--button-color-red--hover: lighten($light--red, 10%);
 $light--button-color-green: $light--green;
-$light--button-color-green--active: darken($light--green, 10%);
+$light--button-color-green--hover: lighten($light--green, 10%);
 $light--button-color-blue: $light--blue;
-$light--button-color-blue--active: darken($light--blue, 10%);
+$light--button-color-blue--hover: lighten($light--blue, 10%);
 
 //==============colors for dark==============
 $dark--primary: #00a1c2;
 $dark--red: #f7382b;
 $dark--green: #2daf21;
 $dark--blue: #2744ec;
-$dark--muted: darken($muted__color, 30%);
+$dark--muted: darken($muted__color, 20%);
 
 //base
 $dark--background-color: #191a1b;
 $dark--color: #e9e9e9;
-$dark--a__color: lighten($a__color, 40%);
+$dark--a__color: lighten($a__color, 20%);
 $dark--a__color--active: $dark--primary;
 $dark--box-shadow__color: #00000080;
 $dark--header__background-color: lighten($dark--background-color, 20%);
 
 //button
 $dark--button-color-primary: $dark--primary;
-$dark--button-color-primary--active: darken($dark--primary, 5%);
+$dark--button-color-primary--hover: lighten($dark--primary, 5%);
 $dark--button-color-default: $dark--a__color;
-$dark--button-color-default--active: darken($dark--a__color, 5%);;
+$dark--button-color-default--hover: lighten($dark--a__color, 5%);;
 $dark--button-color-red: $dark--red;
-$dark--button-color-red--active: lighten($dark--red, 5%);
+$dark--button-color-red--hover: lighten($dark--red, 5%);
 $dark--button-color-green: $dark--green;
-$dark--button-color-green--active: lighten($dark--green, 5%);
+$dark--button-color-green--hover: lighten($dark--green, 5%);
 $dark--button-color-blue: $dark--blue;
-$dark--button-color-blue--active: lighten($dark--blue, 5%);
+$dark--button-color-blue--hover: lighten($dark--blue, 5%);
 
 //==============css custom vars==============
 .app {
@@ -90,15 +90,15 @@ $dark--button-color-blue--active: lighten($dark--blue, 5%);
   --a__color--active: #{$light--a__color--active};
 
   --button-color-primary: #{$light--button-color-primary};
-  --button-color-primary--active: #{$light--button-color-primary--active};
+  --button-color-primary--hover: #{$light--button-color-primary--hover};
   --button-color-default: #{$light--button-color-default};
-  --button-color-default--active: #{$light--button-color-default--active};
+  --button-color-default--hover: #{$light--button-color-default--hover};
   --button-color-red: #{$light--button-color-red};
-  --button-color-red--active: #{$light--button-color-red--active};
+  --button-color-red--hover: #{$light--button-color-red--hover};
   --button-color-green: #{$light--button-color-green};
-  --button-color-green--active: #{$light--button-color-green--active};
+  --button-color-green--hover: #{$light--button-color-green--hover};
   --button-color-blue: #{$light--button-color-blue};
-  --button-color-blue--active: #{$light--button-color-blue--active};
+  --button-color-blue--hover: #{$light--button-color-blue--hover};
 }
 
 .app.dark {
@@ -117,13 +117,13 @@ $dark--button-color-blue--active: lighten($dark--blue, 5%);
   --a__color--active: #{$dark--a__color--active};
 
   --button-color-primary: #{$dark--button-color-primary};
-  --button-color-primary--active: #{$dark--button-color-primary--active};
+  --button-color-primary--hover: #{$dark--button-color-primary--hover};
   --button-color-default: #{$dark--button-color-default};
-  --button-color-default--active: #{$dark--button-color-default--active};
+  --button-color-default--hover: #{$dark--button-color-default--hover};
   --button-color-red: #{$dark--button-color-red};
-  --button-color-red--active: #{$dark--button-color-red--active};
+  --button-color-red--hover: #{$dark--button-color-red--hover};
   --button-color-green: #{$dark--button-color-green};
-  --button-color-green--active: #{$dark--button-color-green--active};
+  --button-color-green--hover: #{$dark--button-color-green--hover};
   --button-color-blue: #{$dark--button-color-blue};
-  --button-color-blue--active: #{$dark--button-color-blue--active};
+  --button-color-blue--hover: #{$dark--button-color-blue--hover};
 }
