@@ -24,7 +24,7 @@ $light--primary: #00a1c2;
 $light--red: #f33207;
 $light--green: #009c00;
 $light--blue: #0033ff;
-$light--muted: lighten($muted__color, 20%);
+$light--muted: lighten($muted__color, 30%);
 
 //base
 $light--background-color: #ffffff;
@@ -36,21 +36,20 @@ $light--header__background-color: $light--background-color;
 
 //button
 $light--button-color-default: $light--a__color;
-$light--button-color-default--active:  $light--a__color--active;
+$light--button-color-default--active: $light--a__color--active;
 $light--button-color-red: $light--red;
-$light--button-color-red--active: $light--red;
+$light--button-color-red--active: darken($light--red, 10%);
 $light--button-color-green: $light--green;
-$light--button-color-green--active: $light--green;
+$light--button-color-green--active: darken($light--green, 10%);
 $light--button-color-blue: $light--blue;
-$light--button-color-blue--active: $light--blue;
-
+$light--button-color-blue--active: darken($light--blue, 10%);
 
 //==============colors for dark==============
 $dark--primary: #00a1c2;
 $dark--red: #f7382b;
 $dark--green: #2daf21;
 $dark--blue: #2744ec;
-$dark--muted: darken($muted__color, 20%);
+$dark--muted: darken($muted__color, 30%);
 
 //base
 $dark--background-color: #191a1b;
@@ -64,11 +63,11 @@ $dark--header__background-color: lighten($dark--background-color, 20%);
 $dark--button-color-default: $dark--a__color;
 $dark--button-color-default--active: $dark--a__color--active;
 $dark--button-color-red: $dark--red;
-$dark--button-color-red--active: $dark--red;
+$dark--button-color-red--active: lighten($dark--red, 5%);
 $dark--button-color-green: $dark--green;
-$dark--button-color-green--active: $dark--green;
+$dark--button-color-green--active: lighten($dark--green, 5%);
 $dark--button-color-blue: $dark--blue;
-$dark--button-color-blue--active: $dark--blue;
+$dark--button-color-blue--active: lighten($dark--blue, 5%);
 
 //==============css custom vars==============
 .app {
