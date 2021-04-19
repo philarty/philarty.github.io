@@ -35,8 +35,10 @@ $light--box-shadow__color: #0000001a;
 $light--header__background-color: $light--background-color;
 
 //button
+$light--button-color-primary: $light--primary;
+$light--button-color-primary--active: darken($light--primary, 10%);
 $light--button-color-default: $light--a__color;
-$light--button-color-default--active: $light--a__color--active;
+$light--button-color-default--active: darken($light--a__color, 10%);
 $light--button-color-red: $light--red;
 $light--button-color-red--active: darken($light--red, 10%);
 $light--button-color-green: $light--green;
@@ -60,8 +62,10 @@ $dark--box-shadow__color: #00000080;
 $dark--header__background-color: lighten($dark--background-color, 20%);
 
 //button
+$dark--button-color-primary: $dark--primary;
+$dark--button-color-primary--active: darken($dark--primary, 5%);
 $dark--button-color-default: $dark--a__color;
-$dark--button-color-default--active: $dark--a__color--active;
+$dark--button-color-default--active: darken($dark--a__color, 5%);;
 $dark--button-color-red: $dark--red;
 $dark--button-color-red--active: lighten($dark--red, 5%);
 $dark--button-color-green: $dark--green;
@@ -85,6 +89,8 @@ $dark--button-color-blue--active: lighten($dark--blue, 5%);
   --a__color: #{$light--a__color};
   --a__color--active: #{$light--a__color--active};
 
+  --button-color-primary: #{$light--button-color-primary};
+  --button-color-primary--active: #{$light--button-color-primary--active};
   --button-color-default: #{$light--button-color-default};
   --button-color-default--active: #{$light--button-color-default--active};
   --button-color-red: #{$light--button-color-red};
@@ -110,6 +116,8 @@ $dark--button-color-blue--active: lighten($dark--blue, 5%);
   --a__color: #{$dark--a__color};
   --a__color--active: #{$dark--a__color--active};
 
+  --button-color-primary: #{$dark--button-color-primary};
+  --button-color-primary--active: #{$dark--button-color-primary--active};
   --button-color-default: #{$dark--button-color-default};
   --button-color-default--active: #{$dark--button-color-default--active};
   --button-color-red: #{$dark--button-color-red};
