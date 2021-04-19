@@ -19,16 +19,24 @@ const Dropdown = React.forwardRef((props, ref) => {
     setShowDropdown(false);
   };
 
-  const selectedOption = options.find((option) => option.value === value)
+  const selectedOption = options.find((option) => option.value === value);
 
   return (
     <div ref={ref} className={"dropdown" + (className ? " " + className : "")}>
       <button
         ref={dropdownMenu}
         onClick={() => setShowDropdown(true)}
-        className="dropdown__input"
+        className={
+          "dropdown__input" + (showDropdown ? " dropdown__input--active" : "")
+        }
       >
-        {selectedOption ? selectedOption.label : <span className='dropdown__placeholder'>{placeholder || 'Select...'}</span>}
+        {selectedOption ? (
+          selectedOption.label
+        ) : (
+          <span className="dropdown__placeholder">
+            {placeholder || "Select..."}
+          </span>
+        )}
       </button>
       {showDropdown && (
         <ol ref={dropdownMenu} className="dropdown__menu">
