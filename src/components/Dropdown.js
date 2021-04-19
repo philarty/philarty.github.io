@@ -42,7 +42,12 @@ const Dropdown = React.forwardRef((props, ref) => {
         <ol ref={dropdownMenu} className="dropdown__menu">
           {options.map((option) => (
             <button
-              className="dropdown__item"
+              className={
+                "dropdown__item" +
+                (selectedOption.value === option.value
+                  ? " dropdown__item--active"
+                  : "")
+              }
               onClick={() => {
                 onChange(option.value);
                 setShowDropdown(false);

@@ -1,15 +1,13 @@
 .dropdown {
   position: relative;
 
-  button {
-    background-color: transparent;
-  }
 
   &__placeholder {
     color: var(--muted);
   }
 
   &__input {
+    background-color: transparent;
     border: 1px solid var(--muted);
     min-width: 100px;
     text-align: left;
@@ -30,7 +28,7 @@
       box-shadow: 0px 0px 1px 1px var(--box-shadow__color);
 
       &::after {
-        border-top-color: var(--color)
+        border-top-color: var(--color);
       }
     }
     &::after {
@@ -72,9 +70,16 @@
     margin: 2px 0;
     color: var(--color);
     line-height: 1.6;
+    background-color: transparent;
 
     &:hover {
       background-color: var(--muted);
+    }
+
+    &--active, &--active:hover {
+      background-color: var(--primary-color);
+      color: white;
+
     }
   }
 }
