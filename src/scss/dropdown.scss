@@ -5,9 +5,17 @@
     color: var(--muted);
   }
 
+  &--block {
+    width: 100%;
+    .dropdown__input {
+      width: 100%;
+   
+    }
+  }
+
   &__input {
     background-color: transparent;
-    border-width: 1px ;
+    border-width: 1px;
     border-style: solid;
     border-color: var(--button-color-default);
 
@@ -32,7 +40,7 @@
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-top: 5px solid var(--button-color-default);
+      border-top: 5px solid var(--muted);
       margin-left: 3px;
     }
 
@@ -42,7 +50,7 @@
       box-shadow: none;
 
       &::after {
-        border-top-color: var(--button-color-default);
+        border-top-color: var(--muted);
       }
     }
 
@@ -55,8 +63,6 @@
         border-top-color: var(--button-color-default);
       }
     }
-
-    
   }
 
   &__menu {
