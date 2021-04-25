@@ -1,5 +1,40 @@
 .dropdown {
   position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--button-color-default);
+  border-radius: 3px;
+  line-height: 1;
+  padding: 0;
+
+  &:hover,
+  &:active,
+  &--active {
+    box-shadow: 0px 0px 1px 1px var(--box-shadow__color);
+
+    &::after {
+      border-top-color: var(--button-color-default);
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+
+    
+    button:disabled {
+      opacity: 1;
+    }
+  }
+
+  &--disabled:hover,
+  &--disabled:active {
+    background-color: transparent;
+    box-shadow: none;
+
+    &::after {
+      border-top-color: var(--muted);
+    }
+  }
 
   &__placeholder {
     color: var(--muted);
@@ -7,31 +42,18 @@
 
   &--block {
     width: 100%;
-    .dropdown__input {
-      width: 100%;
-   
-    }
   }
 
   &__input {
     background-color: transparent;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--button-color-default);
+    border: 0px solid transparent;
 
-    min-width: 100px;
     text-align: left;
-    min-height: 10px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    line-height: 1.6;
     color: var(--color);
-    font-size: $font-size-6--mobile;
-
-    @include md {
-      font-size: $font-size-6--desktop;
-    }
+    width: 100%;
 
     &::after {
       display: block;
@@ -42,26 +64,6 @@
       border-right: 5px solid transparent;
       border-top: 5px solid var(--muted);
       margin-left: 3px;
-    }
-
-    &:disabled:hover,
-    &:disabled:active {
-      background-color: transparent;
-      box-shadow: none;
-
-      &::after {
-        border-top-color: var(--muted);
-      }
-    }
-
-    &:hover,
-    &:active,
-    &--active {
-      box-shadow: 0px 0px 1px 1px var(--box-shadow__color);
-
-      &::after {
-        border-top-color: var(--button-color-default);
-      }
     }
   }
 
@@ -78,10 +80,9 @@
     background-color: var(--background-color);
     display: grid;
     position: absolute;
-    min-width: 100px;
     border-radius: 3px;
-    padding: 2px 0;
     box-shadow: 3px 3px 12px var(--box-shadow__color);
+    margin-top: 1px;
 
     z-index: 1;
   }
@@ -89,7 +90,6 @@
   &__item {
     border: 0px;
     text-align: left;
-    padding: 4px 8px;
     margin: 2px 0;
     color: var(--color);
     line-height: 1.6;
@@ -103,6 +103,98 @@
     &--active:hover {
       background-color: var(--primary-color);
       color: white;
+    }
+  }
+}
+
+.dropdown--sm {
+  min-width: 80px;
+  .dropdown__input {
+    padding: 2px 5px;
+
+    font-size: $font-size-7--mobile;
+    @include md {
+      font-size: $font-size-7--desktop;
+    }
+
+    &::after {
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid var(--muted);
+    }
+  }
+
+  .dropdown__menu {
+    padding: 2px 0;
+  }
+
+  .dropdown__item {
+    padding: 2px 5px;
+    font-size: $font-size-7--mobile;
+    @include md {
+      font-size: $font-size-7--desktop;
+    }
+  }
+}
+
+.dropdown--md {
+  min-width: 100px;
+  .dropdown__input {
+    padding: 5px 12px;
+
+    font-size: $font-size-6--mobile;
+    @include md {
+      font-size: $font-size-6--desktop;
+    }
+
+    &::after {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--muted);
+    }
+  }
+
+  .dropdown__menu {
+    padding: 5px 0;
+  }
+
+  .dropdown__item {
+    padding: 4px 8px;
+
+    font-size: $font-size-6--mobile;
+    @include md {
+      font-size: $font-size-6--desktop;
+    }
+  }
+}
+
+.dropdown--lg {
+  min-width: 160px;
+  .dropdown__input {
+    padding: 8px 20px;
+
+    font-size: $font-size-5--mobile;
+    @include md {
+      font-size: $font-size-5--desktop;
+    }
+
+    &::after {
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid var(--muted);
+    }
+  }
+
+  .dropdown__menu {
+    padding: 8px 0;
+  }
+
+  .dropdown__item {
+    padding: 4px 8px;
+
+    font-size: $font-size-5--mobile;
+    @include md {
+      font-size: $font-size-5--desktop;
     }
   }
 }

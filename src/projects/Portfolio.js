@@ -87,6 +87,7 @@ const DropdownSection = () => {
   const [disabled, setDisabled] = useState(false);
   const [block, setBlock] = useState(false);
   const [value, setValue] = useState(null);
+  const [btnSize, setSize] = useState("md");
 
   const code = `<Dropdown
   placeholder='Select Surname'
@@ -126,15 +127,18 @@ const DropdownSection = () => {
           options={SAMPLEDROPDOWNOPTIONS}
           value={value}
           onChange={setValue}
-          placeholder="Select Surname"
+          placeholder="Select..."
           disabled={disabled}
           block={block}
+          btnSize={btnSize}
         />
       </div>
       <div className="component-docs__options">
         <Button btnStyle="outline" onClick={() => setValue(null)}>
           Clear
         </Button>
+        <Dropdown options={sizeOptions} value={btnSize} onChange={setSize} />
+
         <ToggleSwitch isSelected={block} onToggle={() => setBlock(!block)}>
           Block
         </ToggleSwitch>
