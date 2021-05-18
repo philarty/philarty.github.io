@@ -44,6 +44,19 @@ import natureIcon from "../images/iconography/nature.svg";
 import outdoorIcon from "../images/iconography/outdoor.svg";
 import indoorIcon from "../images/iconography/indoor.svg";
 
+import billingIcon from "../images/iconography/billing.svg";
+import keyboardIcon from "../images/iconography/keyboard.svg";
+import qrCodeIcon from "../images/iconography/qr-code.svg";
+import flashlightIcon from "../images/iconography/flashlight.svg";
+import blankTemplateIcon from "../images/iconography/blank-template.svg";
+import inactivityIcon from "../images/iconography/inactivity.svg";
+import rateLimitErrorIcon from "../images/iconography/rate-limit-error.svg";
+import reviewErrorIcon from "../images/iconography/review-error.svg";
+import reviewBlockingIcon from "../images/iconography/review-blocking.svg";
+import deprecatedErrorIcon from "../images/iconography/deprecated-error.svg";
+import companyInfoIcon from "../images/iconography/company-info.svg";
+import apiInfoIcon from "../images/iconography/api-info.svg";
+
 const ICONSSETS = [
   {
     title: "Weather Icons",
@@ -105,7 +118,24 @@ const ICONSSETS = [
       { id: "Indoor", src: indoorIcon },
     ],
   },
-  // {
+  {
+    title: "Moesif",
+    icons: [
+      { id: "Billing", src: billingIcon },
+      { id: "Keyboard", src: keyboardIcon },
+      { id: "QR", src: qrCodeIcon },
+      { id: "Flashlight", src: flashlightIcon },
+      { id: "Blank Template", src: blankTemplateIcon },
+      { id: "Inactivity", src: inactivityIcon },
+      { id: "Rate Error", src: rateLimitErrorIcon },
+      { id: "Review Error", src: reviewErrorIcon },
+      { id: "Review Blck", src: reviewBlockingIcon },
+      { id: "Deprecated", src: deprecatedErrorIcon },
+      { id: "API Info", src: apiInfoIcon },
+      { id: "CompanyInfo", src: companyInfoIcon },
+    ],
+  },
+
   //   title: "App Icons",
   //   icons: [
   //     { id: "Sunny", src: sunnyIcon },
