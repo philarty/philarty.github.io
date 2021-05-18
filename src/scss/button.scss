@@ -234,10 +234,11 @@ $toggle-background-width: $toggle-size * 2 + $toggle-margin * 3;
     }
   }
 
-  input:checked + .toggle-switch__slider {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
+  // input:checked + .toggle-switch__slider {
+  //   background-color: var(--primary-color);
+  //   border-color: var(--primary-color);
+  // }
+  
   input:checked + .toggle-switch__slider:before {
     left: $toggle-size + $toggle-margin * 2;
   }
@@ -251,3 +252,19 @@ $toggle-background-width: $toggle-size * 2 + $toggle-margin * 3;
     }
   }
 }
+
+@mixin toggle-switch($color) {
+  .toggle-switch--#{$color} {
+    input:checked + .toggle-switch__slider {
+      background-color: var(--button-color-#{$color});;
+      border-color: var(--button-color-#{$color});;
+    }
+  }
+}
+
+
+@include toggle-switch(primary);
+@include toggle-switch(default);
+@include toggle-switch(red);
+@include toggle-switch(green);
+@include toggle-switch(blue);
