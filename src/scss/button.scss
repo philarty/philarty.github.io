@@ -145,6 +145,28 @@ button {
   }
 }
 
+// Button Group
+.btn-group {
+  .btn:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .btn:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  display: flex;
+  .btn-block {
+    flex: 1;
+  }
+}
+
 // utility
 .btn-block {
   width: 100%;
