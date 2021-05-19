@@ -10,8 +10,8 @@
   --background-color: #ffffff;
   --box-shadow__color: #0000001a;
   --header__background-color: #ffffff;
-  --a__color: #4d4d4d;
-  --a__color--active: #00a1c2;
+  --a__color: #00a1c2;
+  --a__color--active: #008ca9;
   --button-color-primary: #00a1c2;
   --button-color-primary--hover: #00cbf5;
   --button-color-default: #4d4d4d;
@@ -25,7 +25,7 @@
 }
 
 .app.dark {
-  --primary-color: #00a1c2;
+  --primary-color: #00bfe6;
   --red: #f7382b;
   --green: #2daf21;
   --blue: #2744ec;
@@ -34,10 +34,10 @@
   --background-color: #191a1b;
   --box-shadow__color: #00000080;
   --header__background-color: #191a1b;
-  --a__color: #b3b3b3;
-  --a__color--active: #00a1c2;
-  --button-color-primary: #00a1c2;
-  --button-color-primary--hover: #00b6dc;
+  --a__color: #00bfe6;
+  --a__color--active: #0095b3;
+  --button-color-primary: #00bfe6;
+  --button-color-primary--hover: #01d4ff;
   --button-color-default: #b3b3b3;
   --button-color-default--hover: silver;
   --button-color-red: #f7382b;
@@ -1111,7 +1111,6 @@ button:disabled {
 
 .preview-wrapper {
   margin: 0 auto;
-  padding: 0 1em;
   position: relative;
 }
 .preview-wrapper--desktop {
@@ -1326,7 +1325,7 @@ button:disabled {
   padding: 3px 8px;
   border-radius: 3px;
   font-size: 0.7em;
-  color: #101c2e;
+  color: var(--color);
   font-weight: 700;
 }
 
