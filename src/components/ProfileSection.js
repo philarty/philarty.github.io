@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -14,10 +13,14 @@ const ProfileSection = () => (
       <Link to="/projects/make">Make</Link> Stuff
     </h2>
     <p>
-      Here is a little paragraph about myself, I'm not 100% what to put in here
-      yet, but if you are reading this, feel free to send me a message about why
-      you think im hirable. it would probably be around four to five lines, so
-      which is the length of this little snippet. Thanks for your input!
+      I'm based in San Francisco, California, and I focus on building usable,
+      and visually captivating digital products with an impact on people's
+      lives. <br />
+      Currently, I'm a UIUX Engineer at{" "}
+      <a href="http://www.moesif.com" target="_blank">
+        Moesif
+      </a>
+      , the leading API analytics company.
     </p>
   </div>
 );
