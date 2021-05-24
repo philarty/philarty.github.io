@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
+import Table from "../components/Table";
 import ToggleSwitch from "../components/ToggleSwitch";
 
 const colorOptions = [
@@ -83,6 +84,56 @@ const ButtonSection = () => {
   );
 };
 
+const DropdownApis = [
+  {
+    name: "1placeHolder",
+    type: "string",
+    default: "1",
+    description: "Specifies a large, medium, or small button.",
+  },
+  {
+    name: "0placeHolder",
+    type: "string",
+    default: "2",
+    description: "Specifies a large, medium, or small button.",
+  },
+  {
+    name: "2placeHolder",
+    type: "string",
+    default: "select...",
+    description: "Specifies a large, medium, or small button.",
+  },
+  {
+    name: "3placeHolder",
+    type: "string",
+    default: "select...",
+    description: "Specifies a large, medium, or small button.",
+  },
+];
+
+const COLUMNS = [
+  {
+    header: "Name", // string/react component
+    accessor: "name",
+    sortable: true,
+    // width: "1fr", // css grid template columns values, strings/number
+  },
+  {
+    header: "Type",
+    accessor: "type",
+    // width: "2fr",
+  },
+  {
+    header: "Default",
+    accessor: "default",
+  },
+  {
+    header: "Description",
+    accessor: "description",
+    width: "3fr",
+  },
+];
+
 const DropdownSection = () => {
   const [disabled, setDisabled] = useState(false);
   const [block, setBlock] = useState(false);
@@ -152,15 +203,71 @@ const DropdownSection = () => {
       <div className="component-docs__code">
         <code>{code}</code>
       </div>
+      <Table columns={COLUMNS} data={DropdownApis} />
     </div>
   );
 };
 
-const Portfolio = (
+const table = (
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>placeHolder</td>
+        <td>string</td>
+        <td>'select...'</td>
+        <td>Specifies a large, medium, or small button.</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>any</td>
+        <td></td>
+        <td>The value, or array of values, of the active (pressed) buttons</td>
+      </tr>
+      <tr>
+        <td>options</td>
+        <td>array</td>
+        <td></td>
+        <td>Specifies a large, medium, or small button.</td>
+      </tr>
+      <tr>
+        <td>onChange</td>
+        <td>function</td>
+        <td></td>
+        <td>Callback fired when a button is pressed</td>
+      </tr>
+      <tr>
+        <td>btnColor</td>
+        <td>'default' | 'primary' | 'red' | 'blue' | 'green'</td>
+        <td>'default'</td>
+        <td>Specifies the colors of button.</td>
+      </tr>
+      <tr>
+        <td>btnStyle</td>
+        <td>'solid' | 'outline' | 'link' </td>
+        <td>'solid'</td>
+        <td>Specifies the visual style of button</td>
+      </tr>
+      <tr>
+        <td>block</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Spans the full width of the Button parent</td>
+      </tr>
+    </tbody>
+  </table>
+);
+
+const PortfolioDocs = (
   <div className="project__body portfolio">
     <ButtonSection />
     <DropdownSection />
   </div>
 );
 
-export default Portfolio;
+export default PortfolioDocs;

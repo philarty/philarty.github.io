@@ -2,7 +2,7 @@ import SpooningSpoon from "./SpooningSpoon";
 import Iconography from "./Iconography";
 import PraiseHk from "./PraiseHk";
 import DailyUI from "./DailyUI";
-import Portfolio from "./Portfolio";
+import PortfolioDocs from "./PortfolioDocs";
 
 import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
@@ -45,9 +45,10 @@ const PROJECTS = [
     content: SpooningSpoon,
   },
   {
-    title: "Portfolio",
-    id: "portfolio",
-    description: "Code project used to display my work that I've done over the yearas. It's pretty meta.",
+    title: "Portfolio Docs",
+    id: "portfolio-docs",
+    description:
+      "Documentation of custom built portfolio components used.",
     previewSrc: IconographyCover,
     tags: ["design", "make"],
     content: Portfolio,
