@@ -2,16 +2,17 @@ import React from "react";
 import SVG from "react-inlinesvg";
 
 const Icon = (props) => {
-  const { icon, src, className } = props;
+  const { icon, src, className, ...rest } = props;
 
   if (icon) {
     switch (icon) {
       case "sun":
         return (
           <svg
-            className="icon icon--sun"
+            className={"icon icon--sun" + (className ? " " + className : "")}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
+            {...rest}
           >
             <g>
               <path d="M12,17a5,5,0,1,1,5-5A5,5,0,0,1,12,17Zm0-8a3,3,0,1,0,3,3A3,3,0,0,0,12,9Z" />
@@ -29,9 +30,10 @@ const Icon = (props) => {
       case "moon":
         return (
           <svg
-            className="icon icon--moon"
+            className={"icon icon--moon" + (className ? " " + className : "")}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
+            {...rest}
           >
             <g>
               <path d="M12.5,21A9.5,9.5,0,0,1,9.77,2.4a1,1,0,0,1,1.14.44,1,1,0,0,1-.13,1.21A6.4,6.4,0,0,0,9,8.5,6.51,6.51,0,0,0,15.5,15,6.4,6.4,0,0,0,20,13.22a1,1,0,0,1,1.65,1A9.57,9.57,0,0,1,12.5,21ZM7.36,6.05A7.49,7.49,0,1,0,18,16.64,8.4,8.4,0,0,1,15.5,17,8.51,8.51,0,0,1,7,8.5,8.4,8.4,0,0,1,7.36,6.05Z" />
@@ -41,20 +43,33 @@ const Icon = (props) => {
       case "cross":
         return (
           <svg
-            className="icon icon--cross"
+            className={"icon icon--cross" + (className ? " " + className : "")}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
+            {...rest}
           >
             <path d="M18.71,17.29a1,1,0,0,1,0,1.42,1,1,0,0,1-1.42,0L12,13.42,6.71,18.71a1,1,0,0,1-1.42,0,1,1,0,0,1,0-1.42L10.58,12,5.29,6.71A1,1,0,0,1,6.71,5.29L12,10.58l5.29-5.29a1,1,0,1,1,1.42,1.42L13.42,12Z" />
+          </svg>
+        );
+      case "expand":
+        return (
+          <svg
+            className={"icon icon--expand" + (className ? " " + className : "")}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            {...rest}
+          >
+            <path d="M12,16.5c-0.3,0-0.5-0.1-0.7-0.3l-7-7c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l6.3,6.3l6.3-6.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-7,7C12.5,16.4,12.3,16.5,12,16.5z" />
           </svg>
         );
       case "menu":
       default:
         return (
           <svg
-            className="icon icon--menu"
+            className={"icon icon--menu" + (className ? " " + className : "")}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
+            {...rest}
           >
             <g id="Symbol">
               <path d="M18,8H6A1,1,0,0,1,6,6H18a1,1,0,0,1,0,2Z" />
@@ -68,7 +83,11 @@ const Icon = (props) => {
 
   if (src) {
     return (
-      <SVG src={src} className={"icon" + (className ? " " + className : "")} />
+      <SVG
+        src={src}
+        className={"icon" + (className ? " " + className : "")}
+        {...rest}
+      />
     );
   }
 
