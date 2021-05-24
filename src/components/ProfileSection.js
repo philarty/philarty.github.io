@@ -13,11 +13,11 @@ const ProfileSection = () => (
       <Link to="/projects/make">Make</Link> Stuff
     </h2>
     <p>
-      I'm based in San Francisco, California, and I focus on building usable,
-      and visually captivating digital products with an impact on people's
-      lives. <br />
-      Currently, I'm a UIUX Engineer at{" "}
-      <a href="http://www.moesif.com" target="_blank">
+      I'm based in San Francisco, California and I focus on building usable and
+      visually captivating digital products that has an impact on people.
+      <br />
+      Currently, I'm a UI/UX Engineer at{" "}
+      <a href="http://www.moesif.com" target="_blank" rel="noreferrer">
         Moesif
       </a>
       , the leading API analytics company.
