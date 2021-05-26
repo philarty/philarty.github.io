@@ -3,6 +3,7 @@ import Iconography from "./Iconography";
 import PraiseHk from "./PraiseHk";
 import DailyUI from "./DailyUI";
 import PortfolioDocs from "./PortfolioDocs";
+import MoesifBrandSystem from "./MoesifBrandSystem";
 
 import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
@@ -30,16 +31,17 @@ const PROJECTS = [
   {
     title: "Daily UI",
     id: "daily-ui",
-    description: "Human Sized Spoon ",
-    previewSrc: spooningSpoonCover,
+    description: "Daily UI",
+    // previewSrc: spooningSpoonCover,
     tags: ["design"],
     content: DailyUI,
-    hidden: true, //*** || TO DO || ***//
+    // hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Spooning Spoon",
     id: "spooning-spoon",
-    description: "Exploration of solitude in space through a Human Sized Spoon ",
+    description:
+      "Exploration of solitude in space through a Human Sized Spoon ",
     previewSrc: spooningSpoonCover,
     tags: ["design", "make"],
     content: SpooningSpoon,
@@ -49,11 +51,41 @@ const PROJECTS = [
     id: "portfolio-docs",
     description:
       "Documentation of custom built portfolio components used.",
-    previewSrc: IconographyCover,
+    // previewSrc: IconographyCover,
     tags: ["design", "make"],
-    content: Portfolio,
-    hidden: true, //*** || TO DO || ***//
-  }
+    content: PortfolioDocs,
+    // hidden: true, //*** || TO DO || ***//
+  },
+  {
+    title: "Moesif Brand System",
+    id: "moesif-brand-system",
+    description:
+      "Create a digitial identity for Moesif, most advanced API Analytics service helping everyone at API-driven organizations learn from their API data and make smarter decisions that drive growth. ",
+    // previewSrc: IconographyCover,
+    tags: ["design"],
+    content: MoesifBrandSystem,
+    // hidden: true, //*** || TO DO || ***//
+  },
+  {
+    title: "Moesif Web Deisgn",
+    id: "moesif-web-design",
+    description:
+      "Create a digitial identity for Moesif, most advanced API Analytics service helping everyone at API-driven organizations learn from their API data and make smarter decisions that drive growth. ",
+    // previewSrc: IconographyCover,
+    tags: ["design"],
+    content: MoesifBrandSystem,
+    // hidden: true, //*** || TO DO || ***//
+  },
+  {
+    title: "Moesif Illustration",
+    id: "moesif-illustration",
+    description:
+      "Create a digitial identity for Moesif, most advanced API Analytics service helping everyone at API-driven organizations learn from their API data and make smarter decisions that drive growth. ",
+    // previewSrc: IconographyCover,
+    tags: ["design"],
+    content: MoesifBrandSystem,
+    // hidden: true, //*** || TO DO || ***//
+  },
 ];
 
 export default PROJECTS;
