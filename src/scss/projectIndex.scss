@@ -148,7 +148,7 @@
       border-radius: 3px;
       font-size: 0.7em;
 
-      color: var(--color);
+      color: $text-color; //hardcoded cause on gray background
       font-weight: 700;
     }
   }
