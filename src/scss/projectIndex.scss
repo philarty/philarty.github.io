@@ -81,7 +81,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &--under-construction {
     h3,
     p {
       z-index: 2;

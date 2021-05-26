@@ -4,10 +4,15 @@ import { Link } from "react-router-dom";
 const ProjectPreview = (props) => {
   const { project } = props;
   return (
-    <div className="project-preview">
+    <div
+      className={
+        "project-preview" +
+        (!project.previewSrc ? " project-preview--under-construction" : "")
+      }
+    >
       <Link to={"/project/" + project.id} className="project-preview__link" />
       <div className="project-preview__img">
-        <img src={project.previewSrc} alt={project.title} />
+        {project.previewSrc && <img src={project.previewSrc} alt={project.title} />}
       </div>
       <h3>{project.title}</h3>
       <p>{project.description}</p>
