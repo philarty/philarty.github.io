@@ -3,11 +3,41 @@
   box-shadow: 0 0 20px var(--box-shadow__color);
   z-index: 300;
   margin-top: 3em;
+
+  color: var(--footer__color);
   background-color: var(--footer__background-color);
 
   &__wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1em;
+
+    @include sm {
+      display: flex;
+     justify-content: space-between;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >* {
+      margin: 0 5px;
+    }
+  }
+
+  //logo ovveride
+  a {
+    justify-self: flex-end;
+    align-self: center;
+    color: var(--footer--color);
+    svg {
+      width: 20px;
+    }
+    rect {
+      fill: currentColor;
+    }
   }
 }
