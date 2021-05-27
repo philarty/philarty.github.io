@@ -1,26 +1,25 @@
 .project {
-  &__header {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1em;
-  }
+  flex: 1;
+}
+.project__header {
+  display: grid;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1em;
+  grid-template-columns: 1fr 1fr;
 
-  &__header--image {
-    width: 500px;
-  }
+
 }
 
-.project {
-  &__body {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+.project__body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  &__section {
-    max-width: 860px;
-    margin: 0 auto 2em;
-    padding: 0 1em;
-  }
+.project__section {
+  max-width: 860px;
+  margin: 0 auto 2em;
+  padding: 0 1em;
 }
 
 .iconography-header {
@@ -117,25 +116,24 @@
 $portfolio-padding: 16px 24px;
 .portfolio {
   padding: 1em;
-  
 }
 
 .component-docs {
   max-width: 600px;
 
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary);
   padding: 0;
   border-radius: 3px;
 
   &__header {
-    padding: 8px 24px;;
+    padding: 8px 24px;
     margin: 0;
     background-color: var(--primary);
     font-weight: 600;
     color: white;
   }
 
-  &__example{
+  &__example {
     border-radius: 3px 3px 0 0;
     padding: $portfolio-padding;
     display: flex;
