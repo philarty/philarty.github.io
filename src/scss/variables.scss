@@ -93,6 +93,8 @@ $dark--button-color-blue--hover: lighten($dark--blue, 5%);
   --background-color: #{$light--background-color};
   --box-shadow__color: #{$light--box-shadow__color};
   --header__background-color: #{$light--background-color};
+  --footer__color: #{$dark--color}; //inverted
+  --footer__background-color: #{$dark--background-color}; //invterted
 
   --a__color: #{$light--a__color};
   --a__color--active: #{$light--a__color--active};
@@ -122,6 +124,8 @@ $dark--button-color-blue--hover: lighten($dark--blue, 5%);
   --background-color: #{$dark--background-color};
   --box-shadow__color: #{$dark--box-shadow__color};
   --header__background-color: #{$dark--background-color};
+  --footer__color: #{$light--color}; //inverted
+  --footer__background-color: #{$light--background-color}; //invterted
 
   --a__color: #{$dark--a__color};
   --a__color--active: #{$dark--a__color--active};
