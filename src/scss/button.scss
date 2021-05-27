@@ -176,18 +176,21 @@ button {
 
 @include btn-solid(primary);
 @include btn-solid(default);
+@include btn-solid(gray);
 @include btn-solid(red);
 @include btn-solid(green);
 @include btn-solid(blue);
 
 @include btn-outline(primary);
 @include btn-outline(default);
+@include btn-outline(gray);
 @include btn-outline(red);
 @include btn-outline(green);
 @include btn-outline(blue);
 
 @include btn-link(primary);
 @include btn-link(default);
+@include btn-link(gray);
 @include btn-link(red);
 @include btn-link(green);
 @include btn-link(blue);

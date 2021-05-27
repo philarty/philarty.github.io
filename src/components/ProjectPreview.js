@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "./Button";
 
 const ProjectPreview = (props) => {
   const { project } = props;
@@ -18,13 +19,16 @@ const ProjectPreview = (props) => {
       <p>{project.description}</p>
       <div className="project-preview__tags">
         {project.tags.map((tag) => (
-          <Link
+          <Button
+            btnStyle='outline'
+            btnColor='gray'
+            btnSize='sm'
             to={"/projects/" + tag}
             key={tag}
             onClick={() => window.scrollTo(0, 0)}
           >
             {tag}
-          </Link>
+          </Button>
         ))}
       </div>
     </div>
