@@ -130,7 +130,7 @@ $portfolio-padding: 16px 24px;
   &__header {
     padding: 8px 24px;;
     margin: 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     font-weight: 600;
     color: white;
   }
@@ -149,13 +149,13 @@ $portfolio-padding: 16px 24px;
   &__code {
     padding: $portfolio-padding;
     white-space: pre-wrap;
-    border-top: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary);
 
     line-height: 1.2;
   }
 
   &__options {
-    border-top: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary);
     padding: $portfolio-padding;
     display: flex;
 
