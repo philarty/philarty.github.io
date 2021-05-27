@@ -83,7 +83,8 @@ $button-color-blue--hover--night: lighten($blue--night, 5%);
 
 //==============css custom vars==============
 .app {
-  --primary-color: #{$primary--day};
+  --primary: #{$primary--day};
+  --default: #{$default--day};
   --red: #{$red--day};
   --green: #{$green--day};
   --blue: #{$blue--day};
@@ -114,7 +115,8 @@ $button-color-blue--hover--night: lighten($blue--night, 5%);
 }
 
 .app.dark {
-  --primary-color: #{$primary--night};
+  --primary: #{$primary--night};
+  --default: #{$default--night};
   --red: #{$red--night};
   --green: #{$green--night};
   --blue: #{$blue--night};

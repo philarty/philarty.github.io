@@ -80,7 +80,6 @@ button {
     color: var(--button-color-#{$color});
 
     &:hover {
-      text-decoration: underline;
       color: var(--button-color-#{$color}--hover);
     }
 
@@ -240,8 +239,8 @@ $toggle-background-width: $toggle-size * 2 + $toggle-margin * 3;
   }
 
   // input:checked + .toggle-switch__slider {
-  //   background-color: var(--primary-color);
-  //   border-color: var(--primary-color);
+  //   background-color: var(--primary);
+  //   border-color: var(--primary);
   // }
   
   input:checked + .toggle-switch__slider:before {
