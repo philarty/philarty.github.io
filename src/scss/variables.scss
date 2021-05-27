@@ -20,126 +20,126 @@ $a__color: #808080;
 $muted__color: #808080;
 
 //==============colors for light==============
-$day--primary: #00a1c2;
-$day--default: darken($a__color, 20%);
-$day--gray: gray;
-$day--red: #f33207;
-$day--green: #009c00;
-$day--blue: #0033ff;
-$day--muted: lighten($muted__color, 30%);
+$primary--day: #00a1c2;
+$default--day: darken($a__color, 20%);
+$gray--day: gray;
+$red--day: #f33207;
+$green--day: #009c00;
+$blue--day: #0033ff;
+$muted--day: lighten($muted__color, 30%);
 
 //base
-$day--background-color: #ffffff;
-$day--color: #191a1b;
-$day--a__color: $day--primary;
-$day--a__color--active: darken($day--primary, 5%);
-$day--box-shadow__color: #0000001a;
-$day--header__background-color: $day--background-color;
+$background-color--day: #ffffff;
+$color--day: #191a1b;
+$a__color--day: $primary--day;
+$a__color--active--day: darken($primary--day, 5%);
+$box-shadow__color--day: #0000001a;
+$header__background-color--day: $background-color--day;
 
 //button
-$day--button-color-primary: $day--primary;
-$day--button-color-primary--hover: lighten($day--primary, 10%);
-$day--button-color-default: $day--default;
-$day--button-color-default--hover: lighten($day--default, 10%);
-$day--button-color-gray: $day--gray;
-$day--button-color-gray--hover: lighten($day--gray, 10%);
-$day--button-color-red: $day--red;
-$day--button-color-red--hover: lighten($day--red, 10%);
-$day--button-color-green: $day--green;
-$day--button-color-green--hover: lighten($day--green, 10%);
-$day--button-color-blue: $day--blue;
-$day--button-color-blue--hover: lighten($day--blue, 10%);
+$button-color-primary--day: $primary--day;
+$button-color-primary--hover--day: lighten($primary--day, 10%);
+$button-color-default--day: $default--day;
+$button-color-default--hover--day: lighten($default--day, 10%);
+$button-color-gray--day: $gray--day;
+$button-color-gray--hover--day: lighten($gray--day, 10%);
+$button-color-red--day: $red--day;
+$button-color-red--hover--day: lighten($red--day, 10%);
+$button-color-green--day: $green--day;
+$button-color-green--hover--day: lighten($green--day, 10%);
+$button-color-blue--day: $blue--day;
+$button-color-blue--hover--day: lighten($blue--day, 10%);
 
 //==============colors for dark==============
-$night--primary: #00bfe6;
-$night--default: lighten($a__color, 20%);
-$night--gray: gray;
-$night--red: #f7382b;
-$night--green: #2daf21;
-$night--blue: #2744ec;
-$night--muted: darken($muted__color, 20%);
+$primary--night: #00bfe6;
+$default--night: lighten($a__color, 20%);
+$gray--night: gray;
+$red--night: #f7382b;
+$green--night: #2daf21;
+$blue--night: #2744ec;
+$muted--night: darken($muted__color, 20%);
 
 //base
-$night--background-color: #191a1b;
-$night--color: #e9e9e9;
-$night--a__color: $night--primary;
-$night--a__color--active: darken($night--primary, 10%);
-$night--box-shadow__color: #00000080;
-$night--header__background-color: lighten($night--background-color, 20%);
+$background-color--night: #191a1b;
+$color--night: #e9e9e9;
+$a__color--night: $primary--night;
+$a__color--active--night: darken($primary--night, 10%);
+$box-shadow__color--night: #00000080;
+$header__background-color--night: lighten($background-color--night, 20%);
 
 //button
-$night--button-color-primary: $night--primary;
-$night--button-color-primary--hover: lighten($night--primary, 5%);
-$night--button-color-default: $night--default;
-$night--button-color-default--hover: lighten($night--default, 5%);
-$night--button-color-gray: $night--gray;
-$night--button-color-gray--hover: lighten($night--gray, 5%);
-$night--button-color-red: $night--red;
-$night--button-color-red--hover: lighten($night--red, 5%);
-$night--button-color-green: $night--green;
-$night--button-color-green--hover: lighten($night--green, 5%);
-$night--button-color-blue: $night--blue;
-$night--button-color-blue--hover: lighten($night--blue, 5%);
+$button-color-primary--night: $primary--night;
+$button-color-primary--hover--night: lighten($primary--night, 5%);
+$button-color-default--night: $default--night;
+$button-color-default--hover--night: lighten($default--night, 5%);
+$button-color-gray--night: $gray--night;
+$button-color-gray--hover--night: lighten($gray--night, 5%);
+$button-color-red--night: $red--night;
+$button-color-red--hover--night: lighten($red--night, 5%);
+$button-color-green--night: $green--night;
+$button-color-green--hover--night: lighten($green--night, 5%);
+$button-color-blue--night: $blue--night;
+$button-color-blue--hover--night: lighten($blue--night, 5%);
 
 //==============css custom vars==============
 .app {
-  --primary-color: #{$day--primary};
-  --red: #{$day--red};
-  --green: #{$day--green};
-  --blue: #{$day--blue};
-  --muted: #{$day--muted};
+  --primary-color: #{$primary--day};
+  --red: #{$red--day};
+  --green: #{$green--day};
+  --blue: #{$blue--day};
+  --muted: #{$muted--day};
 
-  --color: #{$day--color};
-  --background-color: #{$day--background-color};
-  --box-shadow__color: #{$day--box-shadow__color};
-  --header__background-color: #{$day--background-color};
-  --footer__color: #{$night--color}; //inverted
-  --footer__background-color: #{$night--background-color}; //invterted
+  --color: #{$color--day};
+  --background-color: #{$background-color--day};
+  --box-shadow__color: #{$box-shadow__color--day};
+  --header__background-color: #{$background-color--day};
+  --footer__color: #{$color--night}; //inverted
+  --footer__background-color: #{$background-color--night}; //invterted
 
-  --a__color: #{$day--a__color};
-  --a__color--active: #{$day--a__color--active};
+  --a__color: #{$a__color--day};
+  --a__color--active: #{$a__color--active--day};
 
-  --button-color-primary: #{$day--button-color-primary};
-  --button-color-primary--hover: #{$day--button-color-primary--hover};
-  --button-color-default: #{$day--button-color-default};
-  --button-color-default--hover: #{$day--button-color-default--hover};
-  --button-color-gray: #{$day--button-color-gray};
-  --button-color-gray--hover: #{$day--button-color-gray--hover};
-  --button-color-red: #{$day--button-color-red};
-  --button-color-red--hover: #{$day--button-color-red--hover};
-  --button-color-green: #{$day--button-color-green};
-  --button-color-green--hover: #{$day--button-color-green--hover};
-  --button-color-blue: #{$day--button-color-blue};
-  --button-color-blue--hover: #{$day--button-color-blue--hover};
+  --button-color-primary: #{$button-color-primary--day};
+  --button-color-primary--hover: #{$button-color-primary--hover--day};
+  --button-color-default: #{$button-color-default--day};
+  --button-color-default--hover: #{$button-color-default--hover--day};
+  --button-color-gray: #{$button-color-gray--day};
+  --button-color-gray--hover: #{$button-color-gray--hover--day};
+  --button-color-red: #{$button-color-red--day};
+  --button-color-red--hover: #{$button-color-red--hover--day};
+  --button-color-green: #{$button-color-green--day};
+  --button-color-green--hover: #{$button-color-green--hover--day};
+  --button-color-blue: #{$button-color-blue--day};
+  --button-color-blue--hover: #{$button-color-blue--hover--day};
 }
 
 .app.dark {
-  --primary-color: #{$night--primary};
-  --red: #{$night--red};
-  --green: #{$night--green};
-  --blue: #{$night--blue};
-  --muted: #{$night--muted};
+  --primary-color: #{$primary--night};
+  --red: #{$red--night};
+  --green: #{$green--night};
+  --blue: #{$blue--night};
+  --muted: #{$muted--night};
 
-  --color: #{$night--color};
-  --background-color: #{$night--background-color};
-  --box-shadow__color: #{$night--box-shadow__color};
-  --header__background-color: #{$night--background-color};
-  --footer__color: #{$day--color}; //inverted
-  --footer__background-color: #{$day--background-color}; //invterted
+  --color: #{$color--night};
+  --background-color: #{$background-color--night};
+  --box-shadow__color: #{$box-shadow__color--night};
+  --header__background-color: #{$background-color--night};
+  --footer__color: #{color--day}; //inverted
+  --footer__background-color: #{background-color--day}; //invterted
 
-  --a__color: #{$night--a__color};
-  --a__color--active: #{$night--a__color--active};
+  --a__color: #{$a__color--night};
+  --a__color--active: #{$a__color--active--night};
 
-  --button-color-primary: #{$night--button-color-primary};
-  --button-color-primary--hover: #{$night--button-color-primary--hover};
-  --button-color-default: #{$night--button-color-default};
-  --button-color-default--hover: #{$night--button-color-default--hover};
-  --button-color-gray: #{$night--button-color-gray};
-  --button-color-gray--hover: #{$night--button-color-gray--hover};
-  --button-color-red: #{$night--button-color-red};
-  --button-color-red--hover: #{$night--button-color-red--hover};
-  --button-color-green: #{$night--button-color-green};
-  --button-color-green--hover: #{$night--button-color-green--hover};
-  --button-color-blue: #{$night--button-color-blue};
-  --button-color-blue--hover: #{$night--button-color-blue--hover};
+  --button-color-primary: #{$button-color-primary--night};
+  --button-color-primary--hover: #{$button-color-primary--hover--night};
+  --button-color-default: #{$button-color-default--night};
+  --button-color-default--hover: #{$button-color-default--hover--night};
+  --button-color-gray: #{$button-color-gray--night};
+  --button-color-gray--hover: #{$button-color-gray--hover--night};
+  --button-color-red: #{$button-color-red--night};
+  --button-color-red--hover: #{$button-color-red--hover--night};
+  --button-color-green: #{$button-color-green--night};
+  --button-color-green--hover: #{$button-color-green--hover--night};
+  --button-color-blue: #{$button-color-blue--night};
+  --button-color-blue--hover: #{$button-color-blue--hover--night};
 }
