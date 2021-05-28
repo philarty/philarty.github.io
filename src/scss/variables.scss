@@ -94,8 +94,8 @@ $button-color-blue--hover--night: lighten($blue--night, 5%);
   --background-color: #{$background-color--day};
   --box-shadow__color: #{$box-shadow__color--day};
   --header__background-color: #{$background-color--day};
-  --footer__color: #{$color--night}; //inverted
-  --footer__background-color: #{$background-color--night}; //invterted
+  --footer__color: #{$color--day};
+  --footer__background-color: #{$background-color--day};
 
   --a__color: #{$a__color--day};
   --a__color--active: #{$a__color--active--day};
@@ -126,8 +126,8 @@ $button-color-blue--hover--night: lighten($blue--night, 5%);
   --background-color: #{$background-color--night};
   --box-shadow__color: #{$box-shadow__color--night};
   --header__background-color: #{$background-color--night};
-  --footer__color: #{color--day}; //inverted
-  --footer__background-color: #{background-color--day}; //invterted
+  --footer__color: #{$color--night};
+  --footer__background-color: #{$background-color--night};
 
   --a__color: #{$a__color--night};
   --a__color--active: #{$a__color--active--night};

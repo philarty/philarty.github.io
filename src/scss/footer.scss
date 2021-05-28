@@ -32,12 +32,5 @@
   a {
     justify-self: flex-end;
     align-self: center;
-    color: var(--footer--color);
-    svg {
-      width: 20px;
-    }
-    rect {
-      fill: currentColor;
-    }
   }
 }

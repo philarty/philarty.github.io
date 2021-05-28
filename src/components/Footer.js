@@ -1,19 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "./Button";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__wrapper">
-        <Link to="/" className="footer__logo">
+        <div>
           &copy; Philarty 2018-2021
-        </Link>
+        </div>
         <div className="footer__social">
-          <Link to="/" className="footer__logo">
+          <Button to="/" btnStyle="link" btnColor="primary">
             Portfolio
-          </Link>
-          <a href="https://www.instagram.com/philarty/">Instagram</a>
-          <a href="https://www.linkedin.com/in/philiplaudesign/">linkedIn</a>
+          </Button>
+          <Button
+            href="https://www.instagram.com/philarty/"
+            btnStyle="link"
+            btnColor="primary"
+          >
+            Instagram
+          </Button>
+          <Button
+            href="https://www.linkedin.com/in/philiplaudesign/"
+            btnStyle="link"
+            btnColor="primary"
+          >
+            linkedIn
+          </Button>
         </div>
       </div>
     </footer>
