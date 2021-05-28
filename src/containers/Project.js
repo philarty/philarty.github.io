@@ -1,8 +1,9 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 import PROJECTS from "../projects/PROJECTS.js";
 import FourOhFour from "./FourOhFour.js";
+import Button from "../components/Button";
 
 // useParams here to pull from url /portfolio#/projects/:projectId
 
@@ -16,12 +17,45 @@ import FourOhFour from "./FourOhFour.js";
 //   content: SpooningSpoon,
 // },
 
-// const ProjectDescription = ({ title, text }) => (
-//   <div className="project__header--text">
-//     <p>{title}</p>
-//     <p>{text}</p>
-//   </div>
-// );
+const ProjectHeader = (props) => {
+  const { project } = props;
+  const [show, setShow] = useState(false);
+
+  return (
+    <div className="project__header">
+      <div>
+        <h2>{project.title}</h2>
+        <div>
+          {project.tags.map((tag) => (
+            <Button
+              to={"/projects/" + tag}
+              key={tag}
+              onClick={() => window.scrollTo(0, 0)}
+              btnSize="sm"
+              btnStyle="outline"
+              btnColor="gray"
+            >
+              {tag}
+            </Button>
+          ))}
+        </div>
+        <p>Role: Designer, Coder</p>
+        <p>Client: Moesif</p>
+        <p> Date: 2019-present</p>
+      </div>
+      <div>
+        <p>{project.description}</p>
+        <Button
+          onClick={() => (show ? setShow(false) : setShow(true))}
+          btnSize="sm"
+        >
+          {show ? "Hide" : "Show All"}
+        </Button>
+      </div>
+      {show && <div></div>}
+    </div>
+  );
+};
 
 const Project = () => {
   let { projectId } = useParams();
@@ -31,6 +65,7 @@ const Project = () => {
   if (project) {
     return (
       <section className="project">
+        {/* <ProjectHeader project={project} /> */}
         {project.hidden && (
           <div className="project__section text-center">
             <h2>Under Construction</h2>
@@ -41,16 +76,6 @@ const Project = () => {
             </p>
           </div>
         )}
-        {/* <div className="project__header">
-          <h2>{project.title}</h2>
-          {project.summary.map((sum) => (
-            <ProjectDescription
-              title={Object.keys(sum)[0]}
-              text={Object.values(sum)[0]}
-            />
-          ))}
-          <p>{project.description}</p>
-        </div> */}
         {project.content}
       </section>
     );
