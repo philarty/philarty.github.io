@@ -36,9 +36,9 @@ const RESUME = [
         period: "2019 - Present",
         collapsible: true,
         description: [
-          "Design wireframes and build react components for both front facing website, and internal web application",
-          "Revamp and maintain static blog/docs site by building a conhesive jekyll site.",
-          "Develop and grow a consistent design language used across the site and application as well as branding guidelines",
+          "Design UI/UX wireframes and build react components for both front facing website, and web application",
+          "Revamp and maintain static blog/docs site by building a cohesive Jekyll template in Liquid.",
+          "Develop and grow a consistent design system used across the site and application as well as branding guidelines",
           "Create inclusive marketing material used across various social media including Youtube, Facebook, Reddit, LinkedIn",
         ],
       },
@@ -48,7 +48,7 @@ const RESUME = [
         period: "2018",
         collapsible: true,
         description: [
-          "Commissioned by HKUST to develop a user centric smart city app to summarize complex street level pollution data and health risk information.",
+          "Commissioned by HKUST to develop a user centric smart city app to summarize complex street level pollution data & health risk information.",
           "Mobile app aims to empower people affected by COPD or asthma to reduce individual pollution exposure in their daily life and provide personalized analytics.",
           "Created user experience maps, wire-frames, user interface, and background illustrations.",
         ],
@@ -122,6 +122,15 @@ const RESUME = [
   {
     header: "Relevant Experience",
     contents: [
+      {
+        sub_header: "Reclaim Foundation Community App",
+        title: "Reclaim Foundataion",
+        period: "2021",
+        collapsible: true,
+        description: [
+          "Work with the founding team of non-profit organization Reclaim Foundation",
+        ],
+      },
       {
         sub_header: "Design Fellowship Recruitment Campaign",
         title: "Chronicle Books",
