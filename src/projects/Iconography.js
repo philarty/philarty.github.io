@@ -56,6 +56,45 @@ import reviewBlockingIcon from "../images/iconography/review-blocking.svg";
 import deprecatedErrorIcon from "../images/iconography/deprecated-error.svg";
 import companyInfoIcon from "../images/iconography/company-info.svg";
 import apiInfoIcon from "../images/iconography/api-info.svg";
+import userInfoIcon from "../images/iconography/user-info.svg";
+import campaignIcon from "../images/iconography/campaign.svg";
+import sessionTokenIcon from "../images/iconography/session-token.svg";
+import geoIcon from "../images/iconography/geo.svg";
+import userAgentIcon from "../images/iconography/user-agent.svg";
+import metadataIcon from "../images/iconography/metadata.svg";
+import singleUserIcon from "../images/iconography/single-user.svg";
+import clientIntegrationIcon from "../images/iconography/client-integration.svg";
+import alertIcon from "../images/iconography/alert.svg";
+import gettingStartedIcon from "../images/iconography/getting-started.svg";
+import behaviorEmailIcon from "../images/iconography/behavior-email.svg";
+import faqIcon from "../images/iconography/faq.svg";
+import blogIcon from "../images/iconography/blog.svg";
+import docsIcon from "../images/iconography/docs.svg";
+import statusIcon from "../images/iconography/status.svg";
+import booksIcon from "../images/iconography/books.svg";
+import complianceIcon from "../images/iconography/compliance.svg";
+import referenceIcon from "../images/iconography/reference.svg";
+import gdpricon from "../images/iconography/gdpr.svg";
+import infrastructureIcon from "../images/iconography/infrastructure.svg";
+import customersIcon from "../images/iconography/customers.svg";
+import integrationIcon from "../images/iconography/integration.svg";
+import hackerIcon from "../images/iconography/hacker.svg";
+import compareIcon  from "../images/iconography/compare.svg";
+import developerRelationsIcon from "../images/iconography/developer-relations.svg";
+import customerSuccessIcon from "../images/iconography/customer-success.svg";
+import engineeringIcon from "../images/iconography/engineering.svg";
+import securityIcon from "../images/iconography/security.svg";
+import productManagementIcon from "../images/iconography/product-management.svg";
+import thirdpartyIcon from "../images/iconography/third-party.svg";
+import growthicon from "../images/iconography/growth.svg";
+import logIcon from "../images/iconography/log.svg";
+import webIcon from "../images/iconography/web.svg";
+import dashboardIcon from "../images/iconography/dashboard.svg";
+import monitoringIcon from "../images/iconography/monitoring.svg";
+import puzzleIcon from "../images/iconography/puzzle.svg";
+import embeddedIcon from "../images/iconography/embedded.svg";
+import analyticsIcon from "../images/iconography/analytics.svg";
+
 
 const ICONSSETS = [
   {
@@ -133,6 +172,44 @@ const ICONSSETS = [
       { id: "Deprecated", src: deprecatedErrorIcon },
       { id: "API Info", src: apiInfoIcon },
       { id: "CompanyInfo", src: companyInfoIcon },
+      { id: "User Info", src: userInfoIcon },
+      { id: "Campaign", src: campaignIcon },
+      { id: "Session Token", src: sessionTokenIcon },
+      { id: "Geo", src: geoIcon },
+      { id: "UserAgent", src: userAgentIcon },
+      { id: "Metadata", src: metadataIcon },
+      { id: "Single User", src: singleUserIcon },
+      { id: "Client Integration", src: clientIntegrationIcon },
+      { id: "Alert", src: alertIcon },
+      { id: "Getting Started", src: gettingStartedIcon },
+      { id: "Behavior Email", src: behaviorEmailIcon },
+      { id: "FAQ", src: faqIcon },
+      { id: "Blog", src: blogIcon },
+      { id: "Docs", src: docsIcon },
+      { id: "Status", src: statusIcon },
+      { id: "Books", src: booksIcon },
+      { id: "Compliance", src: complianceIcon},
+      { id: "Reference", src: referenceIcon },
+      { id: "GDPR", src: gdpricon },
+      { id: "Infrastructure", src: infrastructureIcon },
+      { id: "customers", src: customersIcon },
+      { id: "Integration", src: integrationIcon },
+      { id: "Hacker", src: hackerIcon },
+      { id: "Compare", src: compareIcon },
+      { id: "Developer Relations", src: developerRelationsIcon },
+      { id: "Customer Success", src: customerSuccessIcon },
+      { id: "Engineering", src: engineeringIcon },
+      { id: "Security", src: securityIcon },
+      { id: "Product Management", src: productManagementIcon },
+      { id: "Third Party", src: thirdpartyIcon },
+      { id: "Growth", src: growthicon },
+      { id: "Log", src: logIcon },
+      { id: "Web", src: webIcon },
+      { id: "Dashboard", src: dashboardIcon },
+      { id: "Monitoring", src: monitoringIcon  },
+      { id: "Puzzle", src: puzzleIcon },
+      { id: "Embeddd", src: embeddedIcon },
+      { id: "Analytics", src: analyticsIcon },
     ],
   },
 
