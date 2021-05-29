@@ -63,7 +63,7 @@ p {
 h1,
 .h1 {
   margin-top: 0;
-  font-size:$font-size-1--mobile; //~49px
+  font-size: $font-size-1--mobile; //~49px
 }
 
 h2,
@@ -157,4 +157,8 @@ a {
 
 .text-center {
   text-align: center;
+}
+
+.box-shadow {
+  box-shadow: 0 0 20px var(--box-shadow__color);
 }
