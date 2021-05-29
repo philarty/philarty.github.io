@@ -1,90 +1,30 @@
 import React, { useState } from "react";
 
-
 import Lightbox from "../components/Lighbox";
-import ToggleSwitch from "../components/ToggleSwitch";
-import ButtonSelect from "../components/ButtonSelect";
 
 import logoSketch from "../images/moesif-brand-system/logo-sketches.png";
 
-import desktopLanding from "../images/moesif-brand-system/desktop-landing.png";
-import mobileLanding from "../images/moesif-brand-system/mobile-landing.png";
-import desktopFeature from "../images/moesif-brand-system/desktop-feature.png";
-import mobileFeature from "../images/moesif-brand-system/mobile-feature.png";
-import desktopBlog from "../images/moesif-brand-system/desktop-blog.png";
-import mobileBlog from "../images/moesif-brand-system/mobile-blog.png";
-import desktopPost from "../images/moesif-brand-system/desktop-post.png";
-import mobilePost from "../images/moesif-brand-system/mobile-post.png";
-
-const SCREENSHOTS = {
-  landing: { desktop: desktopLanding, mobile: mobileLanding },
-  feature: { desktop: desktopFeature, mobile: mobileFeature },
-  blog: { desktop: desktopBlog, mobile: mobileBlog },
-  post: { desktop: desktopPost, mobile: mobilePost },
-};
-
-const WebsiteSection = () => {
-  const [isDesktop, setToDesktop] = useState(true);
-  const [page, setPage] = useState('landing');
-
-  const device = isDesktop ? "desktop" : "mobile";
-
+const LogoSection = () => {
   return (
-    <div>
-      <div>
-        Mobile
-        <ToggleSwitch
-          isSelected={isDesktop}
-          onToggle={() => setToDesktop(!isDesktop)}
-          btnColor='primary'
-        />
-        Desktop
-      </div>
-      <ButtonSelect
-        options={ 
-        [
-          { value: "landing", label: "Landing" },
-          { value: "feature", label: "Feature" },
-          { value: "blog", label: "Blog" },
-          { value: "post", label: "Post" },
-        ]
-      
-      }
-        value={page}
-        onSelect={setPage}
-      />
-      <div
-        className={
-          "preview-wrapper" +
-          (isDesktop ? " preview-wrapper--desktop" : " preview-wrapper--mobile")
-        }
-      >
-        <div
-          className={
-            "preview-background" +
-            (isDesktop
-              ? " preview-background--desktop"
-              : " preview-background--mobile")
-          }
-        >
-          <div className="preview-container" key={page}>
-            
-            <img src={SCREENSHOTS[page][device]} alt=""/>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const MoesifBranding = (
-  <div className="project__body moesif-branding">
     <div className="project__section">
       <Lightbox>
         <img src={logoSketch} alt="" />
       </Lightbox>
     </div>
-    <WebsiteSection />
+  );
+};
+const MoesifBranding = (
+  <div className="project__body moesif-branding">
+    <p>
+      As the world continue to grow to be more interconnected, APIs allow
+      different applicatioins to communicate with one other, snding requests and
+      responses. Moesif provides the most advanced API Analytics service helping
+      everyone at API-driven organizations learn from their API data and make
+      smarter decisions that drive growth. Thousands of customer-driven teams
+      use Moesif to really understand how their customers and partners use their
+      APIs and to automate the debugging of customer issues.
+    </p>
+    <LogoSection />
   </div>
 );
 
