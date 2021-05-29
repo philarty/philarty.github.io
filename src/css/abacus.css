@@ -1307,7 +1307,7 @@ button:disabled {
   height: 0;
   overflow: hidden;
   position: relative;
-  background-color: rgba(179, 179, 179, 0.45);
+  background-color: #b3b3b373;
   border-color: transparent;
   border-style: solid;
 }
@@ -1340,12 +1340,16 @@ button:disabled {
 }
 .preview-selector--desktop .btn-group .btn:not(.btn-solid-default) {
   background-color: white;
+  color: #000000c0;
+}
+.preview-selector--desktop .btn-group .btn-solid-default {
+  background-color: #a4a4a4b8;
 }
 .preview-selector--mobile {
   width: 100%;
 }
 .preview-selector--mobile .dropdown {
-  background-color: white;
+  background-color: var(--background-color);
   border: 0px solid white;
   border-radius: 2px;
 }

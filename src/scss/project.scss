@@ -227,7 +227,7 @@ $portfolio-padding: 16px 24px;
   height: 0;
   overflow: hidden;
   position: relative;
-  background-color: hsla(0, 0%, 70%, 0.45);
+  background-color: #b3b3b373;
   border-color: transparent;
   border-style: solid;
 
@@ -264,6 +264,11 @@ $portfolio-padding: 16px 24px;
 
       .btn:not(.btn-solid-default) {
         background-color: white;
+        color: #000000c0
+      }
+
+      .btn-solid-default {
+        background-color: #a4a4a4b8;
       }
     }
   }
@@ -272,7 +277,7 @@ $portfolio-padding: 16px 24px;
     width: 100%;
     
     .dropdown {
-    background-color: white;
+    background-color: var(--background-color);
 
       border: 0px solid white;
       border-radius: 2px;
