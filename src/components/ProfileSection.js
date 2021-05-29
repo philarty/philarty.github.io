@@ -14,13 +14,13 @@ const ProfileSection = () => (
     </h2>
     <p>
       I'm based in San Francisco, California and I focus on building usable and
-      visually captivating digital products that has an impact on people.
+      visually captivating digital products with an impact on people.
       <br />
       Currently, I'm a UI/UX Engineer at{" "}
       <a href="http://www.moesif.com" target="_blank" rel="noreferrer">
         Moesif
       </a>
-      , the leading API analytics company.
+      , a leading API analytics company, designing and creating seamless experiences for our customers.
     </p>
   </div>
 );
