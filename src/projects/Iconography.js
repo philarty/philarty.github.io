@@ -232,7 +232,7 @@ const IconItem = ({ id, iconSrc }) => {
 
 const IconGrid = ({ title, icons, description }) => {
   return (
-    <div className="project__section">
+    <div className="project__section icongraphy-section">
       <div className="iconography-grid">
         <h3>{title}</h3>
 

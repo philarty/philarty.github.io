@@ -1147,6 +1147,16 @@ button:disabled {
   max-height: 400px;
 }
 
+.icongraphy-section:not(:last-child):after {
+  content: "";
+  display: block;
+  height: 0.9px;
+  background: linear-gradient(to right, #ffffff00, #80808080, #80808080, #ffffff00);
+  grid-column: 1/-1;
+  grid-row: -2/-1;
+  z-index: 2;
+}
+
 .iconography-grid {
   max-width: 800px;
   margin: 0 auto;
@@ -1154,7 +1164,6 @@ button:disabled {
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 24px;
   padding: 1em 0 2em;
-  border-bottom: 1px solid gray;
 }
 .iconography-grid h3,
 .iconography-grid p {

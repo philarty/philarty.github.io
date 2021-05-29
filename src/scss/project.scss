@@ -35,6 +35,28 @@
   }
 }
 
+//ICONOGRAPHY
+
+.icongraphy-section {
+  &:not(:last-child):after {
+    content: "";
+    display: block;
+    // this isnt 1px, because there is a rendering issue on chrome,
+    // even though different 'borders' are 1px. they are rendered differently.
+    height: 0.9px;
+    background: linear-gradient(
+      to right,
+      #ffffff00,
+      #80808080,
+      #80808080,
+      #ffffff00
+    );
+    grid-column: 1/-1;
+    grid-row: -2/-1;
+    z-index: 2;
+  }
+}
+
 .iconography-grid {
   max-width: 800px;
   margin: 0 auto;
@@ -44,7 +66,7 @@
   grid-gap: 24px;
   padding: 1em 0 2em;
 
-  border-bottom: 1px solid gray;
+  // border-bottom: 1px solid gray;
   // border-radius: 12px;
 
   h3,
@@ -74,6 +96,8 @@
   }
 }
 
+
+//PRAISE HK
 .praise-hk {
   display: grid;
   max-width: 1000px;
@@ -93,6 +117,9 @@
   }
 }
 
+
+// SPOONING SPOON
+
 .spooning-spoon {
   &__poster {
     display: flex;
@@ -111,7 +138,10 @@
   }
 }
 
+
+// COMPONENT DOCS
 $portfolio-padding: 16px 24px;
+
 .portfolio {
   padding: 1em;
 }
@@ -160,6 +190,8 @@ $portfolio-padding: 16px 24px;
     }
   }
 }
+
+// MOESIF WEBB DESIGN
 
 .preview-wrapper {
   margin: 0 auto;
@@ -264,7 +296,7 @@ $portfolio-padding: 16px 24px;
 
       .btn:not(.btn-solid-default) {
         background-color: white;
-        color: #000000c0
+        color: #000000c0;
       }
 
       .btn-solid-default {
@@ -275,9 +307,9 @@ $portfolio-padding: 16px 24px;
 
   &--mobile {
     width: 100%;
-    
+
     .dropdown {
-    background-color: var(--background-color);
+      background-color: var(--background-color);
 
       border: 0px solid white;
       border-radius: 2px;
