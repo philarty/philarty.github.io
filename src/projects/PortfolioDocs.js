@@ -24,6 +24,72 @@ const sizeOptions = [
   { value: "lg", label: "Large" },
 ];
 
+const COLUMNS = [
+  {
+    header: "Name", // string/react component
+    accessor: "name",
+    // sortable: true,
+    // width: "1fr", // css grid template columns values, strings/number
+  },
+  {
+    header: "Type",
+    accessor: "type",
+    width: "2fr",
+  },
+  {
+    header: "Default",
+    accessor: "default",
+  },
+  {
+    header: "Description",
+    accessor: "description",
+    width: "3fr",
+  },
+];
+
+const BUTTONAPIS = [
+  {
+    name: "children",
+    type: "any",
+    description: "Element rendered inside a buttom.",
+  },
+  {
+    name: "onClick",
+    type: "function",
+    description: "Callback fired when a button is pressed.",
+  },
+  {
+    name: "btnSize",
+    type: "'sm' | 'md' | 'lg'",
+    default: "'md'",
+    description: "Specifies a large, medium, or small button.",
+  },
+  {
+    name: "btnColor",
+    type: "'default' | 'primary' | 'gray' |'red' | 'green' | 'blue' ",
+    default: "'default'",
+    description: "Specifies bubtton color",
+  },
+  {
+    name: "btnStyle",
+    type: "'solid' | 'outline' | 'link'",
+    default: "'solid'",
+    description: "Specifies bubtton style",
+  },
+  {
+    name: "block",
+    type: "boolean",
+    default: "false",
+    description: "Spans the full width of the button parent",
+  },
+  {
+    name: "disabled",
+    type: "boolean",
+    default: "false",
+    description: "Disable button",
+  },
+];
+
 const ButtonSection = () => {
   const [btnColor, setColor] = useState("blue");
   const [btnStyle, setStyle] = useState("outline");
@@ -63,7 +129,7 @@ const ButtonSection = () => {
           I'm A Button
         </Button>
       </div>
-      <div className="component-docs__options">
+      {/* <div className="component-docs__options">
         <Dropdown options={colorOptions} value={btnColor} onChange={setColor} />
         <Dropdown options={styleOptions} value={btnStyle} onChange={setStyle} />
         <Dropdown options={sizeOptions} value={btnSize} onChange={setSize} />
@@ -79,12 +145,13 @@ const ButtonSection = () => {
       </div>
       <div className="component-docs__code">
         <code>{code}</code>
-      </div>
+      </div> */}
+      <Table columns={COLUMNS} data={BUTTONAPIS} />
     </div>
   );
 };
 
-const DropdownApis = [
+const DROPDOWNAPIS = [
   {
     name: "1placeHolder",
     type: "string",
@@ -108,29 +175,6 @@ const DropdownApis = [
     type: "string",
     default: "select...",
     description: "Specifies a large, medium, or small button.",
-  },
-];
-
-const COLUMNS = [
-  {
-    header: "Name", // string/react component
-    accessor: "name",
-    sortable: true,
-    // width: "1fr", // css grid template columns values, strings/number
-  },
-  {
-    header: "Type",
-    accessor: "type",
-    // width: "2fr",
-  },
-  {
-    header: "Default",
-    accessor: "default",
-  },
-  {
-    header: "Description",
-    accessor: "description",
-    width: "3fr",
   },
 ];
 
@@ -203,70 +247,19 @@ const DropdownSection = () => {
       <div className="component-docs__code">
         <code>{code}</code>
       </div>
-      <Table columns={COLUMNS} data={DropdownApis} />
+      <Table columns={COLUMNS} data={DROPDOWNAPIS} />
     </div>
   );
 };
-
-const table = (
-  <table>
-    <thead>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>placeHolder</td>
-        <td>string</td>
-        <td>'select...'</td>
-        <td>Specifies a large, medium, or small button.</td>
-      </tr>
-      <tr>
-        <td>value</td>
-        <td>any</td>
-        <td></td>
-        <td>The value, or array of values, of the active (pressed) buttons</td>
-      </tr>
-      <tr>
-        <td>options</td>
-        <td>array</td>
-        <td></td>
-        <td>Specifies a large, medium, or small button.</td>
-      </tr>
-      <tr>
-        <td>onChange</td>
-        <td>function</td>
-        <td></td>
-        <td>Callback fired when a button is pressed</td>
-      </tr>
-      <tr>
-        <td>btnColor</td>
-        <td>'default' | 'primary' | 'red' | 'blue' | 'green'</td>
-        <td>'default'</td>
-        <td>Specifies the colors of button.</td>
-      </tr>
-      <tr>
-        <td>btnStyle</td>
-        <td>'solid' | 'outline' | 'link' </td>
-        <td>'solid'</td>
-        <td>Specifies the visual style of button</td>
-      </tr>
-      <tr>
-        <td>block</td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>Spans the full width of the Button parent</td>
-      </tr>
-    </tbody>
-  </table>
-);
 
 const PortfolioDocs = (
   <div className="project__body portfolio">
     <ButtonSection />
     <DropdownSection />
+    <p>Table</p>
+    <p>Toggle Switch</p>
+    <p>Lightbox</p>
+    <p>ButtonSelect</p>
   </div>
 );
 
