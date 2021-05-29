@@ -1,21 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 .app {
-  --primary-color: #00a1c2;
+  --primary: #00a1c2;
+  --default: #4d4d4d;
   --red: #f33207;
   --green: #009c00;
   --blue: #0033ff;
   --muted: #cdcdcd;
   --color: #191a1b;
-  --background-color: #ffffff;
+  --background-color: #fafafa;
   --box-shadow__color: #0000001a;
-  --header__background-color: #ffffff;
+  --header__background-color: #fafafa;
+  --footer__color: #191a1b;
+  --footer__background-color: #fafafa;
   --a__color: #00a1c2;
   --a__color--active: #008ca9;
   --button-color-primary: #00a1c2;
   --button-color-primary--hover: #00cbf5;
   --button-color-default: #4d4d4d;
   --button-color-default--hover: #676767;
+  --button-color-gray: gray;
+  --button-color-gray--hover: #9a9a9a;
   --button-color-red: #f33207;
   --button-color-red--hover: #f95834;
   --button-color-green: #009c00;
@@ -25,7 +30,8 @@
 }
 
 .app.dark {
-  --primary-color: #00bfe6;
+  --primary: #00bfe6;
+  --default: #b3b3b3;
   --red: #f7382b;
   --green: #2daf21;
   --blue: #2744ec;
@@ -34,12 +40,16 @@
   --background-color: #191a1b;
   --box-shadow__color: #00000080;
   --header__background-color: #191a1b;
+  --footer__color: #e9e9e9;
+  --footer__background-color: #191a1b;
   --a__color: #00bfe6;
   --a__color--active: #0095b3;
   --button-color-primary: #00bfe6;
   --button-color-primary--hover: #01d4ff;
   --button-color-default: #b3b3b3;
   --button-color-default--hover: silver;
+  --button-color-gray: gray;
+  --button-color-gray--hover: #8d8d8d;
   --button-color-red: #f7382b;
   --button-color-red--hover: #f84f44;
   --button-color-green: #2daf21;
@@ -169,7 +179,7 @@ a {
   text-decoration: none;
 }
 a.active {
-  color: var(--primary-color);
+  color: var(--primary);
 }
 a:active, a:hover {
   color: var(--a__color--active);
@@ -181,6 +191,10 @@ a:active, a:hover {
 
 .text-center {
   text-align: center;
+}
+
+.box-shadow {
+  box-shadow: 0 0 20px var(--box-shadow__color);
 }
 
 .dropdown {
@@ -267,7 +281,7 @@ a:active, a:hover {
   background-color: var(--muted);
 }
 .dropdown__item--active, .dropdown__item--active:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   color: white;
 }
 
@@ -482,6 +496,7 @@ button:disabled {
 }
 .btn-solid-primary:hover {
   background-color: var(--button-color-primary--hover);
+  color: white;
 }
 .btn-solid-primary:active {
   background-color: var(--button-color-primary);
@@ -495,9 +510,24 @@ button:disabled {
 }
 .btn-solid-default:hover {
   background-color: var(--button-color-default--hover);
+  color: white;
 }
 .btn-solid-default:active {
   background-color: var(--button-color-default);
+  color: white;
+}
+
+.btn-solid-gray {
+  border-color: transparent;
+  background-color: var(--button-color-gray);
+  color: white;
+}
+.btn-solid-gray:hover {
+  background-color: var(--button-color-gray--hover);
+  color: white;
+}
+.btn-solid-gray:active {
+  background-color: var(--button-color-gray);
   color: white;
 }
 
@@ -508,6 +538,7 @@ button:disabled {
 }
 .btn-solid-red:hover {
   background-color: var(--button-color-red--hover);
+  color: white;
 }
 .btn-solid-red:active {
   background-color: var(--button-color-red);
@@ -521,6 +552,7 @@ button:disabled {
 }
 .btn-solid-green:hover {
   background-color: var(--button-color-green--hover);
+  color: white;
 }
 .btn-solid-green:active {
   background-color: var(--button-color-green);
@@ -534,6 +566,7 @@ button:disabled {
 }
 .btn-solid-blue:hover {
   background-color: var(--button-color-blue--hover);
+  color: white;
 }
 .btn-solid-blue:active {
   background-color: var(--button-color-blue);
@@ -547,6 +580,7 @@ button:disabled {
 }
 .btn-outline-primary:hover {
   background-color: #8080801a;
+  color: var(--button-color-primary--hover);
 }
 .btn-outline-primary:active {
   background-color: transparent;
@@ -559,8 +593,22 @@ button:disabled {
 }
 .btn-outline-default:hover {
   background-color: #8080801a;
+  color: var(--button-color-default--hover);
 }
 .btn-outline-default:active {
+  background-color: transparent;
+}
+
+.btn-outline-gray {
+  border-color: var(--button-color-gray);
+  color: var(--button-color-gray);
+  background-color: transparent;
+}
+.btn-outline-gray:hover {
+  background-color: #8080801a;
+  color: var(--button-color-gray--hover);
+}
+.btn-outline-gray:active {
   background-color: transparent;
 }
 
@@ -571,6 +619,7 @@ button:disabled {
 }
 .btn-outline-red:hover {
   background-color: #8080801a;
+  color: var(--button-color-red--hover);
 }
 .btn-outline-red:active {
   background-color: transparent;
@@ -583,6 +632,7 @@ button:disabled {
 }
 .btn-outline-green:hover {
   background-color: #8080801a;
+  color: var(--button-color-green--hover);
 }
 .btn-outline-green:active {
   background-color: transparent;
@@ -595,6 +645,7 @@ button:disabled {
 }
 .btn-outline-blue:hover {
   background-color: #8080801a;
+  color: var(--button-color-blue--hover);
 }
 .btn-outline-blue:active {
   background-color: transparent;
@@ -606,7 +657,6 @@ button:disabled {
   color: var(--button-color-primary);
 }
 .btn-link-primary:hover {
-  text-decoration: underline;
   color: var(--button-color-primary--hover);
 }
 .btn-link-primary:active {
@@ -619,11 +669,22 @@ button:disabled {
   color: var(--button-color-default);
 }
 .btn-link-default:hover {
-  text-decoration: underline;
   color: var(--button-color-default--hover);
 }
 .btn-link-default:active {
   color: var(--button-color-default);
+}
+
+.btn-link-gray {
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--button-color-gray);
+}
+.btn-link-gray:hover {
+  color: var(--button-color-gray--hover);
+}
+.btn-link-gray:active {
+  color: var(--button-color-gray);
 }
 
 .btn-link-red {
@@ -632,7 +693,6 @@ button:disabled {
   color: var(--button-color-red);
 }
 .btn-link-red:hover {
-  text-decoration: underline;
   color: var(--button-color-red--hover);
 }
 .btn-link-red:active {
@@ -645,7 +705,6 @@ button:disabled {
   color: var(--button-color-green);
 }
 .btn-link-green:hover {
-  text-decoration: underline;
   color: var(--button-color-green--hover);
 }
 .btn-link-green:active {
@@ -658,7 +717,6 @@ button:disabled {
   color: var(--button-color-blue);
 }
 .btn-link-blue:hover {
-  text-decoration: underline;
   color: var(--button-color-blue--hover);
 }
 .btn-link-blue:active {
@@ -868,13 +926,13 @@ button:disabled {
   }
 }
 .main-header__logo {
-  color: var(--primary-color);
+  color: var(--primary);
   text-transform: uppercase;
   font-size: 1.4em;
   font-weight: 800;
 }
 .main-header__logo:hover, .main-header__logo:active {
-  color: var(--primary-color);
+  color: var(--primary);
 }
 .main-header__desktop-nav {
   display: flex;
@@ -882,6 +940,10 @@ button:disabled {
 }
 .main-header__desktop-nav a {
   display: none;
+  color: var(--default);
+}
+.main-header__desktop-nav a.active {
+  color: var(--primary);
 }
 @media (min-width: 768px) {
   .main-header__desktop-nav > * {
@@ -929,12 +991,31 @@ button:disabled {
   box-shadow: 0 0 20px var(--box-shadow__color);
   z-index: 300;
   margin-top: 3em;
-  background-color: var(--header__background-color);
+  color: var(--footer__color);
+  background-color: var(--footer__background-color);
 }
 .footer__wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1em;
+}
+@media (min-width: 576px) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__social > * {
+  margin: 0 5px;
+}
+.footer a {
+  justify-self: flex-end;
+  align-self: center;
 }
 
 .about {
@@ -1031,19 +1112,20 @@ button:disabled {
 .project {
   flex: 1;
 }
+
 .project__header {
-  max-width: 800px;
+  display: grid;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 1em;
-}
-.project__header--image {
-  width: 500px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .project__body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .project__section {
   max-width: 860px;
   margin: 0 auto 2em;
@@ -1134,14 +1216,14 @@ button:disabled {
 
 .component-docs {
   max-width: 600px;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary);
   padding: 0;
   border-radius: 3px;
 }
 .component-docs__header {
   padding: 8px 24px;
   margin: 0;
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   font-weight: 600;
   color: white;
 }
@@ -1157,11 +1239,11 @@ button:disabled {
 .component-docs__code {
   padding: 16px 24px;
   white-space: pre-wrap;
-  border-top: 1px solid var(--primary-color);
+  border-top: 1px solid var(--primary);
   line-height: 1.2;
 }
 .component-docs__options {
-  border-top: 1px solid var(--primary-color);
+  border-top: 1px solid var(--primary);
   padding: 16px 24px;
   display: flex;
 }
@@ -1185,13 +1267,15 @@ button:disabled {
   z-index: 3;
   border-radius: 50%;
   position: absolute;
-  top: 6px;
+  top: 10px;
 }
 .preview-wrapper--desktop::before {
-  right: 22px;
+  left: 14px;
+  background-color: var(--red);
 }
 .preview-wrapper--desktop::after {
-  right: 40px;
+  left: 35px;
+  background-color: var(--green);
 }
 .preview-wrapper--mobile {
   max-width: 300px;
@@ -1223,13 +1307,13 @@ button:disabled {
   height: 0;
   overflow: hidden;
   position: relative;
-  background-color: #80808080;
-  border-color: #80808080;
+  background-color: rgba(179, 179, 179, 0.45);
+  border-color: transparent;
   border-style: solid;
 }
 .preview-background--desktop {
   padding-top: 60%;
-  border-width: 24px 2px 2px;
+  border-width: 0px;
   border-radius: 4px 4px 4px 4px;
 }
 .preview-background--mobile {
@@ -1241,29 +1325,42 @@ button:disabled {
 .preview-selector {
   position: absolute;
   top: 0;
-  width: 100%;
+  background-color: transparent;
+}
+.preview-selector--desktop {
+  width: 75%;
+  padding: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.preview-selector--desktop .btn-group .btn {
+  border: transparent;
+  margin-left: 1px;
+  padding: 3px;
+}
+.preview-selector--desktop .btn-group .btn:not(.btn-solid-default) {
   background-color: white;
 }
-.preview-selector .btn {
-  border-radius: 0;
+.preview-selector--mobile {
+  width: 100%;
 }
-.preview-selector .dropdown {
+.preview-selector--mobile .dropdown {
+  background-color: white;
   border: 0px solid white;
   border-radius: 2px;
 }
-.preview-selector .dropdown__input::after {
-  border-top: 5px solid black;
+.preview-selector--mobile .dropdown__input::after {
+  border-top: 5px solid var(--color);
 }
 
 .preview-container {
   position: absolute;
-  top: 30px;
+  top: 32px;
   bottom: -11px;
   left: 0;
   right: 0;
   overflow-y: scroll;
   max-height: 100%;
-  border-radius: 2px;
 }
 .preview-container img {
   max-width: 100%;
@@ -1398,16 +1495,9 @@ button:disabled {
   grid-row: 4/5;
   max-width: fit-content;
 }
-.project-preview__tags a {
+.project-preview__tags .btn {
   text-transform: uppercase;
   margin-right: 0.5em;
-  background: #d3d3d3;
-  line-height: 1;
-  padding: 3px 8px;
-  border-radius: 3px;
-  font-size: 0.7em;
-  color: var(--color);
-  font-weight: 700;
 }
 
 .resume {
@@ -1465,7 +1555,7 @@ button:disabled {
   font-size: 2.2em;
   font-weight: 500;
   margin: 0;
-  color: var(--primary-color);
+  color: var(--primary);
 }
 .resume__item--open, .resume__item--closed {
   cursor: pointer;
