@@ -4,6 +4,8 @@ import PraiseHk from "./PraiseHk";
 import DailyUI from "./DailyUI";
 import PortfolioDocs from "./PortfolioDocs";
 import MoesifBrandSystem from "./MoesifBrandSystem";
+import MoesifWebsiteDesign from "./MoesifWebsiteDesign";
+import MoesifIllustration from "./MoesifIllustration";
 
 import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
@@ -73,7 +75,7 @@ const PROJECTS = [
       "Create a digitial identity for Moesif, most advanced API Analytics service helping everyone at API-driven organizations learn from their API data and make smarter decisions that drive growth. ",
     // previewSrc: IconographyCover,
     tags: ["design"],
-    content: MoesifBrandSystem,
+    content: MoesifWebsiteDesign,
     // hidden: true, //*** || TO DO || ***//
   },
   {
@@ -83,7 +85,7 @@ const PROJECTS = [
       "Create a digitial identity for Moesif, most advanced API Analytics service helping everyone at API-driven organizations learn from their API data and make smarter decisions that drive growth. ",
     // previewSrc: IconographyCover,
     tags: ["design"],
-    content: MoesifBrandSystem,
+    content: MoesifIllustration,
     // hidden: true, //*** || TO DO || ***//
   },
 ];
