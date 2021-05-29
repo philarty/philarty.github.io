@@ -1169,6 +1169,10 @@ button:disabled {
 .iconography-grid p {
   grid-column: 1/-1;
   margin: 0;
+  text-align: center;
+}
+.iconography-grid h3 {
+  margin-bottom: 0.5em;
 }
 .iconography-grid__icon {
   display: grid;
