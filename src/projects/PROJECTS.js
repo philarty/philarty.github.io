@@ -37,7 +37,7 @@ const PROJECTS = [
     // previewSrc: spooningSpoonCover,
     tags: ["design"],
     content: DailyUI,
-    // hidden: true, //*** || TO DO || ***//
+    hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Spooning Spoon",
@@ -56,7 +56,7 @@ const PROJECTS = [
     // previewSrc: IconographyCover,
     tags: ["design", "make"],
     content: PortfolioDocs,
-    // hidden: true, //*** || TO DO || ***//
+    hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Brand System",
@@ -66,7 +66,7 @@ const PROJECTS = [
     // previewSrc: IconographyCover,
     tags: ["design"],
     content: MoesifBrandSystem,
-    // hidden: true, //*** || TO DO || ***//
+    hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Web Deisgn",
@@ -76,7 +76,7 @@ const PROJECTS = [
     // previewSrc: IconographyCover,
     tags: ["design"],
     content: MoesifWebsiteDesign,
-    // hidden: true, //*** || TO DO || ***//
+    hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Illustration",
@@ -86,7 +86,7 @@ const PROJECTS = [
     // previewSrc: IconographyCover,
     tags: ["design"],
     content: MoesifIllustration,
-    // hidden: true, //*** || TO DO || ***//
+    hidden: true, //*** || TO DO || ***//
   },
 ];
 
