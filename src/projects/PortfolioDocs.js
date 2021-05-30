@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
+import Icon from "../components/Icon";
 import Table from "../components/Table";
 import ToggleSwitch from "../components/ToggleSwitch";
-import { BUTTONPROPERTIES, PORTFOLIODOCSCOLUMNS } from "./PortfolioDocsData";
+import {
+  BUTTONPROPERTIES,
+  PORTFOLIODOCSCOLUMNS,
+  DROPDOWNPROPERTIES,
+} from "./PortfolioDocsData";
 
 const colorOptions = [
   { value: "primary", label: "Primary" },
@@ -43,10 +48,28 @@ const ButtonSection = () => {
   const [disabled, setDisabled] = useState(false);
   const [showCode, toggleShowCode] = useState(false);
 
-  const code = `<Button 
-  btnStyle="${btnStyle}" 
-  btnColor="${btnColor}" 
-  btnSize="${btnSize}"${
+  const code = `<Button${
+    btnSize !== "md"
+      ? `
+  btnSize="` +
+        btnSize +
+        `"`
+      : ``
+  }${
+    btnColor !== "primary"
+      ? `
+  btnColor="` +
+        btnColor +
+        `"`
+      : ``
+  }${
+    btnStyle !== "solid"
+      ? `
+  btnStyle="` +
+        btnStyle +
+        `"`
+      : ``
+  }${
     block
       ? `
   block`
@@ -98,7 +121,9 @@ const ButtonSection = () => {
             Disabled
           </ToggleSwitch>
         </div>
-        <Button onClick={() => toggleShowCode(!showCode)}>showCode</Button>
+        <Button btnStyle="link" icon onClick={() => toggleShowCode(!showCode)}>
+          <Icon icon={showCode ? "cross" : "code"} />
+        </Button>
       </div>
       {showCode && (
         <div className="component-docs__code">
@@ -110,33 +135,6 @@ const ButtonSection = () => {
   );
 };
 
-const DROPDOWNPROPERTIES = [
-  {
-    property: "1placeHolder",
-    type: "string",
-    default: "1",
-    description: "Specifies a large, medium, or small button.",
-  },
-  {
-    property: "0placeHolder",
-    type: "string",
-    default: "2",
-    description: "Specifies a large, medium, or small button.",
-  },
-  {
-    property: "2placeHolder",
-    type: "string",
-    default: "select...",
-    description: "Specifies a large, medium, or small button.",
-  },
-  {
-    property: "3placeHolder",
-    type: "string",
-    default: "select...",
-    description: "Specifies a large, medium, or small button.",
-  },
-];
-
 const DropdownSection = () => {
   const [disabled, setDisabled] = useState(false);
   const [block, setBlock] = useState(false);
@@ -144,17 +142,12 @@ const DropdownSection = () => {
   const [btnSize, setSize] = useState("md");
   const [showCode, toggleShowCode] = useState(false);
 
-  const code = `<Dropdown
-  placeholder='Select Surname'
-  value={surname}
-  onChange={() => setSurname()}
-  options=[
-    { value: "Green", label: "Green"},
-    { value: "Melendez", label: "Melendez"},
-    { value: "Middleton",label: "Middleton"},
-    { value: "Suarez",label: "Suarez"},
-    { value: "Chaney", label: "Chaney"},
-  ]${
+  const code = `<Dropdown${
+    btnSize !== "md"
+      ? `
+  btnSize=` + btnSize
+      : ``
+  }${
     block
       ? `
   block`
@@ -165,6 +158,16 @@ const DropdownSection = () => {
   disabled`
       : ""
   }
+  placeholder='Select Surname'
+  value={surname}
+  onChange={() => setSurname()}
+  options=[
+    { value: "Green", label: "Green"},
+    { value: "Melendez", label: "Melendez"},
+    { value: "Middleton",label: "Middleton"},
+    { value: "Suarez",label: "Suarez"},
+    { value: "Chaney", label: "Chaney"},
+  ]
 />`;
 
   const SAMPLEDROPDOWNOPTIONS = [
@@ -181,7 +184,7 @@ const DropdownSection = () => {
           options={SAMPLEDROPDOWNOPTIONS}
           value={value}
           onChange={setValue}
-          placeholder="Select..."
+          placeholder="Select Surname"
           disabled={disabled}
           block={block}
           btnSize={btnSize}
@@ -189,7 +192,11 @@ const DropdownSection = () => {
       </div>
       <div className="component-docs__buttons">
         <div className="component-docs__options">
-          <Button btnStyle="outline" onClick={() => setValue(null)}>
+          <Button
+            btnStyle="outline"
+            disabled={!value}
+            onClick={() => setValue(null)}
+          >
             Clear
           </Button>
           <Dropdown options={sizeOptions} value={btnSize} onChange={setSize} />
@@ -204,7 +211,9 @@ const DropdownSection = () => {
             Disabled
           </ToggleSwitch>
         </div>
-        <Button onClick={() => toggleShowCode(!showCode)}>showCode</Button>
+        <Button btnStyle="link" icon onClick={() => toggleShowCode(!showCode)}>
+          <Icon icon={showCode ? "cross" : "code"} />
+        </Button>
       </div>
       {showCode && (
         <div className="component-docs__code">
