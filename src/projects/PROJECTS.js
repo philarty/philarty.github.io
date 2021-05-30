@@ -10,6 +10,7 @@ import MoesifIllustration from "./MoesifIllustration";
 import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
 import praiseHkCover from "../images/praise-hk/praise-hk-cover.png";
+import PortfolioDocsCover from "../images/portfolio-docs/portfolio-docs-cover.png"
 
 const PROJECTS = [
   {
@@ -53,10 +54,10 @@ const PROJECTS = [
     id: "portfolio-docs",
     description:
       "Documentation of custom built portfolio components used.",
-    // previewSrc: IconographyCover,
+    previewSrc: PortfolioDocsCover,
     tags: ["design", "make"],
     content: PortfolioDocs,
-    hidden: true, //*** || TO DO || ***//
+    // hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Brand System",
