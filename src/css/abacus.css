@@ -861,11 +861,10 @@ button:disabled {
 .table tr::after {
   content: "";
   display: block;
-  height: 0.9px;
+  height: 1px;
   background: linear-gradient(to right, #ffffff00, var(--muted), var(--muted), #ffffff00);
   grid-column: 1/-1;
   grid-row: -2/-1;
-  z-index: 2;
 }
 .table tr .btn-icon {
   padding: 0;
@@ -1228,17 +1227,17 @@ button:disabled {
 }
 
 .component-docs {
-  max-width: 600px;
-  border: 1px solid var(--primary);
+  max-width: 900px;
+  border: 1px solid var(--muted);
   padding: 0;
   border-radius: 3px;
 }
 .component-docs__header {
   padding: 8px 24px;
   margin: 0;
-  background-color: var(--primary);
+  background-color: var(--muted);
   font-weight: 600;
-  color: white;
+  color: var(--color);
 }
 .component-docs__example {
   border-radius: 3px 3px 0 0;
@@ -1249,19 +1248,25 @@ button:disabled {
 .component-docs__example--button {
   min-height: 50px;
 }
-.component-docs__code {
+.component-docs__buttons {
+  display: flex;
   padding: 16px 24px;
-  white-space: pre-wrap;
-  border-top: 1px solid var(--primary);
-  line-height: 1.2;
+  border-top: 1px solid var(--muted);
+  justify-content: space-between;
 }
 .component-docs__options {
-  border-top: 1px solid var(--primary);
-  padding: 16px 24px;
   display: flex;
 }
 .component-docs__options > * {
   margin-right: 10px;
+}
+.component-docs__code {
+  padding: 16px 24px;
+  background-color: black;
+  color: white;
+  word-break: normal;
+  white-space: pre-wrap;
+  font-size: 0.9em;
 }
 
 .preview-wrapper {
