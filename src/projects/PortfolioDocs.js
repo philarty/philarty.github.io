@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
 import Table from "../components/Table";
 import ToggleSwitch from "../components/ToggleSwitch";
+import { BUTTONPROPERTIES, PORTFOLIODOCSCOLUMNS } from "./PortfolioDocsData";
 
 const colorOptions = [
   { value: "primary", label: "Primary" },
@@ -24,71 +25,15 @@ const sizeOptions = [
   { value: "lg", label: "Large" },
 ];
 
-const COLUMNS = [
-  {
-    header: "Name", // string/react component
-    accessor: "name",
-    // sortable: true,
-    // width: "1fr", // css grid template columns values, strings/number
-  },
-  {
-    header: "Type",
-    accessor: "type",
-    width: "2fr",
-  },
-  {
-    header: "Default",
-    accessor: "default",
-  },
-  {
-    header: "Description",
-    accessor: "description",
-    width: "3fr",
-  },
-];
-
-const BUTTONAPIS = [
-  {
-    name: "children",
-    type: "any",
-    description: "Element rendered inside a buttom.",
-  },
-  {
-    name: "onClick",
-    type: "function",
-    description: "Callback fired when a button is pressed.",
-  },
-  {
-    name: "btnSize",
-    type: "'sm' | 'md' | 'lg'",
-    default: "'md'",
-    description: "Specifies a large, medium, or small button.",
-  },
-  {
-    name: "btnColor",
-    type: "'default' | 'primary' | 'gray' |'red' | 'green' | 'blue' ",
-    default: "'default'",
-    description: "Specifies bubtton color",
-  },
-  {
-    name: "btnStyle",
-    type: "'solid' | 'outline' | 'link'",
-    default: "'solid'",
-    description: "Specifies bubtton style",
-  },
-  {
-    name: "block",
-    type: "boolean",
-    default: "false",
-    description: "Spans the full width of the button parent",
-  },
-  {
-    name: "disabled",
-    type: "boolean",
-    default: "false",
-    description: "Disable button",
-  },
-];
+const DocSection = ({ children, name, data }) => {
+  return (
+    <div className="project__section component-docs">
+      <h4 className="component-docs__header">{name}</h4>
+      {children}
+      <Table columns={PORTFOLIODOCSCOLUMNS} data={data} />
+    </div>
+  );
+};
 
 const ButtonSection = () => {
   const [btnColor, setColor] = useState("blue");
@@ -129,7 +74,7 @@ const ButtonSection = () => {
           I'm A Button
         </Button>
       </div>
-      {/* <div className="component-docs__options">
+      <div className="component-docs__options">
         <Dropdown options={colorOptions} value={btnColor} onChange={setColor} />
         <Dropdown options={styleOptions} value={btnStyle} onChange={setStyle} />
         <Dropdown options={sizeOptions} value={btnSize} onChange={setSize} />
@@ -145,33 +90,33 @@ const ButtonSection = () => {
       </div>
       <div className="component-docs__code">
         <code>{code}</code>
-      </div> */}
-      <Table columns={COLUMNS} data={BUTTONAPIS} />
+      </div>
+      <Table columns={PORTFOLIODOCSCOLUMNS} data={BUTTONPROPERTIES} />
     </div>
   );
 };
 
-const DROPDOWNAPIS = [
+const DROPDOWNPROPERTIES = [
   {
-    name: "1placeHolder",
+    property: "1placeHolder",
     type: "string",
     default: "1",
     description: "Specifies a large, medium, or small button.",
   },
   {
-    name: "0placeHolder",
+    property: "0placeHolder",
     type: "string",
     default: "2",
     description: "Specifies a large, medium, or small button.",
   },
   {
-    name: "2placeHolder",
+    property: "2placeHolder",
     type: "string",
     default: "select...",
     description: "Specifies a large, medium, or small button.",
   },
   {
-    name: "3placeHolder",
+    property: "3placeHolder",
     type: "string",
     default: "select...",
     description: "Specifies a large, medium, or small button.",
@@ -183,6 +128,7 @@ const DropdownSection = () => {
   const [block, setBlock] = useState(false);
   const [value, setValue] = useState(null);
   const [btnSize, setSize] = useState("md");
+  const [showCode, toggleShowCode] = useState(false);
 
   const code = `<Dropdown
   placeholder='Select Surname'
@@ -215,8 +161,7 @@ const DropdownSection = () => {
     { value: "Chaney", label: "Chaney" },
   ];
   return (
-    <div className="project__section component-docs">
-      <h4 className="component-docs__header">Dropdown</h4>
+    <DocSection name="Dropdown" data={DROPDOWNPROPERTIES}>
       <div className="component-docs__example component-docs__example--button">
         <Dropdown
           options={SAMPLEDROPDOWNOPTIONS}
@@ -228,27 +173,31 @@ const DropdownSection = () => {
           btnSize={btnSize}
         />
       </div>
-      <div className="component-docs__options">
-        <Button btnStyle="outline" onClick={() => setValue(null)}>
-          Clear
-        </Button>
-        <Dropdown options={sizeOptions} value={btnSize} onChange={setSize} />
+      <div className="component-docs__buttons">
+        <div className="component-docs__options">
+          <Button btnStyle="outline" onClick={() => setValue(null)}>
+            Clear
+          </Button>
+          <Dropdown options={sizeOptions} value={btnSize} onChange={setSize} />
 
-        <ToggleSwitch isSelected={block} onToggle={() => setBlock(!block)}>
-          Block
-        </ToggleSwitch>
-        <ToggleSwitch
-          isSelected={disabled}
-          onToggle={() => setDisabled(!disabled)}
-        >
-          Disabled
-        </ToggleSwitch>
+          <ToggleSwitch isSelected={block} onToggle={() => setBlock(!block)}>
+            Block
+          </ToggleSwitch>
+          <ToggleSwitch
+            isSelected={disabled}
+            onToggle={() => setDisabled(!disabled)}
+          >
+            Disabled
+          </ToggleSwitch>
+        </div>
+        <Button onClick={() => toggleShowCode(!showCode)}>showCode</Button>
       </div>
-      <div className="component-docs__code">
-        <code>{code}</code>
-      </div>
-      <Table columns={COLUMNS} data={DROPDOWNAPIS} />
-    </div>
+      {showCode && (
+        <div className="component-docs__code">
+          <code>{code}</code>
+        </div>
+      )}
+    </DocSection>
   );
 };
 
