@@ -134,16 +134,7 @@ button {
 
 .btn-icon {
   line-height: 0;
-
-  &.btn-sm {
-    padding: 2px;
-  }
-  &.btn-md {
-    padding: 5px;
-  }
-  &.btn-lg {
-    padding: 8px;
-  }
+  padding: 0;
 }
 
 // Button Group
