@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.f2c8bcb0.chunk.css",
-    "main.js": "/static/js/main.ce497f7b.chunk.js",
-    "main.js.map": "/static/js/main.ce497f7b.chunk.js.map",
+    "main.css": "/static/css/main.2b2b7ab0.chunk.css",
+    "main.js": "/static/js/main.a68d07e5.chunk.js",
+    "main.js.map": "/static/js/main.a68d07e5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bfea658e.js",
     "runtime-main.js.map": "/static/js/runtime-main.bfea658e.js.map",
-    "static/js/2.8722306f.chunk.js": "/static/js/2.8722306f.chunk.js",
-    "static/js/2.8722306f.chunk.js.map": "/static/js/2.8722306f.chunk.js.map",
+    "static/js/2.9925ff15.chunk.js": "/static/js/2.9925ff15.chunk.js",
+    "static/js/2.9925ff15.chunk.js.map": "/static/js/2.9925ff15.chunk.js.map",
     "static/js/3.de0083ce.chunk.js": "/static/js/3.de0083ce.chunk.js",
     "static/js/3.de0083ce.chunk.js.map": "/static/js/3.de0083ce.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.f2c8bcb0.chunk.css.map": "/static/css/main.f2c8bcb0.chunk.css.map",
-    "static/js/2.8722306f.chunk.js.LICENSE.txt": "/static/js/2.8722306f.chunk.js.LICENSE.txt",
+    "static/css/main.2b2b7ab0.chunk.css.map": "/static/css/main.2b2b7ab0.chunk.css.map",
+    "static/js/2.9925ff15.chunk.js.LICENSE.txt": "/static/js/2.9925ff15.chunk.js.LICENSE.txt",
     "static/media/HeadShot.c331daf2.jpg": "/static/media/HeadShot.c331daf2.jpg",
     "static/media/alert.f1f18e57.svg": "/static/media/alert.f1f18e57.svg",
     "static/media/analytics.0129774f.svg": "/static/media/analytics.0129774f.svg",
@@ -100,6 +100,7 @@
     "static/media/paise-hk-8.2aef0f25.png": "/static/media/paise-hk-8.2aef0f25.png",
     "static/media/paise-hk-9.6542687b.png": "/static/media/paise-hk-9.6542687b.png",
     "static/media/peak-tram.950fbccf.svg": "/static/media/peak-tram.950fbccf.svg",
+    "static/media/portfolio-docs-cover.51c74fcb.png": "/static/media/portfolio-docs-cover.51c74fcb.png",
     "static/media/praise-hk-cover.1ae06c43.png": "/static/media/praise-hk-cover.1ae06c43.png",
     "static/media/product-management.2510bb0e.svg": "/static/media/product-management.2510bb0e.svg",
     "static/media/puzzle.a227df0b.svg": "/static/media/puzzle.a227df0b.svg",
@@ -140,8 +141,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bfea658e.js",
-    "static/js/2.8722306f.chunk.js",
-    "static/css/main.f2c8bcb0.chunk.css",
-    "static/js/main.ce497f7b.chunk.js"
+    "static/js/2.9925ff15.chunk.js",
+    "static/css/main.2b2b7ab0.chunk.css",
+    "static/js/main.a68d07e5.chunk.js"
   ]
 }
