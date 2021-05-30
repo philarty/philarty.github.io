@@ -41,6 +41,7 @@ const ButtonSection = () => {
   const [btnSize, setSize] = useState("md");
   const [block, setBlock] = useState(false);
   const [disabled, setDisabled] = useState(false);
+  const [showCode, toggleShowCode] = useState(false);
 
   const code = `<Button 
   btnStyle="${btnStyle}" 
@@ -74,23 +75,36 @@ const ButtonSection = () => {
           I'm A Button
         </Button>
       </div>
-      <div className="component-docs__options">
-        <Dropdown options={colorOptions} value={btnColor} onChange={setColor} />
-        <Dropdown options={styleOptions} value={btnStyle} onChange={setStyle} />
-        <Dropdown options={sizeOptions} value={btnSize} onChange={setSize} />
-        <ToggleSwitch isSelected={block} onToggle={() => setBlock(!block)}>
-          Block
-        </ToggleSwitch>
-        <ToggleSwitch
-          isSelected={disabled}
-          onToggle={() => setDisabled(!disabled)}
-        >
-          Disabled
-        </ToggleSwitch>
+      <div className="component-docs__buttons">
+        <div className="component-docs__options">
+          <Dropdown
+            options={colorOptions}
+            value={btnColor}
+            onChange={setColor}
+          />
+          <Dropdown
+            options={styleOptions}
+            value={btnStyle}
+            onChange={setStyle}
+          />
+          <Dropdown options={sizeOptions} value={btnSize} onChange={setSize} />
+          <ToggleSwitch isSelected={block} onToggle={() => setBlock(!block)}>
+            Block
+          </ToggleSwitch>
+          <ToggleSwitch
+            isSelected={disabled}
+            onToggle={() => setDisabled(!disabled)}
+          >
+            Disabled
+          </ToggleSwitch>
+        </div>
+        <Button onClick={() => toggleShowCode(!showCode)}>showCode</Button>
       </div>
-      <div className="component-docs__code">
-        <code>{code}</code>
-      </div>
+      {showCode && (
+        <div className="component-docs__code">
+          <code>{code}</code>
+        </div>
+      )}
       <Table columns={PORTFOLIODOCSCOLUMNS} data={BUTTONPROPERTIES} />
     </div>
   );
