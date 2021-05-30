@@ -41,8 +41,6 @@
   &:not(:last-child):after {
     content: "";
     display: block;
-    // this isnt 1px, because there is a rendering issue on chrome,
-    // even though different 'borders' are 1px. they are rendered differently.
     height: 0.9px;
     background: linear-gradient(
       to right,
@@ -53,7 +51,6 @@
     );
     grid-column: 1/-1;
     grid-row: -2/-1;
-    z-index: 2;
   }
 }
 
@@ -179,19 +176,22 @@ $portfolio-padding: 16px 24px;
     padding: $portfolio-padding;
     border-top: 1px solid var(--muted);
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__options {
     display: flex;
+    flex-wrap: wrap;
     > * {
       margin-right: 10px;
     }
   }
 
   &__code {
+    border-top: 1px solid var(--muted);
     padding: $portfolio-padding;
-    background-color: black;
-    color: white;
+    background-color: $background-color--night;
+    color: $color--night;
     word-break: normal;
     white-space: pre-wrap;
     font-size: 0.9em;

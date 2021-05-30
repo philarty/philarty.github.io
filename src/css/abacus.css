@@ -456,15 +456,7 @@ button:disabled {
 
 .btn-icon {
   line-height: 0;
-}
-.btn-icon.btn-sm {
-  padding: 2px;
-}
-.btn-icon.btn-md {
-  padding: 5px;
-}
-.btn-icon.btn-lg {
-  padding: 8px;
+  padding: 0;
 }
 
 .btn-group {
@@ -1153,7 +1145,6 @@ button:disabled {
   background: linear-gradient(to right, #ffffff00, #80808080, #80808080, #ffffff00);
   grid-column: 1/-1;
   grid-row: -2/-1;
-  z-index: 2;
 }
 
 .iconography-grid {
@@ -1253,17 +1244,20 @@ button:disabled {
   padding: 16px 24px;
   border-top: 1px solid var(--muted);
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .component-docs__options {
   display: flex;
+  flex-wrap: wrap;
 }
 .component-docs__options > * {
   margin-right: 10px;
 }
 .component-docs__code {
+  border-top: 1px solid var(--muted);
   padding: 16px 24px;
-  background-color: black;
-  color: white;
+  background-color: #191a1b;
+  color: #e9e9e9;
   word-break: normal;
   white-space: pre-wrap;
   font-size: 0.9em;
