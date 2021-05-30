@@ -22,7 +22,6 @@ export const PORTFOLIODOCSCOLUMNS = [
     accessor: "description",
     width: "3fr",
     // minWidth: 500,
-
   },
 ];
 
@@ -65,33 +64,48 @@ export const BUTTONPROPERTIES = [
     property: "disabled",
     type: "boolean",
     default: "false",
-    description: "Disable button",
+    description: "Make the button disabled",
   },
 ];
 
 export const DROPDOWNPROPERTIES = [
   {
-    property: "1placeHolder",
-    type: "string",
-    default: "1",
-    description: "Specifies a large, medium, or small button.",
-  },
-  {
-    property: "0placeHolder",
-    type: "string",
-    default: "2",
-    description: "Specifies a large, medium, or small button.",
-  },
-  {
-    property: "2placeHolder",
+    property: "placeHolder",
     type: "string",
     default: "select...",
-    description: "Specifies a large, medium, or small button.",
+    description: "Placeholder for dropdown when no value is selected",
   },
   {
-    property: "3placeHolder",
-    type: "string",
-    default: "select...",
+    property: "value",
+    type: "any",
+    description: "",
+  },
+  {
+    property: "options",
+    type: "array",
+    description: "Array of options",
+  },
+  {
+    property: "onChange",
+    type: "function",
+    description: "A callback fired when the value prop changes",
+  },
+  {
+    property: "block",
+    type: "boolean",
+    default: "false",
+    description: "Spans the full width of the dropdown parent",
+  },
+  {
+    property: "disabled",
+    type: "boolean",
+    default: "false",
+    description: "Make the dropdown disabled",
+  },
+  {
+    property: "btnSize",
+    type: "'sm' | 'md' | 'lg'",
+    default: "'md'",
     description: "Specifies a large, medium, or small button.",
   },
 ];

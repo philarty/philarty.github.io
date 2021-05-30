@@ -142,7 +142,17 @@ const DropdownSection = () => {
   const [btnSize, setSize] = useState("md");
   const [showCode, toggleShowCode] = useState(false);
 
-  const code = `<Dropdown${
+  const code = `<Dropdown
+  placeholder='Select Surname'
+  value={surname}
+  onChange={() => setSurname()}
+  options=[
+    { value: "Green", label: "Green"},
+    { value: "Melendez", label: "Melendez"},
+    { value: "Middleton",label: "Middleton"},
+    { value: "Suarez",label: "Suarez"},
+    { value: "Chaney", label: "Chaney"},
+  ]${
     btnSize !== "md"
       ? `
   btnSize=` + btnSize
@@ -158,16 +168,6 @@ const DropdownSection = () => {
   disabled`
       : ""
   }
-  placeholder='Select Surname'
-  value={surname}
-  onChange={() => setSurname()}
-  options=[
-    { value: "Green", label: "Green"},
-    { value: "Melendez", label: "Melendez"},
-    { value: "Middleton",label: "Middleton"},
-    { value: "Suarez",label: "Suarez"},
-    { value: "Chaney", label: "Chaney"},
-  ]
 />`;
 
   const SAMPLEDROPDOWNOPTIONS = [
@@ -228,10 +228,10 @@ const PortfolioDocs = (
   <div className="project__body portfolio">
     <ButtonSection />
     <DropdownSection />
-    <p>Table</p>
+    {/* <p>Table</p>
     <p>Toggle Switch</p>
     <p>Lightbox</p>
-    <p>ButtonSelect</p>
+    <p>ButtonSelect</p> */}
   </div>
 );
 
