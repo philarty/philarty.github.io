@@ -20,7 +20,7 @@ const ProfileSection = () => (
       <a href="http://www.moesif.com" target="_blank" rel="noreferrer">
         Moesif
       </a>
-      , a leading API analytics company, designing and creating seamless experiences for our customers.
+      , a leading API analytics company, designing and implementing seamless experiences for our customers.
     </p>
   </div>
 );
