@@ -1,12 +1,22 @@
 .project {
   flex: 1;
 }
-.project__header {
-  display: grid;
+.project-header {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1em;
-  grid-template-columns: 1fr 1fr;
+
+  &__title {
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__tags {
+    .btn {
+      text-transform: uppercase;
+    }
+  }
+
 }
 
 .project__body {
@@ -14,8 +24,8 @@
   margin: 0 auto;
 }
 
-.project__section {
-  max-width: 860px;
+.project-section {
+  max-width: 900px;
   margin: 0 auto 2em;
   padding: 0 1em;
 }
@@ -41,7 +51,7 @@
   &:not(:last-child):after {
     content: "";
     display: block;
-    height: 0.9px;
+    height: 1px;
     background: linear-gradient(
       to right,
       #ffffff00,
@@ -55,16 +65,12 @@
 }
 
 .iconography-grid {
-  max-width: 800px;
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 24px;
   padding: 1em 0 2em;
-
-  // border-bottom: 1px solid gray;
-  // border-radius: 12px;
 
   h3,
   p {
@@ -87,10 +93,11 @@
     .icon {
       height: 36px;
       width: 36px;
+      margin-top: 20px
     }
 
     p {
-      line-height: 1.4;
+      line-height: 1.2;
       font-weight: 300;
       font-size: 0.9em;
       margin: 0.75em 0;
@@ -101,13 +108,11 @@
 //PRAISE HK
 .praise-hk {
   display: grid;
-  max-width: 1000px;
-  background-color: hsl(0, 0%, 96%);
-  padding: 0;
+  max-width: 900px;
+
   img {
     max-width: 100%;
     max-height: 100%;
-
     &:first-child {
       border-radius: 3px 3px 0 0;
     }

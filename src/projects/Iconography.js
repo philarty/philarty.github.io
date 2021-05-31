@@ -79,7 +79,7 @@ import infrastructureIcon from "../images/iconography/infrastructure.svg";
 import customersIcon from "../images/iconography/customers.svg";
 import integrationIcon from "../images/iconography/integration.svg";
 import hackerIcon from "../images/iconography/hacker.svg";
-import compareIcon  from "../images/iconography/compare.svg";
+import compareIcon from "../images/iconography/compare.svg";
 import developerRelationsIcon from "../images/iconography/developer-relations.svg";
 import customerSuccessIcon from "../images/iconography/customer-success.svg";
 import engineeringIcon from "../images/iconography/engineering.svg";
@@ -94,7 +94,7 @@ import monitoringIcon from "../images/iconography/monitoring.svg";
 import puzzleIcon from "../images/iconography/puzzle.svg";
 import embeddedIcon from "../images/iconography/embedded.svg";
 import analyticsIcon from "../images/iconography/analytics.svg";
-
+import ProjectLayout from "../components/ProjectLayout";
 
 const ICONSSETS = [
   {
@@ -122,8 +122,17 @@ const ICONSSETS = [
       // { id: "Humid", src: coldIcon },
       // { id: "Dry", src: coldIcon },
     ],
-    // description:
-    //   "This set of icons are designed for usage in the PRAISE HK app",
+    description: (
+      <React.Fragment>
+        This set of icons are designed for usage in the PRAISE HK app. These are
+        translated versions of the recognized{" "}
+        <a href="https://www.hko.gov.hk/textonly/v2/explain/wxicon_e.htm">
+          weather icons
+        </a>{" "}
+        from the Hong Kong Observatory, the official government weather forecast
+        agency.
+      </React.Fragment>
+    ),
   },
   {
     title: "Transit Icons",
@@ -188,7 +197,7 @@ const ICONSSETS = [
       { id: "Docs", src: docsIcon },
       { id: "Status", src: statusIcon },
       { id: "Books", src: booksIcon },
-      { id: "Compliance", src: complianceIcon},
+      { id: "Compliance", src: complianceIcon },
       { id: "Reference", src: referenceIcon },
       { id: "GDPR", src: gdpricon },
       { id: "Infrastructure", src: infrastructureIcon },
@@ -206,19 +215,21 @@ const ICONSSETS = [
       { id: "Log", src: logIcon },
       { id: "Web", src: webIcon },
       { id: "Dashboard", src: dashboardIcon },
-      { id: "Monitoring", src: monitoringIcon  },
+      { id: "Monitoring", src: monitoringIcon },
       { id: "Puzzle", src: puzzleIcon },
       { id: "Embeddd", src: embeddedIcon },
       { id: "Analytics", src: analyticsIcon },
     ],
+    description: (
+      <React.Fragment>
+        These icons acopmany navigation text found in the header of the{" "}
+        <a href="http://www.moesif.com" target="_blank" rel="noreferrer">
+          Moesif landing page
+        </a>{" "}
+        as well as the main app.
+      </React.Fragment>
+    ),
   },
-
-  //   title: "App Icons",
-  //   icons: [
-  //     { id: "Sunny", src: sunnyIcon },
-  //     { id: "S3nny", src: sunnyIcon },
-  //   ],
-  // },
 ];
 
 const IconItem = ({ id, iconSrc }) => {
@@ -232,22 +243,21 @@ const IconItem = ({ id, iconSrc }) => {
 
 const IconGrid = ({ title, icons, description }) => {
   return (
-    <div className="project__section icongraphy-section">
+    <ProjectLayout.Section className='icongraphy-section'>
       <div className="iconography-grid">
         <h3>{title}</h3>
-
+        {description && <p>{description}</p>}
         {icons.map((icon) => (
           <IconItem key={icon.id} id={icon.id} iconSrc={icon.src} />
         ))}
-        {description && <p>{description}</p>}
       </div>
-    </div>
+    </ProjectLayout.Section>
   );
 };
 
 const Iconography = (
-  <div className="project__body">
-    <div className="project__section iconography-header">
+  <React.Fragment>
+    <ProjectLayout.Section className="iconography-header">
       <SVG src={iconHeader} alt="icon" />
       <div className="text">
         <p>
@@ -257,18 +267,18 @@ const Iconography = (
           devices.
         </p>
         <p>
-          This series of icons are designed to be used for mobile applications.
-          Most of these icons draw inspiration from pre-existing ones, while a
-          few are new and unique to this application. Following Google's
-          Material Design Principle, the use of a 24 x 24 pixel grid ensures the
-          icon aligns with display pixels on a mobile device. Minimum stroke
-          weight of 2px for both positive and negative space to ensure
-          legibility on a small screen. The consistent treatment also unifies
-          them into a single set, allowing them to look cohesive existing in the
-          same page.
+          This series of icons are designed to be used for various projects I've
+          worked on. Most of these icons draw inspiration from pre-existing
+          ones, while a few are new and unique to their application. Following
+          Google's Material Design Principle, the use of a 24 x 24 pixel grid
+          ensures the icon aligns with display pixels on a mobile device.
+          Minimum stroke weight of 2px for both positive and negative space to
+          ensure legibility on a small screen. The consistent treatment also
+          unifies them into a single set, allowing them to look cohesive
+          existing in the same page.
         </p>
       </div>
-    </div>
+    </ProjectLayout.Section>
     {ICONSSETS.map((set) => (
       <IconGrid
         key={set.title}
@@ -277,7 +287,7 @@ const Iconography = (
         description={set.description}
       />
     ))}
-  </div>
+  </React.Fragment>
 );
 
 export default Iconography;
