@@ -243,7 +243,7 @@ const IconItem = ({ id, iconSrc }) => {
 
 const IconGrid = ({ title, icons, description }) => {
   return (
-    <ProjectLayout.Section className='icongraphy-section'>
+    <ProjectLayout.Section className="icongraphy-section">
       <div className="iconography-grid">
         <h3>{title}</h3>
         {description && <p>{description}</p>}
@@ -256,7 +256,7 @@ const IconGrid = ({ title, icons, description }) => {
 };
 
 const Iconography = (
-  <React.Fragment>
+  <ProjectLayout.Body>
     <ProjectLayout.Section className="iconography-header">
       <SVG src={iconHeader} alt="icon" />
       <div className="text">
@@ -287,7 +287,7 @@ const Iconography = (
         description={set.description}
       />
     ))}
-  </React.Fragment>
+  </ProjectLayout.Body>
 );
 
 export default Iconography;
