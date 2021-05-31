@@ -31,7 +31,21 @@ const Section = ({ children, className, id }) => {
   );
 };
 
+const Body = ({ children, className, id }) => {
+    let classNameString = "project-body";
+  
+    if (className) {
+      classNameString = classNameString.concat(" " + className);
+    }
+    return (
+      <div className={classNameString} id={id}>
+        {children}
+      </div>
+    );
+  };
+
 ProjectLayout.Header = Header;
+ProjectLayout.Body = Body;
 ProjectLayout.Section = Section;
 
 export default ProjectLayout;

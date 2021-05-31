@@ -5,15 +5,17 @@ import spooningSpoonDefinition from "../images/spooning-spoon/spooning-spoon-def
 import spooningSpoonProcess from "../images/spooning-spoon/spooning-spoon-process.png";
 import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
 import spooningSpoonPhil from "../images/spooning-spoon/spooning-spoon-phil.jpg";
+import ProjectLayout from "../components/ProjectLayout";
 
 const SpooningSpoon = (
-  <div className="project__body">
-    <div className="project__section spooning-spoon__poster">
+  <ProjectLayout.Body>
+    <ProjectLayout.Section className="spooning-spoon__poster">
       <Lightbox>
         <img src={spooningSpoonPoster} alt="" />
       </Lightbox>
-    </div>
-    <div className="project__section spooning-spoon__definition">
+    </ProjectLayout.Section>
+
+    <ProjectLayout.Section className="spooning-spoon__definition">
       <Lightbox>
         <img src={spooningSpoonDefinition} alt="" />
       </Lightbox>
@@ -33,23 +35,24 @@ const SpooningSpoon = (
           bent knees, so as to fit together like spoons.
         </li>
       </ol>
-    </div>
-    <div className="project__section">
+    </ProjectLayout.Section>
+
+    <ProjectLayout.Section>
       <Lightbox>
         <img src={spooningSpoonProcess} alt="" />
       </Lightbox>
-    </div>
-    <div className="project__section">
+    </ProjectLayout.Section>
+    <ProjectLayout.Section>
       <Lightbox>
         <img src={spooningSpoonCover} alt="" />
       </Lightbox>
-    </div>
-    <div className="project__section">
+    </ProjectLayout.Section>
+    <ProjectLayout.Section>
       <Lightbox>
         <img src={spooningSpoonPhil} alt="" />
       </Lightbox>
-    </div>
-  </div>
+    </ProjectLayout.Section>
+  </ProjectLayout.Body>
 );
 
 export default SpooningSpoon;
