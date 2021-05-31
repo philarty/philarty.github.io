@@ -15,6 +15,7 @@ import praiseImage13 from "../images/praise-hk/paise-hk-13.png";
 import praiseImage14 from "../images/praise-hk/paise-hk-14.png";
 import praiseImage15 from "../images/praise-hk/paise-hk-15.png";
 import praiseImage16 from "../images/praise-hk/paise-hk-16.png";
+import ProjectLayout from "../components/ProjectLayout";
 
 const STATICIMAGES = [
   { src: praiseImage1, alt: "Banner" },
@@ -36,13 +37,11 @@ const STATICIMAGES = [
 ];
 
 const PraiseHk = (
-  <div className="project__body">
-    <div className="project__section praise-hk">
-      {STATICIMAGES.map((image) => (
-        <img src={image.src} alt={image.alt} key={image.alt}/>
-      ))}
-    </div>
-  </div>
+  <ProjectLayout.Section className="praise-hk">
+    {STATICIMAGES.map((image) => (
+      <img src={image.src} alt={image.alt} key={image.alt} />
+    ))}
+  </ProjectLayout.Section>
 );
 
 export default PraiseHk;
