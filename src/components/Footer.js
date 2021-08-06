@@ -5,9 +5,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__social">
-        <Button to="/" btnStyle="link" btnColor="primary" target="_blank">
-          Portfolio
-        </Button>
         <Button
           href="https://www.instagram.com/philarty/"
           btnStyle="link"
@@ -37,7 +34,7 @@ const Footer = () => {
         </Button>
       </div>
       <div className="footer__disclaimer">
-        &copy; 2021 All rights reserved by Philip Lau
+        &copy; Philip Lau
       </div>
     </footer>
   );
