@@ -151,8 +151,15 @@ const RESUME = [
           "Performed user research to discover pain point of currently available sports bra. Created high fidelity prototype and conducted user testing to refine solution.",
         ],
       },
-        ],
-      },
+      // {
+      //   sub_header: "First Responder Headlamp",
+      //   title: "Brown University and RI Hospital",
+      //   period: "Fall 2017",
+      //   description: [
+      //     "Partnered with RI hospital EMT team and Brown University engineers to develop and design a headlamp to ease airway examination during emergency situations. Headlamp aligns light with vision to improve illumination of mouth and airway.",
+      //     "Conducted qualitative user research to discover challenges of lighting equipment. Created a functional, high fidelity prototype that received positive reviews during final user testing.Conducted qualitative user research to discover challenges of lighting equipment. Created a functional, high fidelity prototype that received positive reviews during final user testing.",
+      //   ],
+      // },
     ],
   },
   {
