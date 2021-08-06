@@ -5,13 +5,19 @@ import Icon from "../components/Icon";
 import ProjectLayout from "../components/ProjectLayout";
 import Table from "../components/Table";
 import Tabs, { Tab } from "../components/Tabs";
+import PhotoSlider from "../components/PhotoSlider";
+
 import ToggleSwitch from "../components/ToggleSwitch";
 import {
   BUTTONPROPERTIES,
   PORTFOLIODOCSCOLUMNS,
   DROPDOWNPROPERTIES,
   TABSPROPERTIES,
+  PHOTOSLIDERPROPERTIES,
 } from "./PortfolioDocsData";
+
+import testimonyOld from "../images/moesif-website-design/testimony-old.png";
+import testimonyNew from "../images/moesif-website-design/testimony-new.png";
 
 const colorOptions = [
   { value: "primary", label: "Primary" },
@@ -232,7 +238,10 @@ const TabsSection = () => {
 
   return (
     <DocSection name="Tabs" data={TABSPROPERTIES}>
-      <div className="component-docs__example" style={{minHeight: 200, alignItems: 'flex-start'}}>
+      <div
+        className="component-docs__example"
+        style={{ minHeight: 200, alignItems: "flex-start" }}
+      >
         <Tabs btnSize={btnSize} btnColor={btnColor}>
           <Tab label="Dogs" disabled={disabled}>
             <div>
@@ -293,11 +302,28 @@ const TabsSection = () => {
   );
 };
 
+const PhotoSliderSection = () => {
+  const [disabled, setDisabled] = useState(false);
+  const [btnSize, setSize] = useState("md");
+  const [btnColor, setColor] = useState("primary");
+
+  return (
+    <DocSection name="Photo Slider" data={PHOTOSLIDERPROPERTIES}>
+      <div
+        className="component-docs__example"
+      >
+        <PhotoSlider leftSrc={testimonyOld} RightSrc={testimonyNew} />
+      </div>
+    </DocSection>
+  );
+};
+
 const PortfolioDocs = (
   <ProjectLayout.Body>
     <ButtonSection />
     <DropdownSection />
     <TabsSection />
+    <PhotoSliderSection />
     {/* <p>Table</p>
     <p>Toggle Switch</p>
     <p>Lightbox</p>
