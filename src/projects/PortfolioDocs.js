@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
 import Icon from "../components/Icon";
+import ProjectLayout from "../components/ProjectLayout";
 import Table from "../components/Table";
+import Tabs, { Tab } from "../components/Tabs";
 import ToggleSwitch from "../components/ToggleSwitch";
 import {
   BUTTONPROPERTIES,
   PORTFOLIODOCSCOLUMNS,
   DROPDOWNPROPERTIES,
+  TABSPROPERTIES,
 } from "./PortfolioDocsData";
 
 const colorOptions = [
