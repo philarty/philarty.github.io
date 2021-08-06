@@ -11,6 +11,8 @@ import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
 import praiseHkCover from "../images/praise-hk/praise-hk-cover.png";
 import PortfolioDocsCover from "../images/portfolio-docs/portfolio-docs-cover.png";
+import moesifWebsiteDesignCover from "../images/moesif-website-design/website-cover.png";
+
 
 const PROJECTS = [
   {
@@ -56,7 +58,7 @@ const PROJECTS = [
     // previewSrc: IconographyCover,
     tags: ["design"],
     content: MoesifBrandSystem,
-    // hidden: true, //*** || TO DO || ***//
+    hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Web Deisgn",
@@ -66,7 +68,7 @@ const PROJECTS = [
     previewSrc: moesifWebsiteDesignCover,
     tags: ["design"],
     content: MoesifWebsiteDesign,
-    // hidden: true, //*** || TO DO || ***//
+    hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Illustration",
