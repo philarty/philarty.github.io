@@ -1,0 +1,71 @@
+.photo-slider {
+  position: relative;
+  display: grid;
+  width: 100%;
+
+  > * {
+    grid-area: 1/1/2/2;
+    display: grid;
+  }
+
+  &__left {
+    overflow: hidden;
+    border-right: 1px solid var(--muted);
+  }
+
+  &__slider {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+
+    place-self: center;
+
+    -webkit-appearance: none;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  @mixin track() {
+    margin: 0 -5px;
+  }
+
+  input[type="range"] {
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+    &::-moz-range-track {
+      @include track;
+    }
+    &::-ms-track {
+      @include track;
+    }
+  }
+
+  @mixin thumb() {
+    -webkit-appearance: none;
+    border: 1px solid var(--muted);
+    height: 36px;
+    width: 10px;
+    border-radius: 3px;
+    background: white;
+    cursor: ew-resize;
+  }
+
+  input[type="range"] {
+    &::-webkit-slider-thumb {
+      @include thumb;
+    }
+    &::-ms-thumb {
+      @include thumb;
+    }
+    //mozilla does not allow thumb to fo outside of input.
+    &::-moz-range-thumb {
+      height: 100%;
+      width: 4px;
+      border: 0px;
+      background-color: var(--muted);
+      cursor: ew-resize;
+    }
+  }
+}
