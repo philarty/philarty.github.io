@@ -63,7 +63,7 @@ const PROJECTS = [
     id: "moesif-web-design",
     description:
       "Create a digitial identity for Moesif, most advanced API Analytics service helping everyone at API-driven organizations learn from their API data and make smarter decisions that drive growth. ",
-    // previewSrc: IconographyCover,
+    previewSrc: moesifWebsiteDesignCover,
     tags: ["design"],
     content: MoesifWebsiteDesign,
     // hidden: true, //*** || TO DO || ***//
