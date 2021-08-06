@@ -109,3 +109,26 @@ export const DROPDOWNPROPERTIES = [
     description: "Specifies a large, medium, or small button.",
   },
 ];
+
+export const TABSPROPERTIES = [
+  {
+    property: "btnSize",
+    type: "'sm' | 'md' | 'lg'",
+    default: "'md'",
+    description: "Specifies a large, medium, or small button.",
+  },
+  {
+    property: "btnColor",
+    type: "'default' | 'primary' | 'gray' |'red' | 'green' | 'blue' ",
+    default: "'default'",
+    description: "Specifies tab color",
+  },
+  {
+    property: "disabled",
+    type: "boolean",
+    default: "false",
+    description: "Make the dropdown disabled",
+  },
+  
+];
+
