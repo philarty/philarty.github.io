@@ -129,6 +129,18 @@ export const TABSPROPERTIES = [
     default: "false",
     description: "Make the dropdown disabled",
   },
-  
 ];
 
+export const PHOTOSLIDERPROPERTIES = [
+  {
+    property: "leftSrc",
+    type: null,
+    default: null,
+    description: "Specify source of left photo",
+  },
+  {
+    property: "RightSrc",
+
+    description: "Specifies source of right photo",
+  },
+];
