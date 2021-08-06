@@ -10,7 +10,7 @@ import MoesifIllustration from "./MoesifIllustration";
 import IconographyCover from "../images/iconography/iconography-cover.svg";
 import spooningSpoonCover from "../images/spooning-spoon/spooning-spoon-cover.jpg";
 import praiseHkCover from "../images/praise-hk/praise-hk-cover.png";
-import PortfolioDocsCover from "../images/portfolio-docs/portfolio-docs-cover.png"
+import PortfolioDocsCover from "../images/portfolio-docs/portfolio-docs-cover.png";
 
 const PROJECTS = [
   {
@@ -32,15 +32,6 @@ const PROJECTS = [
     content: PraiseHk,
   },
   {
-    title: "Daily UI",
-    id: "daily-ui",
-    description: "Daily UI",
-    // previewSrc: spooningSpoonCover,
-    tags: ["design"],
-    content: DailyUI,
-    hidden: true, //*** || TO DO || ***//
-  },
-  {
     title: "Spooning Spoon",
     id: "spooning-spoon",
     description:
@@ -52,12 +43,10 @@ const PROJECTS = [
   {
     title: "Portfolio Docs",
     id: "portfolio-docs",
-    description:
-      "Documentation of custom built portfolio components used.",
+    description: "This portoflio is built on React components. Check out the documentation for all of them.",
     previewSrc: PortfolioDocsCover,
     tags: ["design", "make"],
     content: PortfolioDocs,
-    // hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Brand System",
@@ -67,7 +56,7 @@ const PROJECTS = [
     // previewSrc: IconographyCover,
     tags: ["design"],
     content: MoesifBrandSystem,
-    hidden: true, //*** || TO DO || ***//
+    // hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Web Deisgn",
@@ -77,7 +66,7 @@ const PROJECTS = [
     // previewSrc: IconographyCover,
     tags: ["design"],
     content: MoesifWebsiteDesign,
-    hidden: true, //*** || TO DO || ***//
+    // hidden: true, //*** || TO DO || ***//
   },
   {
     title: "Moesif Illustration",
@@ -87,6 +76,15 @@ const PROJECTS = [
     // previewSrc: IconographyCover,
     tags: ["design"],
     content: MoesifIllustration,
+    hidden: true, //*** || TO DO || ***//
+  },
+  {
+    title: "Daily UI",
+    id: "daily-ui",
+    description: "Daily UI",
+    // previewSrc: spooningSpoonCover,
+    tags: ["design"],
+    content: DailyUI,
     hidden: true, //*** || TO DO || ***//
   },
 ];
