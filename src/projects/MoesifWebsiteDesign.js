@@ -13,11 +13,8 @@ import mobilePost from "../images/moesif-website-design/mobile-post.png";
 import desktopDocs from "../images/moesif-website-design/desktop-docs.png";
 import mobileDocs from "../images/moesif-website-design/mobile-docs.png";
 
-import blogOld from "../images/moesif-website-design/blog-landing-old.png";
-import blogNew from "../images/moesif-website-design/blog-landing-new.png";
 import Dropdown from "../components/Dropdown";
 import ProjectLayout from "../components/ProjectLayout";
-import PhotoSlider from "../components/PhotoSlider";
 
 const SCREENSHOTS = {
   landing: {
@@ -152,9 +149,6 @@ const MoesifBranding = (
       </div>
     </ProjectLayout.Section>
     <WebsiteSection />
-    <ProjectLayout.Section>
-      <PhotoSlider photoA={blogOld} photoB={blogNew} />
-    </ProjectLayout.Section>
   </ProjectLayout.Body>
 );
 
