@@ -44,7 +44,7 @@ export const BUTTONPROPERTIES = [
   },
   {
     property: "btnColor",
-    type: "'default' | 'primary' |'red' | 'green' | 'blue' ",
+    type: "'default' | 'primary' | 'red' | 'green' | 'blue' ",
     default: "'default'",
     description: "Specifies bubtton color",
   },
@@ -119,7 +119,7 @@ export const TABSPROPERTIES = [
   },
   {
     property: "btnColor",
-    type: "'default' | 'primary' |'red' | 'green' | 'blue' ",
+    type: "'default' | 'primary' | 'red' | 'green' | 'blue' ",
     default: "'default'",
     description: "Specifies tab color",
   },
