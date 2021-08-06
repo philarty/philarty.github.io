@@ -22,37 +22,36 @@ const ProjectHeader = (props) => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="project__header">
-      <div>
-        <h2>{project.title}</h2>
-        <div>
-          {project.tags.map((tag) => (
-            <Button
-              to={"/projects/" + tag}
-              key={tag}
-              onClick={() => window.scrollTo(0, 0)}
-              btnSize="sm"
-              btnStyle="outline"
-              btnColor="gray"
-            >
-              {tag}
-            </Button>
-          ))}
-        </div>
-        <p>Role: Designer, Coder</p>
-        <p>Client: Moesif</p>
-        <p> Date: 2019-present</p>
+    <div className="project-header">
+      <div className="project-header__tags">
+        {project.tags.map((tag) => (
+          <Button
+            to={"/projects/" + tag}
+            key={tag}
+            onClick={() => window.scrollTo(0, 0)}
+            btnSize="sm"
+            btnStyle="outline"
+            btnColor="gray"
+          >
+            {tag}
+          </Button>
+        ))}
       </div>
-      <div>
-        <p>{project.description}</p>
-        <Button
-          onClick={() => (show ? setShow(false) : setShow(true))}
-          btnSize="sm"
-        >
-          {show ? "Hide" : "Show All"}
-        </Button>
-      </div>
-      {show && <div></div>}
+      <h2 className="project-header__title">{project.title}</h2>
+
+      <p>Illustration</p>
+      <p>Client: Moesif, Praise HK, Portfolio</p>
+      <p> Date: 2019-present</p>
+
+      <p>{project.description}</p>
+      <Button
+        onClick={() => (show ? setShow(false) : setShow(true))}
+        btnSize="sm"
+      >
+        {show ? "Hide" : "Show All"}
+      </Button>
+
+      {show && <div> hi</div>}
     </div>
   );
 };
@@ -65,7 +64,6 @@ const Project = () => {
   if (project) {
     return (
       <section className="project">
-        {/* <ProjectHeader project={project} /> */}
         {project.hidden && (
           <div className="project__section text-center">
             <h2>Under Construction</h2>
