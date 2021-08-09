@@ -47,7 +47,12 @@ const DocSection = ({ children, name, data }) => {
     <ProjectLayout.Section className="component-docs">
       <h4 className="component-docs__header">{name}</h4>
       {children}
-      <Table columns={PORTFOLIODOCSCOLUMNS} data={data} />
+      {data.map((d) => (
+        <React.Fragment>
+          {data.length > 1 && d.id}
+          <Table columns={PORTFOLIODOCSCOLUMNS} data={d.props} />
+        </React.Fragment>
+      ))}
     </ProjectLayout.Section>
   );
 };

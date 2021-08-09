@@ -1,7 +1,7 @@
 export const PORTFOLIODOCSCOLUMNS = [
   {
-    header: "Property", // string/react component
-    accessor: "property",
+    header: "Name", // string/react component
+    accessor: "name",
     // minWidth: 100,
     // sortable: true,
     // width: "1fr", // css grid template columns values, strings/number
@@ -27,120 +27,156 @@ export const PORTFOLIODOCSCOLUMNS = [
 
 export const BUTTONPROPERTIES = [
   {
-    property: "children",
-    type: "any",
-    description: "Element rendered inside a buttom.",
-  },
-  {
-    property: "onClick",
-    type: "function",
-    description: "Callback fired when a button is pressed.",
-  },
-  {
-    property: "btnSize",
-    type: "'sm' | 'md' | 'lg'",
-    default: "'md'",
-    description: "Specifies a large, medium, or small button.",
-  },
-  {
-    property: "btnColor",
-    type: "'default' | 'primary' | 'red' | 'green' | 'blue' ",
-    default: "'default'",
-    description: "Specifies bubtton color",
-  },
-  {
-    property: "btnStyle",
-    type: "'solid' | 'outline' | 'link'",
-    default: "'solid'",
-    description: "Specifies bubtton style",
-  },
-  {
-    property: "block",
-    type: "boolean",
-    default: "false",
-    description: "Spans the full width of the button parent",
-  },
-  {
-    property: "disabled",
-    type: "boolean",
-    default: "false",
-    description: "Make the button disabled",
+    id: "Button",
+    props: [
+      {
+        name: "children",
+        type: "any",
+        description: "Element rendered inside a buttom.",
+      },
+      {
+        name: "onClick",
+        type: "function",
+        description: "Callback fired when a button is pressed.",
+      },
+      {
+        name: "btnSize",
+        type: "'sm' | 'md' | 'lg'",
+        default: "'md'",
+        description: "Specifies a large, medium, or small button.",
+      },
+      {
+        name: "btnColor",
+        type: "'default' | 'primary' | 'red' | 'green' | 'blue' ",
+        default: "'default'",
+        description: "Specifies bubtton color",
+      },
+      {
+        name: "btnStyle",
+        type: "'solid' | 'outline' | 'link'",
+        default: "'solid'",
+        description: "Specifies bubtton style",
+      },
+      {
+        name: "block",
+        type: "boolean",
+        default: "false",
+        description: "Spans the full width of the button parent",
+      },
+      {
+        name: "disabled",
+        type: "boolean",
+        default: "false",
+        description: "Make the button disabled",
+      },
+    ],
   },
 ];
 
 export const DROPDOWNPROPERTIES = [
   {
-    property: "placeHolder",
-    type: "string",
-    default: "select...",
-    description: "Placeholder for dropdown when no value is selected",
-  },
-  {
-    property: "value",
-    type: "any",
-    description: "",
-  },
-  {
-    property: "options",
-    type: "array",
-    description: "Array of options",
-  },
-  {
-    property: "onChange",
-    type: "function",
-    description: "A callback fired when the value prop changes",
-  },
-  {
-    property: "block",
-    type: "boolean",
-    default: "false",
-    description: "Spans the full width of the dropdown parent",
-  },
-  {
-    property: "disabled",
-    type: "boolean",
-    default: "false",
-    description: "Make the dropdown disabled",
-  },
-  {
-    property: "btnSize",
-    type: "'sm' | 'md' | 'lg'",
-    default: "'md'",
-    description: "Specifies a large, medium, or small button.",
+    id: "Dropdown",
+    props: [
+      {
+        name: "placeHolder",
+        type: "string",
+        default: "select...",
+        description: "Placeholder for dropdown when no value is selected",
+      },
+      {
+        name: "value",
+        type: "any",
+        description: "",
+      },
+      {
+        name: "options",
+        type: "array",
+        description: "Array of options",
+      },
+      {
+        name: "onChange",
+        type: "function",
+        description: "A callback fired when the value prop changes",
+      },
+      {
+        name: "block",
+        type: "boolean",
+        default: "false",
+        description: "Spans the full width of the dropdown parent",
+      },
+      {
+        name: "disabled",
+        type: "boolean",
+        default: "false",
+        description: "Make the dropdown disabled",
+      },
+      {
+        name: "btnSize",
+        type: "'sm' | 'md' | 'lg'",
+        default: "'md'",
+        description: "Specifies a large, medium, or small button.",
+      },
+    ],
   },
 ];
 
 export const TABSPROPERTIES = [
   {
-    property: "btnSize",
-    type: "'sm' | 'md' | 'lg'",
-    default: "'md'",
-    description: "Specifies a large, medium, or small button.",
+    id: "Tabs",
+    props: [
+      {
+        name: "btnSize",
+        type: "'sm' | 'md' | 'lg'",
+        default: "'md'",
+        description: "Specifies a large, medium, or small button.",
+      },
+      {
+        name: "btnColor",
+        type: "'default' | 'primary' | 'red' | 'green' | 'blue' ",
+        default: "'default'",
+        description: "Specifies tab color",
+      },
+      {
+        name: "disabled",
+        type: "boolean",
+        default: "false",
+        description: "Disable switching between tabs",
+      },
+    ],
   },
-  {
-    property: "btnColor",
-    type: "'default' | 'primary' | 'red' | 'green' | 'blue' ",
-    default: "'default'",
-    description: "Specifies tab color",
-  },
-  {
-    property: "disabled",
-    type: "boolean",
-    default: "false",
-    description: "Make the dropdown disabled",
-  },
+  {id: 'Tab',
+  props: [
+    {
+      name: "disabled",
+      type: "boolean",
+      default: "false",
+      description: "Disable specific tabs",
+    },
+    {
+      name: "label",
+      type: "string",
+      default: null,
+      description: "label to be displayed on tab.",
+    },
+  ],}
 ];
 
 export const PHOTOSLIDERPROPERTIES = [
   {
-    property: "leftSrc",
-    type: null,
-    default: null,
-    description: "Specify source of left photo",
-  },
-  {
-    property: "RightSrc",
+    id: "PhotoSlider",
+    props: [
+      {
+        name: "leftSrc",
+        type: null,
+        default: null,
+        description: "Specify source of left photo",
+      },
+      {
+        name: "RightSrc",
 
-    description: "Specifies source of right photo",
+        description: "Specifies source of right photo",
+      },
+    ],
   },
+  
 ];
