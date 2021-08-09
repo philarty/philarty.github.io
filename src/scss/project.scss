@@ -193,7 +193,7 @@ $portfolio-padding: 16px 24px;
 
   &__code {
     border-top: 1px solid var(--muted);
-    padding: $portfolio-padding;
+    padding: $portfolio-padding !important;
     background-color: $background-color--night;
     color: $color--night;
     word-break: normal;
