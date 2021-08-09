@@ -7,6 +7,9 @@ import Table from "../components/Table";
 import Tabs, { Tab } from "../components/Tabs";
 import PhotoSlider from "../components/PhotoSlider";
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus as SyntaxStyle } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import ToggleSwitch from "../components/ToggleSwitch";
 import {
   BUTTONPROPERTIES,
@@ -48,6 +51,16 @@ const DocSection = ({ children, name, data }) => {
     </ProjectLayout.Section>
   );
 };
+
+const CodeSection = ({ code }) => (
+  <SyntaxHighlighter
+    className="component-docs__code"
+    language="jsx"
+    style={SyntaxStyle}
+  >
+    {code}
+  </SyntaxHighlighter>
+);
 
 const ButtonSection = () => {
   const [btnColor, setColor] = useState("blue");
@@ -133,11 +146,7 @@ const ButtonSection = () => {
           <Icon icon={showCode ? "cross" : "code"} />
         </Button>
       </div>
-      {showCode && (
-        <div className="component-docs__code">
-          <code>{code}</code>
-        </div>
-      )}
+      {showCode && <CodeSection code={code} />}
     </DocSection>
   );
 };
@@ -222,19 +231,43 @@ const DropdownSection = () => {
           <Icon icon={showCode ? "cross" : "code"} />
         </Button>
       </div>
-      {showCode && (
-        <div className="component-docs__code">
-          <code>{code}</code>
-        </div>
-      )}
+      {showCode && <CodeSection code={code} />}
     </DocSection>
   );
 };
 
 const TabsSection = () => {
-  const [disabled, setDisabled] = useState(false);
+  const [tabDisabled, setTabDisabled] = useState(false);
+  const [tabsDisabled, setTabsDisabled] = useState(false);
   const [btnSize, setSize] = useState("md");
   const [btnColor, setColor] = useState("primary");
+  const [showCode, toggleShowCode] = useState(false);
+
+  const code = `<Tabs 
+  btnSize="${btnSize}"
+  btnColor="${btnColor}"${
+    tabsDisabled
+      ? `
+  disabled`
+      : ""
+  }
+>
+  <Tab label="Dogs"${tabDisabled ? " disabled" : ""}>
+    <div>
+      The domestic dog (Canis familiaris or Canis lupus familiaris)...
+    </div>
+  </Tab>
+  <Tab label="Cats">
+    <div>
+      The cat (Felis catus) is a domestic species of small...
+    </div>
+  </Tab>
+  <Tab label="Ferrets">
+    <div>
+      The ferret (Mustela furo) is a domestic species of...
+    </div>
+  </Tab>
+</Tabs>`;
 
   return (
     <DocSection name="Tabs" data={TABSPROPERTIES}>
@@ -242,8 +275,8 @@ const TabsSection = () => {
         className="component-docs__example"
         style={{ minHeight: 200, alignItems: "flex-start" }}
       >
-        <Tabs btnSize={btnSize} btnColor={btnColor}>
-          <Tab label="Dogs" disabled={disabled}>
+        <Tabs btnSize={btnSize} btnColor={btnColor} disabled={tabsDisabled}>
+          <Tab label="Dogs" disabled={tabDisabled}>
             <div>
               The domestic dog (Canis familiaris or Canis lupus familiaris) is a
               domesticated descendant of the wolf. The dog derived from an
@@ -257,7 +290,7 @@ const TabsSection = () => {
               canids.
             </div>
           </Tab>
-          <Tab label="Cats" disabled={disabled}>
+          <Tab label="Cats">
             <div>
               The cat (Felis catus) is a domestic species of small carnivorous
               mammal. It is the only domesticated species in the family Felidae
@@ -269,7 +302,7 @@ const TabsSection = () => {
               breeds are recognized by various cat registries.
             </div>
           </Tab>
-          <Tab label="Ferrets" disabled={disabled}>
+          <Tab label="Ferrets">
             <div>
               The ferret (Mustela furo) is a domestic species of small mustelid.
               The only domesticated species in Mustelidae, it is thought to be a
@@ -291,13 +324,23 @@ const TabsSection = () => {
             onChange={setColor}
           />
           <ToggleSwitch
-            isSelected={disabled}
-            onToggle={() => setDisabled(!disabled)}
+            isSelected={tabsDisabled}
+            onToggle={() => setTabsDisabled(!tabsDisabled)}
           >
-            Disabled
+            Disable All Tabs
+          </ToggleSwitch>
+          <ToggleSwitch
+            isSelected={tabDisabled}
+            onToggle={() => setTabDisabled(!tabDisabled)}
+          >
+            Disable Tab
           </ToggleSwitch>
         </div>
+        <Button btnStyle="link" icon onClick={() => toggleShowCode(!showCode)}>
+          <Icon icon={showCode ? "cross" : "code"} />
+        </Button>
       </div>
+      {showCode && <CodeSection code={code} />}
     </DocSection>
   );
 };
@@ -309,9 +352,7 @@ const PhotoSliderSection = () => {
 
   return (
     <DocSection name="Photo Slider" data={PHOTOSLIDERPROPERTIES}>
-      <div
-        className="component-docs__example"
-      >
+      <div className="component-docs__example">
         <PhotoSlider leftSrc={testimonyOld} RightSrc={testimonyNew} />
       </div>
     </DocSection>
