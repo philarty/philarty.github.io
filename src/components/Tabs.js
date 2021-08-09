@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Tabs(props) {
-  const { children: rawChildren, btnColor, btnSize } = props;
+  const { children: rawChildren, btnColor, btnSize, disabled } = props;
 
   const children = React.Children.toArray(rawChildren);
 
@@ -25,7 +25,7 @@ function Tabs(props) {
             className={
               "tabs__tab " + (activeTab === index ? "tabs__tab--selected" : "")
             }
-            disabled={tab.props.disabled}
+            disabled={disabled || tab.props.disabled}
           >
             {tab.props.label}
           </button>
