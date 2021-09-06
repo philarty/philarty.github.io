@@ -7,8 +7,8 @@ import Button from "../components/Button";
 const FourOhFour = () => {
   const [photo, setPhoto] = useState();
   function handleUpdatePhoto() {
-    axios.get("https://randomfox.ca/floof").then((res) => {
-      setPhoto(res.data.image);
+    axios.get("https://api.thecatapi.com/v1/images/search").then((res) => {
+      setPhoto(res.data[0].url);
     });
   }
   useEffect(() => handleUpdatePhoto(), []);
@@ -21,9 +21,8 @@ const FourOhFour = () => {
         src={photo}
         alt="Cute Animals"
       />
-      <p>here are some cute animals for your troubles</p>
       <div>
-        <Button onClick={() => handleUpdatePhoto()}>I want more cutness</Button>
+        <Button onClick={() => handleUpdatePhoto()}>I want more catness</Button>
         <Link to="/" className="btn btn-lg btn-solid-green">
           Go back to Portfolio
         </Link>

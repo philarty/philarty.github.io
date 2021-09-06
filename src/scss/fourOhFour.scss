@@ -12,11 +12,16 @@
   div {
     padding: 0 1em;
     text-align: center;
+    margin: 0;
   }
 
+
   img {
+    margin: 2em 0;
     max-width: 100%;
+    width: 500px;
     height: intrinsic;
+    border-radius: 4px;
   }
 
   div {
