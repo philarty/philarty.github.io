@@ -22,7 +22,7 @@ const FourOhFour = () => {
         alt="Cute Animals"
       />
       <div>
-        <Button onClick={() => handleUpdatePhoto()}>I want more catness</Button>
+        <Button btnSize='lg' onClick={() => handleUpdatePhoto()}>I want more catness</Button>
         <Link to="/" className="btn btn-lg btn-solid-green">
           Go back to Portfolio
         </Link>
