@@ -351,10 +351,6 @@ const TabsSection = () => {
 };
 
 const PhotoSliderSection = () => {
-  const [disabled, setDisabled] = useState(false);
-  const [btnSize, setSize] = useState("md");
-  const [btnColor, setColor] = useState("primary");
-
   return (
     <DocSection name="Photo Slider" data={PHOTOSLIDERPROPERTIES}>
       <div className="component-docs__example">

@@ -32,13 +32,13 @@ const PhotoSlider = (props) => {
   return (
     <div className="photo-slider" ref={ref}>
       <div className="photo-slider__right">
-        <img src={RightSrc} style={{ width: width }} />
+        <img src={RightSrc} style={{ width: width }} alt='right' />
       </div>
       <div
         className="photo-slider__left"
         style={{ width: sliderPosition + "%" }}
       >
-        <img src={leftSrc} style={{ width: width }} />
+        <img src={leftSrc} style={{ width: width }} alt='left'  />
       </div>
       <input
         className="photo-slider__slider"
