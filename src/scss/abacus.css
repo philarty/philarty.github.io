@@ -1841,7 +1841,7 @@ button:disabled {
 
 .four-oh-four {
   max-width: 1040px;
-  margin: auto;
+  margin: 0 auto auto;
   display: grid;
   justify-content: center;
 }
