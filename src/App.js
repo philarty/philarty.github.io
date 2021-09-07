@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import "./css/abacus.css";
+import "./scss/abacus.css";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import ProfileSection from "./components/ProfileSection.js";

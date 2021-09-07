@@ -21,7 +21,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "css": "sass --watch src/scss:src/css",
+    "css": "sass --watch src/scss/abacus.scss src/scss/abacus.css",
     "start": "react-scripts start",
     "local-dev": "concurrently \"npm run css\" \"npm start\"",
     "build": "react-scripts build",
