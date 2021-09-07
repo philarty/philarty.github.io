@@ -15,7 +15,7 @@ const FourOhFour = () => {
 
   return (
     <section className="four-oh-four">
-      <h1>AIYA</h1>
+      <h1>Oups</h1>
       <h3>Seems like you are lost.</h3>
       <img
         src={photo}
