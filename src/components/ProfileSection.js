@@ -16,12 +16,7 @@ const ProfileSection = () => (
       I focus on building usable and visually captivating digital products that
       impact people.
       <br />
-      Currently, I'm a UI/UX Engineer at{" "}
-      <a href="http://www.moesif.com" target="_blank" rel="noreferrer">
-        Moesif
-      </a>
-      , a leading API analytics company, where I design and build seamless
-      experiences for our customers.
+      Currently, I'm a senior software engineer at Brex.
     </p>
   </div>
 );
