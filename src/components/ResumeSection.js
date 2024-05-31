@@ -33,10 +33,10 @@ const RESUME = [
         title: "Senior software engineer",
         period: "2021 - Present",
         description: [
-          "Led mobile implementation of Global Mileage Reimbursement, increasing mobile submissions by 25%, and developed a new Expense Details Pane, reducing load and save times by 50%."
-          "Enhanced user experience by enabling granular error messages and mobile bank account editing, significantly reducing customer service inquiries."
-          "Contributed new input components to the Metal library and created a global currency guideline for consistent display across products."
-          "Advocated for key features like Plaid connections on mobile and custom extended fields, while leading a team of 5 engineers and mentoring new team members."
+          "Led mobile implementation of Global Mileage Reimbursement, increasing mobile submissions by 25%, and developed a new Expense Details Pane, reducing load and save times by 50%.",
+          "Enhanced user experience by enabling granular error messages and mobile bank account editing, significantly reducing customer service inquiries.",
+          "Contributed new input components to the Metal library and created a global currency guideline for consistent display across products.",
+          "Advocated for key features like Plaid connections on mobile and custom extended fields, while leading a team of 5 engineers and mentoring new team members.",
         ],
       },
       {
